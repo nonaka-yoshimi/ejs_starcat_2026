@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 概要パーツ */
+.summary{
+    position: relative;
+    min-height: 400px;
+    margin-bottom: 120px;
+}
+.summary .flex_text{
+    z-index: 2;
+}
+.summary:last-child{
+    margin-bottom: 0;
+}
+.summary .img_item{
+    position: absolute;
+    max-width: 640px;
+}
+.summary .text_item{
+    position: relative;
+    box-sizing: border-box;
+    background:rgba(255, 255, 255, 0.8);
+    max-width: 670px;
+    padding: 60px;
+    margin-top: 80px;
+}
+.summary .flex_right .img_item{
+    right: 0;
+}
+.summary .flex_left .img_item{
+    left: 0;
+}
+.summary .text_item::before{
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+}
+.summary .text_item::after{
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+}
+.summary .flex_right .text_item::before{
+    top: 0;
+    right: 0;
+    border-top: 1px solid #005bac;
+    border-right: 1px solid #005bac;
+}
+.summary .flex_right .text_item::after{
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #005bac;
+    border-left: 1px solid #005bac;
+}
+.summary .flex_left .text_item::before{
+    top: 0;
+    left: 0;
+    border-top: 1px solid #005bac;
+    border-left: 1px solid #005bac;
+}
+.summary .flex_left .text_item::after{
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #005bac;
+    border-right: 1px solid #005bac;
+}
+.summary .text_item .reason_title{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+    margin-bottom: 40px;
+}
+.summary .text_item .reason_text{
+    margin-bottom: 26px;
+}
+.summary .text_item *:last-child{
+    margin-bottom: 0;
+}
+@media screen and (max-width:767px){
+    .summary{
+        margin-bottom: 50px;
+    }
+    .summary .flex_left .img_item{
+        margin-left: -20px;
+    }
+    .summary .flex_left .text_item{
+        margin-left: -20px;
+    }
+    .summary .flex_right .img_item{
+        margin-right: -20px;
+    }
+    .summary .flex_right .text_item{
+        margin-right: -20px;
+    }
+    .summary .text_item{
+        padding: 40px;
+        margin-top: 170px;
+    }
+    .summary .text_item .reason_title{
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 30px;
+    }
+}
+
+

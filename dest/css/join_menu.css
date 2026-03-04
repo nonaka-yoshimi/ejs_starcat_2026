@@ -1,0 +1,17 @@
+.main_inner .join_menu { padding:30px; border-radius:10px; background:#424242; color:#FFFFFF; }
+.main_inner .join_menu .contact_block { margin-bottom:10px; }
+.main_inner .join_menu .apply_btn { font-size:26px; }
+.main_inner .join_menu .apply_btn::before { left:-60px; }
+.main_inner .join_menu .menu_block p { font-size:16px; }
+@media screen and (max-width:1100px) {
+  .main_inner .join_menu .apply_btn::before { left:20px; }
+
+}
+@media screen and (max-width:767px) {
+  .main_inner .join_menu .apply_btn::before { left:-10px; }
+  .main_inner .join_menu .contact_link_list { display:block; }
+  .main_inner .join_menu .contact_link_list .contact_link_btn { display: block; width: 100%; margin-bottom: 15px; }
+  .main_inner .join_menu .contact_link_list .contact_link_btn span br { display:none; }
+}
+
+

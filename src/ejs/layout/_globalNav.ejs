@@ -1,0 +1,237 @@
+<div class="showTB commonNav">
+	<div data-commonnav="1">
+		<a href="/join/?ref=header" data-icon="beginner">初めての方</a>
+		<button id="mypageButtonTB" data-icon="mypage" onclick="modalToggle(menuCustomerArea);target(mypageButton)">ご利用中の方</button>
+		<a href="/business/?ref=header" data-icon="corporation">法人のお客様</a>
+	</div>
+</div>
+<!--▽モーダルコンテンツ-->
+<!--▽ハンバーガーメニュー-->
+<div id="navMenuArea" class="modalArea">
+	<div class="modalContents">
+		<button class="showPC" onclick="modalClose(navMenuArea)" data-icon="close"></button>
+		<div class="inner">
+			<div data-commonnav="1" class="showPC">
+				<a href="/join/?ref=bmenu_h" data-icon="beginner">初めての方</a>
+				<a href="/customer/?ref=bmenu_h" data-icon="mypage">ご利用中の方</a>
+				<a href="/business/?ref=bmenu_h" data-icon="corporation">法人のお客様</a>
+			</div>
+			<div data-commonnav="1" class="showTB">
+				<a href="/join/?ref=bmenu_h_sp" data-icon="beginner">初めての方</a>
+				<a href="/customer/?ref=bmenu_h_sp" data-icon="mypage">ご利用中の方</a>
+				<a href="/business/?ref=bmenu_h_sp" data-icon="corporation">法人のお客様</a>
+			</div>
+			<!--sp版要素数によって背景色が変わってくるため出し分け-->
+			<div data-column="2" class="column_pc showPC">
+				<ul class="arrowLinkList_after">
+					<li><a href="/service/inquiry/?ref=bmenu_h">お申し込み・各種変更</a></li>
+					<li><a href="/service/?ref=bmenu_h">スターキャットのサービス</a></li>
+					<li><a href="/price/?ref=bmenu_h">料金のご案内</a></li>
+					<li><a href="/service_area/?ref=bmenu_h">サービス提供エリア</a></li>
+					<li><a href="/campaign/?ref=bmenu_h">キャンペーン・特典・プレゼント</a></li>
+					<li><a href="/members/?ref=bmenu_h">スターキャットメンバーズ</a></li>
+					<li><a href="/customer/?ref=bmenu_h">お客様サポート</a></li>
+				</ul>
+				<ul class="arrowLinkList_after">
+					<li><a href="/maintenance/?ref=bmenu_h">障害・メンテンナンス情報</a></li>
+					<li><a href="https://faq.starcat.co.jp/?ref=bmenu_h" target="_blank">よくあるご質問</a></li>
+					<li><a href="/plaza/?ref=bmenu_h">スターキャットプラザ</a></li>
+					<li><a href="/service/sales/?ref=bmenu_h" target="_blank">機器販売</a></li>
+					<li><a href="/announcement/?ref=bmenu_h">お知らせ情報</a></li>
+					<li><a href="/contact/?ref=bmenu_h">お問い合わせ</a></li>
+					<li><a href="/company/?ref=bmenu_h" target="_blank">企業情報</a></li>
+				</ul>
+			</div>
+			<ul class="arrowLinkList_after showTB">
+				<li><a href="/service/inquiry/?ref=bmenu_h_sp">お申し込み・各種変更</a></li>
+				<li><a href="/service/?ref=bmenu_h_sp">スターキャットのサービス</a></li>
+				<li><a href="/price/?ref=bmenu_h_sp">料金のご案内</a></li>
+				<li><a href="/service_area/?ref=bmenu_h_sp">サービス提供エリア</a></li>
+				<li><a href="/campaign/?ref=bmenu_h_sp">キャンペーン・特典・プレゼント</a></li>
+				<li><a href="/members/?ref=bmenu_h_sp">スターキャットメンバーズ</a></li>
+				<li><a href="/customer/?ref=bmenu_h_sp">お客様サポート</a></li>
+				<li><a href="/maintenance/?ref=bmenu_h_sp">障害・メンテンナンス情報</a></li>
+				<li><a href="https://faq.starcat.co.jp/?ref=bmenu_h_sp">よくあるご質問</a></li>
+				<li><a href="/plaza/?ref=bmenu_h_sp">スターキャットプラザ</a></li>
+				<li><a href="/service/sales/?ref=bmenu_h_sp" target="_blank">機器販売</a></li>
+				<li><a href="/announcement/?ref=bmenu_h_sp">お知らせ情報</a></li>
+				<li><a href="/contact/?ref=bmenu_h_sp">お問い合わせ</a></li>
+				<li><a href="/company/?ref=bmenu_h_sp" target="_blank">企業情報</a></li>
+			</ul>
+			<div class="showPC">
+				<form class="searchForm" method="get" action="https://www.google.com/search" target="_blank" rel="noopener noreferrer">
+					<label data-icon="search" class="icon_before">
+						<input class="search_text" type="text" name="q" placeholder="検索キーワードを入力">
+					</label>
+					<input type="hidden" name="hl" value="ja">
+					<input type="hidden" name="sitesearch" value="www.starcat.co.jp">
+				</form>
+			</div>
+			<div class="fixedContent_bottom showTB">
+				<button onclick="modalClose(navMenuArea)" data-icon="close">閉じる</button>
+				<form class="searchForm" method="get" action="https://www.google.com/search" target="_blank" rel="noopener noreferrer">
+					<label data-icon="search" class="icon_before">
+						<input class="search_text" type="text" name="q" placeholder="検索キーワードを入力">
+					</label>
+					<input type="hidden" name="hl" value="ja">
+					<input type="hidden" name="sitesearch" value="www.starcat.co.jp">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--▽お申込み-->
+<div id="navEntryArea" class="modalArea gNavModalArea">
+	<div class="modalContents">
+		<div class="inner">
+			<button onclick="modalClose(navEntryArea)" data-icon="close"></button>
+			<div class="entryLinks">
+				<div class="inner">
+					<section class="entryLinkArea">
+						<h3 class="title" data-icon="beginner">初めての方</h3>
+						<div class="linkWrap">
+							<a href="/mform/?ref=bmenu" class="entryLink showPC" data-icon="entry">
+								新規加入<br class="showContainer">お申し込み
+								<img src="/img/top/entry_cat_pc.svg" alt="3分でWebからお申し込みいただけます">
+							</a>
+							<a href="/mform/?ref=bmenu_sp" class="entryLink showTB" data-icon="entry">
+								新規加入<br class="showContainer">お申し込み
+								<img src="/img/top/entry_cat_sp.svg" alt="3分でWebからお申し込みいただけます">
+							</a>
+							<a href="javascript:synalio.toggle(0);" class="entryFaq" data-icon="entryFaq">新規ご加入に関するお問い合わせ</a>
+						</div>
+					</section>
+					<section class="userLinkArea">
+						<h3 class="title" data-icon="mypage">ご利用中の方</h3>
+						<div class="linkWrap">
+							<a href="/customer/self/mypage/?ref=bmenu" class="mypage showPC" data-icon="user">マイページ</a>
+							<a href="/customer/self/mypage/?ref=bmenu_sp" class="mypage showTB" data-icon="user">マイページ</a>
+							<a href="/customer/action/?ref=bmenu" class="addService showPC" data-icon="addService">サービス<br class="showTB">追加・変更</a>
+							<a href="/customer/action/?ref=bmenu_sp" class="addService showTB" data-icon="addService">サービス<br class="showTB">追加・変更</a>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--▽▽▽PCのみモーダル-->
+<!--▽スターキャットのサービス-->
+<div id="navServiceArea" class="modalArea gNavModalArea showPC">
+	<div class="modalContents">
+		<div class="inner">
+			<div class="buttonArea">
+				<a href="/service/net/?ref=bmenu" class="bottomArrowLinkButton_border">
+					<p data-icon="service_internet" class="icon_before">インターネット</p>
+				</a>
+				<a href="/service/tv/?ref=bmenu" class="bottomArrowLinkButton_border">
+					<p data-icon="service_tv" class="icon_before">テレビ</p>
+				</a>
+				<a href="/service/tel/?ref=bmenu" class="bottomArrowLinkButton_border">
+					<p data-icon="service_tel" class="icon_before">電話</p>
+				</a>
+			</div>
+			<ul class="arrowLinkList_after">
+				<li>
+					<a href="/service/?ref=bmenu">
+						<img src="/img/icon/service_discount_icon.svg" alt="割引アイコン">
+						<p>提携・割引サービス</p>
+					</a>
+				</li>
+				<li>
+					<a href="/service/mvno/?ref=bmenu">
+						<img src="/img/icon/service_smartPhone.svg" alt="スマートフォンアイコン">
+						<p>格安スマホサービス</p>
+					</a>
+				</li>
+				<li>
+					<a href="/service/vod/?ref=bmenu">
+						<img src="/img/icon/service_video-delivery.svg" alt="動画アイコン">
+						<p>動画配信サービス</p>
+					</a>
+				</li>
+				<li>
+					<a href="/service/net/option/security-camera/?ref=bmenu">
+						<img src="/img/icon/service_security-camera.svg" alt="防犯カメラアイコン">
+						<p>防犯カメラサービス</p>
+					</a>
+				</li>
+				<li>
+					<a href="/service/?ref=bmenu">
+						<img src="/img/icon/service_list.svg" alt="サービスアイコン">
+						<p>スターキャットのサービス一覧</p>
+					</a>
+				</li>
+				<li>
+					<a href="/business/?ref=bmenu">
+						<img src="/img/icon/service_corporation.svg" alt="ビルアイコン">
+						<p>法人向けサービス</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--▽▽▽SPのみモーダル-->
+<!--▽インターネット-->
+<div id="navInternetArea" class="modalArea gNavModalArea showTB">
+	<div class="modalContents notPadding" data-icon="service_internet">
+		<div class="inner">
+			<button onclick="modalClose(navInternetArea)" data-icon="close"></button>
+			<h3 class="title">インターネット</h3>
+			<p>下り最大10Gbpsの超高速回線</p>
+			<ul class="arrowLinkList_after">
+				<li><a href="/service/net/?ref=bmenu_sp">おすすめポイント</a></li>
+				<li><a href="/service/net/?ref=bmenu_sp#_link_2">ご利用料金</a></li>
+				<li><a href="/service/net/?ref=bmenu_sp#_op">オプションサービス</a></li>
+				<li><a href="/customer/ss/?ref=bmenu_sp#net">サポート情報</a></li>
+			</ul>
+			<div class="bannerArea">
+				<a href="/service/net/option/security-camera/?ref=bmenu_sp">
+					<img alt="スターキャット光オプション Safieカメラサービスプラン" src="/img/bannerSlider/top_bnr_service_202601_security_camera.jpg">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--▽テレビ-->
+<div id="navTvArea" class="modalArea gNavModalArea showTB">
+	<div class="modalContents notPadding" data-icon="service_tv">
+		<div class="inner">
+			<button onclick="modalClose(navTvArea)" data-icon="close"></button>
+			<h3 class="title">テレビ</h3>
+			<p>最大58chの専門チャンネル</p>
+			<ul class="arrowLinkList_after">
+				<li><a href="/service/tv/?ref=bmenu_sp">おすすめポイント</a></li>
+				<li><a href="/service/tv/?ref=bmenu_sp#_link_2">ご利用料金</a></li>
+				<li><a href="/service/tv/option/?ref=bmenu_sp">オプションチャンネル</a></li>
+				<li><a href="/ch/?ref=bmenu_sp" target="_blank">チャンネルガイド</a></li>
+				<li><a href="/customer/ss/?ref=bmenu_sp#tv">サポート情報</a></li>
+			</ul>
+			<div class="bottomLinkArea">
+				<a href="/mform/?ref=bmenu_tv_sp" class="button arrow_after">
+					<p>お申し込みはこちら</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--▽その他-->
+<div id="navOtherArea" class="modalArea gNavModalArea showTB">
+	<div class="modalContents notPadding" data-icon="service_other">
+		<div class="inner">
+			<button onclick="modalClose(navOtherArea)" data-icon="close"></button>
+			<h3 class="title">その他</h3>
+			<p>暮らしをもっと快適に！</p>
+			<ul class="arrowLinkList_after">
+				<li><a href="/service/tel/?ref=bmenu_sp">電話</a></li>
+				<li><a href="/service/?ref=bmenu_sp">提携・割引サービス</a></li>
+				<li><a href="/service/mvno/?ref=bmenu_sp">格安スマホサービス</a></li>
+				<li><a href="/service/vod/?ref=bmenu_sp">動画配信サービス</a></li>
+				<li><a href="/service/net/option/security-camera/?ref=bmenu_sp">防犯カメラサービス</a></li>
+				<li><a href="/service/?ref=bmenu_sp">スターキャットのサービス一覧</a></li>
+				<li><a href="/business/?ref=bmenu_sp">法人向けサービス</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

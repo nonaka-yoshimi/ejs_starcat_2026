@@ -1,0 +1,41 @@
+<%
+	_default = dataJSON['default'];
+	for ( key in _default ) {
+		if ( typeof data[key] === 'undefined' ) {
+			data[key] = _default[key];
+		}
+	}
+
+	current = data['directory'];
+	currentText = data['directoryText'];
+	pageTitle = data['directoryText'].slice(-1)[0];
+%>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="<%- replaceJSON['author'] %>">
+	<meta name="description" content="<%= data['description'] %>">
+	<meta name="keywords" content="<%= data['keywords'] %>">
+	<title><%= data['title'] %>｜<%- replaceJSON['author'] %></title>
+
+	<!-- ページごとのCSS -->
+	<% if (data['cssFiles']) { %>
+		<% data['cssFiles'].forEach(function(cssPath) { %>
+	<link rel="stylesheet" href="<%= cssPath %>">
+		<% }); %>
+	<% } %>
+
+	<!-- ページごとのJS -->
+	<% if (data['jsFiles']) { %>
+		<% data['jsFiles'].forEach(function(jsPath) { %>
+	<script src="<%= jsPath %>"></script>
+		<% }); %>
+	<% } %>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="icon" href="/img/favicon/favicon.ico">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>

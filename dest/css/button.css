@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ボタンエリア */
+.btn_area{
+    text-align: center;
+}
+.btn{
+    margin-bottom: 20px;
+}
+
+/* ボタン装飾 */
+.blue_btn{
+    transition: background 0.4s ease-in-out;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #fff;
+    padding: 13px 50px 13px 40px;
+    background: #005bac;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.blue_btn:hover{
+    transition: background 0.4s ease-in-out;
+    opacity: 1;
+    background-color: #2f8fe5;
+}
+.blue_btn::after{
+    position: absolute;
+    content: url(/img/icon/link_icon.svg);
+    width: 7px;
+    margin-left: 10px;
+    line-height: 18px;
+    margin-top: 3px;
+}
+.yellow_btn{
+    transition: background 0.4s ease-in-out;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+    background: #fccf00;
+    max-width: 580px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.yellow_btn:hover{
+    transition: background 0.4s ease-in-out;
+    opacity: 1;
+    background: #ffea04;
+}
+.yellow_btn > *:last-child.btn_title{
+    margin-bottom: 0;
+}
+.gray_btn{
+    transition: background 0.4s ease-in-out;
+    position: relative;
+    display: inline-block;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    background: #595959;
+    color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+}
+.gray_btn::after{
+    position: absolute;
+    content: url(/img/icon/ch_open_icon.svg);
+    width: 12px;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.gray_btn:hover{
+    transition: background 0.4s ease-in-out;
+    background: #fccf00;
+}
+.gray_btn:hover::after{
+    content: url(/img/icon/ch_open_w_icon.svg);
+}
+.btn_title{
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.btn_text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.circle_btn,
+.circle_blank_btn{
+    transition: background 0.4s ease-in-out;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    color: #005bac;
+    line-height: 24px;
+    padding: 12px 50px 12px 40px;
+    border: 1px solid #005bac;
+    border-radius: 25px;
+    margin: auto;
+    margin-right: 20px;
+}
+.circle_blank_btn{
+    padding: 12px 40px;
+}
+.circle_btn::after {
+    position: absolute;
+    content: url(/img/icon/link_blue_icon.svg);
+    width: 7px;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+.circle_btn:hover,
+.circle_blank_btn:hover{
+    transition: background 0.4s ease-in-out;
+    background: #005bac;
+    color: #fff;
+}
+.circle_btn:hover::after{
+    content: url(/img/icon/link_white_icon.svg);
+}
+.circle_blank_btn::after{
+    display: inline-block;
+    content: "";
+    background: url(/img/icon/blank_blue_icon.svg) no-repeat;
+    width: 10px;
+    height: 8px;
+    margin-left: 4px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+}
+.circle_blank_btn:hover::after{
+    background: url(/img/icon/blank_icon.svg) no-repeat;
+}
+.adobe_reader{
+    display: block;
+    width: 159px;
+}
+@media screen and (max-width:767px){
+    .blue_btn{
+        font-size: 16px;
+        padding: 12px 40px 12px 30px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+    }
+    .gray_btn{
+        max-width: 260px;
+    }
+    .circle_btn{
+        padding: 7px 40px 7px 30px;
+        margin-right: 0;
+    }
+}
+
+/*お問い合わせ*/
+.contact .contact_inquiry_btn_box._type01{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 1100px) {
+  .contact .contact_inquiry_btn_box._type01{
+      margin-bottom: 0px;
+  }
+}
+
+.wrap_contact_inquiry_customer_other {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .contact .contact_inquiry_btn_box._type01 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.contact .contact_inquiry_btn {
+    width: 333px;
+    height: 264px;
+}
+
+@media screen and (max-width: 767px) {
+  .contact .contact_inquiry_btn,.contact .contact_inquiry_chat_box .contact_inquiry_btn {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact a.square_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #7b9e21;
+    line-height: 24px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 0 rgba(13, 83, 8, 0.3);
+    text-decoration: none;
+}
+.contact a.square_btn.orange {
+    color: #e56e06;
+    box-shadow: 0 3px 10px 0 rgba(201, 94, 0, 0.3);
+}
+.contact a.square_btn:hover{
+    transition: opacity 0.2s ease-in;
+    opacity: 0.6;
+}
+@media screen and (max-width: 767px) {
+  .contact a.square_btn {
+    justify-content: flex-start;
+    padding: 20px 45px 20px 66px;
+    text-align: left;
+    font-size: clamp(16px, 2.5vw, 18px);
+  }
+}
+.contact a.square_btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 48px;
+    left: 140px;
+}
+.contact a.square_btn.contact_action_other::before {
+    background: url(img/icon/action_other_g_icon.svg) no-repeat;
+}
+.contact a.square_btn.contact_service::before {
+    background: url(img/icon/service_g_icon.svg) no-repeat;
+}
+.contact a.square_btn.contact_faq::before {
+    background: url(img/icon/faq_g_icon.svg) no-repeat;
+}
+.contact a.square_btn.contact_tel_contact::before {
+    width: 60px;
+    height: 47px;
+    top: 30px;
+    left: 135px;
+    background: url(img/icon/freecall_navy.svg) no-repeat;
+}
+.contact a.square_btn.contact_tel_crowd_level::before {
+    background: url(img/icon/tel_contact_g_icon.svg) no-repeat;
+}
+.contact a.square_btn.contact_chat::before {
+    background: url(img/icon/chat_g_icon.svg) no-repeat;
+}
+.contact a.square_btn.request_materials::before {
+    background: url(img/icon/request_materials_g_icon.svg) no-repeat;
+}
+.contact a.square_btn.orange.contact_about_internet::before {
+    background: url(img/icon/internet_o_icon.svg) no-repeat;
+}
+.contact a.square_btn.orange.contact_about_tv::before {
+    background: url(img/icon/tv_o_icon.svg) no-repeat;
+}
+.contact a.square_btn.orange.contact_about_telephone::before {
+    background: url(img/icon/tel_o_icon.svg) no-repeat;
+}
+.contact a.square_btn.orange.contact_tel_crowd_level::before {
+    background: url("img/icon/tel_contact_o_icon.svg") no-repeat;
+}
+.contact a.square_btn.orange.contact_about_customer_info::before {
+    background: url("img/icon/mypage_o_icon.svg") no-repeat;
+}
+.contact a.square_btn.orange.contact_faq::before {
+    background: url("img/icon/faq_o_icon.svg") no-repeat;
+}
+.contact a.square_btn.orange.contact_chat_auto::before {
+    background: url("img/icon/chatbot_icon.svg") no-repeat;
+}
+.contact a.square_btn.orange.contact_support_info::before {
+    background: url("img/icon/support_o_icon.svg") no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  .contact a.square_btn::before {
+      width: 30px;
+      height: 30px;
+      top: calc(50% - 15px);
+      left: 22px;
+  }
+  .contact a.square_btn.contact_tel_contact::before {
+      width: 38px;
+      height: 30px;
+      top: calc(50% - 15px);
+      left: 18px;
+      background: url(img/icon/freecall_navy.svg) no-repeat;
+  }
+}
+
+.contact a.square_btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 175px;
+    left: 150px;
+    background: url(img/icon/link_blue_round_icon.svg) no-repeat;
+}
+
+.contact a.square_btn.contact_faq::after {
+    top: 180px;
+}
+.contact a.square_btn.contact_tel_crowd_level::after {
+    top: 180px;
+}
+.contact a.square_btn.contact_tel_contact::after {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .contact a.square_btn::after {
+      width: 20px;
+      height: 20px;
+      top: calc(50% - 10px);
+      right: 10px;
+      left: auto;
+  }
+  .contact a.square_btn.contact_faq::after {
+      top: calc(50% - 10px);
+  }
+  .contact a.square_btn.contact_tel_crowd_level::after {
+      top: calc(50% - 10px);
+  }
+  .contact a.square_btn.contact_tel_contact::after {
+      display: block;
+      top: calc(50% - 10px);
+  }
+}
+
+.contact .inquiry_btn_text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .contact .inquiry_btn_text{
+    align-items: flex-start;
+    margin-top: 0;
+  }
+}
+.contact .inquiry_btn_text_black {
+    padding-top: 7px;
+    font-size: 14px;
+    color: #1c1c1c;
+}
+.contact .contact_tel_contact .inquiry_btn_text .inquiry_btn_text_tel{
+    margin-bottom: 15px;
+}
+.contact .inquiry_btn_text_tel{
+    font-size: 32px;
+}
+
+/*.contact .wrap_contact_inquiry_tel_chat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}*/
+
+.contact_inquiry_head._type01{
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .contact .inquiry_btn_text_black {
+      padding-top: 0px;
+      font-size: clamp(12px, 1.8vw, 14px);
+      color: #1c1c1c;
+  }
+  .contact .contact_tel_contact .inquiry_btn_text{
+      margin-top: 0px;
+  }
+  .contact .contact_tel_contact .inquiry_btn_text .inquiry_btn_text_tel{
+      margin-bottom: 8px;
+      font-size: clamp(26px, 4vw, 32px);
+      font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .contact_inquiry_head._type01 {
+    display: block;
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+.contact .wrap_contact_inquiry._type02{
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .contact .wrap_contact_inquiry._type02{
+    margin-bottom: 40px;
+  }
+  .square_btn_br_sp{
+    display: none;
+  }
+}
+
+

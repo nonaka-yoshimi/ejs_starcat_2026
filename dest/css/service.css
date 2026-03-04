@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 選ばれる理由 */
+#select_reason{
+    margin-bottom: 0;
+}
+.black_back{
+    background: #1c1c1c;
+    color: #fff;
+    margin-right: -20px;
+    margin-left: -20px;
+    margin-top: -130px;
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+.black_back .section_inner{
+    max-width: 1420px;
+    text-align: center;
+}
+.black_back .section_inner h2{
+    max-width: 1100px;
+    text-align: left;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.main_content{
+    margin-bottom: 120px;
+}
+.main_content:last-child{
+    margin-bottom: 0;
+}
+@media screen and (max-width:767px){
+    .black_back{
+        margin-top: -100px;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+    .black_back .section_inner{
+        padding: 0 20px;
+    }
+    .main_content{
+        display: block;
+        margin-bottom: 50px;
+    }
+}
+
+/* 選ばれる理由 -上部黒背景部分- */
+.main_content .flex_right .text_item{
+    padding-right: 160px;
+}
+.main_content .flex_left .text_item{
+    padding-left: 160px;
+}
+.main_content .text_item{
+    flex-basis: 44%;
+    max-width: 380px;
+    text-align: left;
+}
+.main_content .img_item{
+    flex-basis: 56%;
+    max-width: 800px;
+    overflow: hidden;
+}
+.main_content .text_item .reason{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fccf00;
+}
+.main_content .text_item .reason span{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.main_content .text_item .reason_title{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 72px;
+    margin-bottom: 50px;
+}
+.main_content .text_item .reason_title .under_line{
+    border-bottom: solid 3px #fccf00;
+}
+.main_content .text_item small{
+    font-size: 14px;
+    color: #7a7a7a;
+}
+@media screen and (max-width:1400px){
+    .main_content .flex_right .text_item{
+        padding-right: 6vw;
+        margin-left: 2vw;
+    }
+    .main_content .flex_left .text_item{
+        padding-left: 6vw;
+        margin-right: 2vw;
+    }
+}
+@media screen and (max-width:767px){
+    .main_content .flex_right .text_item{
+        padding-right: 0;
+    }
+    .main_content .flex_left .text_item{
+        padding-left: 0;
+    }
+    .main_content .img_item{
+        margin: 0 -20px 40px;
+    }
+    .main_content .text_item .reason_title{
+        font-size: 34px;
+        line-height: 64px;
+        margin-bottom: 30px;
+    }
+
+}
+
+

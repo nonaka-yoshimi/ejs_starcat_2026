@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/*||| トップページ |||*/
+/*▽組み合わせておトク！*/
+#priceCheck .title {
+  text-align: center;
+  color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  #priceCheck .title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #priceCheck .title {
+    font-size: 5.208vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #priceCheck .title {
+    font-size: 4.8vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  #priceCheck .title p {
+    font-size: 4.375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #priceCheck .title p {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  #priceCheck .catch {
+    margin: 2.5rem auto 1.25rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #priceCheck .catch {
+    margin: 1.25rem auto 0.625rem;
+    font-size: 3.125vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #priceCheck .catch {
+    font-size: 4.267vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #priceCheck a, #priceCheck button {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 376px) {
+  #priceCheck a, #priceCheck button {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #priceCheck a, #priceCheck button {
+    font-size: 3.733vw;
+  }
+}
+#priceCheck a p, #priceCheck button p {
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 769px) {
+  #priceCheck a p, #priceCheck button p {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #priceCheck a p, #priceCheck button p {
+    gap: 0.625rem;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+#priceCheck a p::after, #priceCheck button p::after {
+  background-color: #fff;
+}
+@media screen and (min-width: 376px) {
+  #priceCheck a p::after, #priceCheck button p::after {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #priceCheck a p::after, #priceCheck button p::after {
+    width: 10.667vw;
+    height: 10.667vw;
+  }
+}
+
+/*▽ご利用エリアをチェック*/
+#availableAreaCheck {
+  margin-top: 3.125rem;
+}
+#availableAreaCheck .imageWrap {
+  position: relative;
+  margin: 0 auto;
+}
+@media screen and (min-width: 376px) {
+  #availableAreaCheck .imageWrap {
+    max-width: 170px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #availableAreaCheck .imageWrap {
+    width: 40%;
+  }
+}
+#availableAreaCheck .imageWrap .absolute {
+  position: absolute;
+  left: 10px;
+  bottom: -12%;
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
+}
+#availableAreaCheck .searchLinkArea {
+  border-radius: 1rem;
+  background-color: #e8f1ff;
+}
+@media screen and (min-width: 769px) {
+  #availableAreaCheck .searchLinkArea {
+    padding: 3.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #availableAreaCheck .searchLinkArea {
+    padding: 1.875rem 1.25rem 1.25rem;
+  }
+}
+#availableAreaCheck .searchLinkArea .title {
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  #availableAreaCheck .searchLinkArea .title {
+    margin-bottom: 1.875rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #availableAreaCheck .searchLinkArea .title {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #availableAreaCheck .searchLinkArea .title {
+    font-size: 4.8vw;
+  }
+}
+#availableAreaCheck .searchLinkArea a {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media screen and (min-width: 769px) {
+  #availableAreaCheck .searchLinkArea a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.25rem;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #availableAreaCheck .searchLinkArea a {
+    font-size: 1.818vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #availableAreaCheck .searchLinkArea a {
+    display: grid;
+    place-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 2.604vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #availableAreaCheck .searchLinkArea a {
+    font-size: 3.733vw;
+  }
+}
+@media screen and (min-width: 1101px) {
+  #availableAreaCheck .searchLinkArea a img {
+    width: 5rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #availableAreaCheck .searchLinkArea a img {
+    width: 7.273vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #availableAreaCheck .searchLinkArea a img {
+    width: 5rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #availableAreaCheck .searchLinkArea a img {
+    width: 75%;
+  }
+}
+
+/*▽キャッチエリア*/
+#catchArea {
+  text-align: center;
+}
+#catchArea .imageWrap {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #catchArea .imageWrap .inner {
+    padding: 0;
+  }
+}
+#catchArea .imageWrap .title {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 3.125rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #005bac;
+  font-weight: 900;
+}
+@media screen and (min-width: 769px) {
+  #catchArea .imageWrap .title {
+    font-size: 3.375rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  #catchArea .imageWrap .title {
+    font-size: 5.4vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #catchArea .imageWrap .title {
+    font-size: 7.031vw;
+  }
+}
+#catchArea .text {
+  font-size: 1rem;
+  font-weight: 900;
+}
+@media screen and (min-width: 769px) {
+  #catchArea .text {
+    margin-top: 2.5rem;
+    margin-bottom: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #catchArea .text {
+    margin-bottom: 1.25rem;
+  }
+}
+#catchArea a {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 0.625rem;
+  max-width: 550px;
+  border-radius: 0.875rem;
+  line-height: 1.2;
+}
+@media screen and (min-width: 769px) {
+  #catchArea a {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #catchArea a {
+    padding-top: 0.875rem;
+    font-size: 1rem;
+  }
+}
+#catchArea a img {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  #catchArea a img {
+    margin-bottom: 0.625rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #catchArea a img {
+    margin-bottom: 7px;
+  }
+}
+
+/*▽下部バナーエリア*/
+#bannerArea {
+  background-color: #e8f1ff;
+}
+@media screen and (min-width: 769px) {
+  #bannerArea {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #bannerArea {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+}
+
+

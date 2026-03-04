@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+table{
+    width: 100%;
+    border: 1px solid #dadada;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+table .red{
+    color: #f00;
+}
+table tr th,
+table tr td{
+    width: 25%;
+    font-weight: normal;
+    padding: 30px;
+    border: 1px solid #dadada;
+}
+table tr th{
+    background: #f2f2f2;
+}
+table tr td{
+    text-align: center;
+}
+table tr td.adjLeft{
+	text-align: left;
+}
+table tr th:first-child{
+    text-align: left;
+}
+table tr td:first-child{
+    text-align: left;
+    background: #f2f2f2;
+}
+td.first-child-width {
+width: 10%;
+}
+@media screen and (max-width:767px){
+    table tr th,
+    table tr td{
+        font-size: 14px;
+        line-height: 20px;
+        padding: 10px;
+    }
+}
+
+

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 手続きパーツ */
+.procedure{
+    margin-bottom: 100px;
+}
+.procedure .image{
+    background: #f4f4f4;
+    width: 170px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+.procedure .image img{
+    width: 75px;
+}
+.procedure .text{
+    width: 890px;
+}
+.procedure .text h5{
+    margin-top: 0;
+}
+.procedure .btn_area{
+    font-size: 0;
+    text-align: left;
+}
+.procedure .btn_area .circle_btn{
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 16px;
+    max-width: 435px;
+    width: 100%;
+    margin: 20px 0 0;
+}
+.procedure .btn_area .circle_btn:nth-child(odd){
+    margin-right: 20px;
+}
+.procedure .btn_area .circle_btn:nth-child(1),
+.procedure .btn_area .circle_btn:nth-child(2){
+    margin-top: 0;
+}
+div#_net, div#_tv, div#_tel {
+    padding-top: 300px;
+    margin-top: -300px;
+}
+@media screen and (max-width:1139px){
+    .procedure .btn_area .circle_btn:nth-child(2){
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:767px){
+    .procedure .image{
+        align-items: start;
+        width: 60px;
+        margin-right: 20px;
+    }
+    .procedure .image img{
+        width: 40px;
+        padding: 10px;
+    }
+    .procedure .btn_area .circle_btn,
+    .procedure .btn_area .circle_btn:nth-child(2){
+        margin-top: 15px;
+    }
+    .procedure .btn_area .circle_btn:nth-child(odd){
+        margin-right: 0;
+    }
+   div#_net, div#_tv, div#_tel {
+       padding-top: 200px;
+       margin-top: -200px;
+   }
+}
+
+

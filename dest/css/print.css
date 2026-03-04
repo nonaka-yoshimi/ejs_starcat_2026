@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@media print {
+header, div.breadcrumb, div.section_header, .main_navi, .footer_inner, .commonNav, .footContentArea, .join_menu {
+  display:none;
+}
+footer { background-color:#FFFFFF !important; }
+footer p.copyright, footer small { padding-top:20px !important; border-top:1px #000000 solid !important; color:#000000 !important; }
+main, div.main_inner section {
+  margin:0;
+  padding:0;
+}
+main { padding-top:30px !important; margin-bottom:50px; }
+div.main_inner { padding-top:0; }
+p.lead_text { margin-bottom:0; }
+section h2, section h3 { margin-top:30px; margin-bottom:30px; }
+}
+
+

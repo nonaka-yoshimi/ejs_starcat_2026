@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* おすすめドラマ */
+.recomend_drama{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.recomend_drama .flex{
+    justify-content: space-between;
+}
+.recomend_drama .flex .text{
+    max-width: 560px;
+    width: 51%;
+    margin-right: 5%;
+}
+.recomend_drama .flex .image{
+    max-width: 480px;
+    width: 44%;
+}
+.recomend_drama .flex .text p{
+    margin-bottom: 40px;
+}
+.recomend_drama dl{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #e4e4e4;
+    margin: 0;
+}
+.recomend_drama dl dt,
+.recomend_drama dl dd{
+    font-size: 14px;
+    line-height: 22px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+.recomend_drama dl dt{
+    font-weight: bold;
+    width: 28%;
+}
+.recomend_drama dl dd{
+    width: 72%;
+    margin: 0;
+}
+.recomend_drama .flex .image img{
+    margin-bottom: 20px;
+}
+.recomend_drama .flex .image small{
+    font-size: 12px;
+    line-height: 1em;
+    color: #b5b5b5;
+    margin: 0;
+}
+@media screen and (max-width:767px){
+    .recomend_drama{
+        margin-top: 50px;
+    }
+    .recomend_drama .flex{
+        display: block;
+    }
+    .recomend_drama .flex{
+        display: block;
+    }
+    .recomend_drama .flex .text{
+        width: 100%;
+        margin-right: 0;
+    }
+    .recomend_drama .flex .image{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .recomend_drama .flex .text p{
+        margin-bottom: 20px;
+    }
+    .recomend_drama dl{
+        display: block;
+    }
+    .recomend_drama dl dt,
+    .recomend_drama dl dd{
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .recomend_drama dl dt{
+        padding-top: 20px;
+        border: none;
+        margin-bottom: 6px;
+    }
+    .recomend_drama dl dd{
+        padding-bottom: 20px;
+    }
+}
+
+

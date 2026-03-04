@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.831 20.826">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #ffca04;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <polyline class="a" points="1.334 10.326 10.834 18.826 26.334 1.326"/>
+</svg>

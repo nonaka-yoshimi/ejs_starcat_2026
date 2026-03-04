@@ -1,0 +1,71 @@
+{
+	"default": {
+		"description": "スターキャットをはじめてご利用になる方へ 最大10GのWi-Fi付インターネットをプロバイダ料込みのお得な料金で提供。地デジや、BS、CSなどの専門チャンネルが楽しめます。電話も安い。",
+		"keywords": "スターキャット,ケーブルテレビ,CATV,愛知,名古屋,北名古屋,豊山,江南,岩倉,清須,地デジ,BS,CS,インターネットプロバイダ,スターキャットチャンネル",
+		"root": "https://www.starcat.co.jp/www.starcat.co.jp"
+	},
+	"top": {
+		"title": "愛知県のスターキャット - 名古屋の ケーブルテレビ、インターネットプロバイダ、電話",
+		"directory": ["/"],
+		"directoryText": ["トップページ"],
+		"mainClass": ["topPage"],
+		"cssFiles": [
+			"/css/slick-theme.css",
+			"/css/slick.css",
+			"/css/base_202401.css",
+			"/css/layout_202401.css",
+			"/css/common_202401.css",
+			"/css/mv_carousel.css",
+			"/css/top_202401.css"
+		],
+		"jsFiles": [
+			"/js/jquery-3.6.1.min.js",
+			"/js/slick.min.js",
+			"/js/common_202401.js",
+			"/js/mv_carousel.js"
+		]
+	},
+	"join": {
+		"title": "新規加入をご検討のお客様 │ スターキャット株式会社",
+		"directory": ["/", "/join/"],
+		"directoryText": ["新規加入をご検討のお客様"],
+		"cssFiles": [
+			"/css/slick-theme.css",
+			"/css/slick.css",
+			"/css/new_layout.css",
+			"/css/new_header.css",
+			"/css/new_join_header.css",
+			"/css/sidemenu.css",
+			"/css/margin.css",
+			"/css/button.css",
+			"/css/content_list.css",
+			"/css/list.css",
+			"/css/pagenation.css",
+			"/css/plaza_icon.css",
+			"/css/section_header.css",
+			"/css/table.css",
+			"/css/summary.css",
+			"/css/banner.css",
+			"/css/block.css",
+			"/css/title.css",
+			"/css/plan_list.css",
+			"/css/set_contents.css",
+			"/css/price_area.css",
+			"/css/procedure.css",
+			"/css/recomend_drama.css",
+			"/css/print.css",
+			"/css/base_202401.css",
+			"/css/layout_202401.css",
+			"/css/common_202401.css",
+			"/css/service.css",
+			"/css/join.css",
+			"/css/join_menu.css"
+		],
+		"jsFiles": [
+			"/js/jquery.min.js",
+			"/js/freecall_modal.js",
+			"/js/slick.min.js",
+			"/js/common_202401.js"
+		]
+	}
+}

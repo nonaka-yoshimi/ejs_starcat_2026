@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+/* ヘッダー */
+#join_toggle {
+    color: #005bac;
+    font-weight: bold;
+    padding: 22px 20px 27px;
+    border-top: 5px solid #fccf00;
+}
+
+#join_toggle:after {
+    content: url(/img/icon/header_current_icon.svg);
+}
+
+/* トグルナビ OPEN時 */
+#join_toggle.on {
+    border-top: 5px solid #505050;
+}
+
+@media screen and (max-width:1300px) {
+    #join_toggle {
+        padding: 4px 20px 17px;
+    }
+}
+
+

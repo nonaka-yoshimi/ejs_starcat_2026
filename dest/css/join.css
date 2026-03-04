@@ -1,0 +1,71 @@
+/* 選ばれる理由 text_item幅上書き */
+.main_content .text_item {
+  max-width:550px;
+}
+
+.black_back { margin-top:0; }
+#about_service h4 { margin-top:100px; font-size:28px; }
+#about_service h6 { margin-top:80px; }
+
+@media screen and (max-width: 767px) {
+#about_service h4 { margin-top:70px; font-size:24px; }
+#about_service h6 { margin-top:50px; }
+}
+
+/* おすすめプラン */
+.recomend_plan{
+    margin-bottom: 80px;
+}
+.recomend_plan .sp{
+    display: none;
+}
+@media screen and (max-width:767px){
+    .recomend_plan{
+        margin-bottom: 40px;
+    }
+    .recomend_plan .pc{
+        display: none;
+    }
+    .recomend_plan .sp{
+        display: block;
+    }
+}
+
+/* バナーエリア */
+.banner_area .sp{
+    display: none;
+}
+.banner_area .pc a{
+    display: block;
+}
+.banner_area .pc > *{
+    margin-bottom: 40px;
+}
+.banner_area .pc > *:last-child{
+    margin-bottom: 60px;
+}
+@media screen and (max-width:767px){
+    .recomend_plan{
+        margin-bottom: 50px;
+    }
+    .banner_area .pc,
+    .recomend_plan .pc{
+        display: none;
+    }
+    .banner_area .sp,
+    .recomend_plan .sp{
+        display: block;
+    }
+    .banner_area .sp a{
+        display: block;
+    }
+    .banner_area .sp > *{
+        margin-bottom: 20px;
+    }
+    .banner_area .sp > *:last-child{
+        margin-bottom: 40px;
+    }
+}
+
+
+

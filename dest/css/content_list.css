@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* CSS Document */
+/* コンテンツ一覧 */
+.content_item{
+    display: inline-block;
+    max-width: 525px;
+    width: 49%;
+    margin-bottom: 50px;
+    position: relative;
+    border: 1px solid #cccccc;
+}
+.content_item::before{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 50px 50px 0px 0px;
+    border-right-color: #005bac;
+}
+.content_item::after{
+    display: block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px #fccf00;
+    border-right: solid 2px #fccf00;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.content_item .content_item_inner{
+    padding: 40px;
+}
+.content_item .content_image{
+    overflow:hidden;
+    margin-bottom: 40px;
+}
+.content_item .content_title{
+    font-size: 20px;
+    line-height: 1em;
+    font-weight: bold;
+    color: #005bac;
+    margin-bottom: 36px;
+}
+.content_item p{
+    color: #333;
+    margin-bottom: 0;
+}
+@media screen and (max-width:767px){
+    .content_list{
+        margin-bottom: 0;
+    }
+    .content_item{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .content_item:last-child{
+        margin-bottom: 0;
+    }
+    .content_item .content_item_inner {
+        padding: 30px;
+    }
+    .content_item .content_image{
+        margin-bottom: 30px;
+    }
+    .content_item .content_title{
+        margin-bottom: 26px;
+    }
+}
+
+/* コンテンツ一覧 - ホバー時の処理 */
+.content_item{
+    transition: all 0.4s ease-in-out;
+}
+.content_item:hover{
+    transition: all 0.4s ease-in-out;
+    box-shadow: 1px 1px 8px rgba(0,0,0,.25);
+}
+.content_item a:hover{
+    opacity: 1;
+}
+.content_item:hover::before{
+    border-right-color: #2f8fe5;
+}
+.content_item:hover .content_title{
+    color: #2f8fe5;
+}
+.content_item:hover .content_image img{
+    transform: scale(1.1 ,1.1);
+    transition: 1s all;
+}
+.content_item .content_image img{
+    transition: 1s all;
+}
+
+
+

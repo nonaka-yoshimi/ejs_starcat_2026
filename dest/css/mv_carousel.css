@@ -1,0 +1,62 @@
+#mainVisual .slick-next {
+  right: 20px;
+}
+#mainVisual .slick-prev {
+  left: 20px;
+}
+
+#mainVisual .slick-prev,
+#mainVisual .slick-next {
+  z-index: 1;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 3px #fff solid;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 0.5;
+}
+#mainVisual .slick-prev:hover,
+#mainVisual .slick-next:hover {
+  opacity: 1;
+}
+#mainVisual .slick-prev {
+  transform: rotate(180deg);
+}
+
+#mainVisual .slick-prev::before,
+#mainVisual .slick-next::before {
+  opacity: 1;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid #fff;
+  border-top: 3px solid #fff;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  right: 0;
+  margin: auto;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 768px) {
+  #mainVisual .slick-prev,
+  #mainVisual .slick-next {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+  #mainVisual .slick-prev::before,
+  #mainVisual .slick-next::before {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+}
+
+
+

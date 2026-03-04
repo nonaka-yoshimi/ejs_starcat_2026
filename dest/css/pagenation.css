@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* CSS Document */
+.pagenation{
+    margin-top: 50px;
+    text-align: center;
+}
+.pagenation a{
+    display: inline-block;
+    width: 28px;
+    height: 38px;
+    font-size:16px;
+    line-height:40px;
+    text-align:center;
+    color:#005bac;
+    border: 1px solid #005bac;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.pagenation a:last-child{
+    margin-right: 0;
+}
+.pagenation a:hover{
+    opacity: 1;
+    background: #005bac;
+    color: #fff;
+    border: 1px solid #005bac;
+}
+.pagenation > a{
+    width: 78px;
+}
+.pagenation > a:last-child{
+    margin-left: 15px;
+}
+.pagenation a.current{
+    background: #ececec;
+    color: #333;
+    border: 1px solid #ececec;
+}
+@media screen and (max-width:767px){
+    .pagenation .WCMpaged a{
+        display: none;
+    }
+    .pagenation .WCMpaged a.current{
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+

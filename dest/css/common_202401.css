@@ -1,0 +1,3287 @@
+@charset "UTF-8";
+/*□□□□□□□□□□ 汎用クラス □□□□□□□□□□*/
+/*||| アイコン類 |||*/
+/*maskを指定してあるものはbackgroundで色変更*/
+[data-icon].icon_before::before {
+  display: block;
+  width: 0.8em;
+  height: 0.8em;
+  content: "";
+}
+[data-icon].icon_before::after {
+  display: none;
+}
+[data-icon].icon_after::before {
+  display: none;
+}
+[data-icon].icon_after::after {
+  display: block;
+  width: 0.8em;
+  height: 0.8em;
+  content: "";
+}
+[data-icon].icon_blue::before, [data-icon].icon_blue::after {
+  background-color: #005bac;
+}
+[data-icon].icon_yellow::before, [data-icon].icon_yellow::after {
+  background-color: #fccf00 !important;
+}
+[data-icon].icon_white::before, [data-icon].icon_white::after {
+  background-color: #fff !important;
+}
+[data-icon].icon_12::before, [data-icon].icon_12::after {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+[data-icon].icon_18::before, [data-icon].icon_18::after {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+[data-icon].icon_24::before, [data-icon].icon_24::after {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+[data-icon].icon_30::before, [data-icon].icon_30::after {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+[data-icon]::before {
+  display: block;
+  content: "";
+}
+[data-icon]::before, [data-icon]::after {
+  mask-mode: alpha;
+}
+
+[data-icon=arrow_next] {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 5px;
+  text-decoration: none;
+}
+[data-icon=arrow_next]::before, [data-icon=arrow_next]::after {
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=arrow_prev] {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 5px;
+  text-decoration: none;
+}
+[data-icon=arrow_prev]::before, [data-icon=arrow_prev]::after {
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolygon%20points%3D%225.8%2C11.3%200.1%2C5.6%205.6%2C0.1%207.1%2C1.5%202.9%2C5.6%207.2%2C9.9%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolygon%20points%3D%225.8%2C11.3%200.1%2C5.6%205.6%2C0.1%207.1%2C1.5%202.9%2C5.6%207.2%2C9.9%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=close] {
+  display: grid;
+}
+[data-icon=close]::before {
+  width: 1em;
+  height: 1em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2010.5%2010.5%22%20style%3D%22enable-background%3Anew%200%200%2010.5%2010.5%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cg%3E%20%3Cline%20class%3D%22st0%22%20x1%3D%220.7%22%20y1%3D%220.7%22%20x2%3D%229.8%22%20y2%3D%229.8%22%2F%3E%20%3Cline%20class%3D%22st0%22%20x1%3D%229.8%22%20y1%3D%220.7%22%20x2%3D%220.7%22%20y2%3D%229.8%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2010.5%2010.5%22%20style%3D%22enable-background%3Anew%200%200%2010.5%2010.5%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cg%3E%20%3Cline%20class%3D%22st0%22%20x1%3D%220.7%22%20y1%3D%220.7%22%20x2%3D%229.8%22%20y2%3D%229.8%22%2F%3E%20%3Cline%20class%3D%22st0%22%20x1%3D%229.8%22%20y1%3D%220.7%22%20x2%3D%220.7%22%20y2%3D%229.8%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=plus]::before, [data-icon=plus]::after {
+  width: 1em;
+  height: 1em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2018%22%20style%3D%22enable-background%3Anew%200%200%2018%2018%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-379%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C7.5h-6v-6C10.5%2C0.7%2C9.8%2C0%2C9%2C0S7.5%2C0.7%2C7.5%2C1.5v6h-6C0.7%2C7.5%2C0%2C8.2%2C0%2C9s0.7%2C1.5%2C1.5%2C1.5h6v6C7.5%2C17.3%2C8.2%2C18%2C9%2C18%20s1.5-0.7%2C1.5-1.5v-6h6c0.8%2C0%2C1.5-0.7%2C1.5-1.5S17.3%2C7.5%2C16.5%2C7.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2018%22%20style%3D%22enable-background%3Anew%200%200%2018%2018%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-379%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C7.5h-6v-6C10.5%2C0.7%2C9.8%2C0%2C9%2C0S7.5%2C0.7%2C7.5%2C1.5v6h-6C0.7%2C7.5%2C0%2C8.2%2C0%2C9s0.7%2C1.5%2C1.5%2C1.5h6v6C7.5%2C17.3%2C8.2%2C18%2C9%2C18%20s1.5-0.7%2C1.5-1.5v-6h6c0.8%2C0%2C1.5-0.7%2C1.5-1.5S17.3%2C7.5%2C16.5%2C7.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=minus]::before, [data-icon=minus]::after {
+  width: 1em;
+  height: 1em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%203%22%20style%3D%22enable-background%3Anew%200%200%2018%203%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%223%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-371.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C3h-15C0.7%2C3%2C0%2C2.3%2C0%2C1.5S0.7%2C0%2C1.5%2C0h15C17.3%2C0%2C18%2C0.7%2C18%2C1.5S17.3%2C3%2C16.5%2C3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%203%22%20style%3D%22enable-background%3Anew%200%200%2018%203%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%223%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-371.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C3h-15C0.7%2C3%2C0%2C2.3%2C0%2C1.5S0.7%2C0%2C1.5%2C0h15C17.3%2C0%2C18%2C0.7%2C18%2C1.5S17.3%2C3%2C16.5%2C3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=blank] {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  text-decoration: none;
+}
+[data-icon=blank]::before, [data-icon=blank]::after {
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%207%22%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M1%2C2H0V7H7V6H1ZM2%2C0V5H9V0ZM8%2C2H3V1H8Z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%207%22%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M1%2C2H0V7H7V6H1ZM2%2C0V5H9V0ZM8%2C2H3V1H8Z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=mypage]::before, [data-icon=mypage]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2027.8%2025%22%20style%3D%22enable-background%3Anew%200%200%2027.8%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2227.8%22%20x%3D%22101.9%22%20y%3D%22102.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M13.9%2C0L0%2C12h4.9v13H11h5.8h6.2V12h4.9L13.9%2C0z%20M19.3%2C18.6c-0.2%2C1.3-1.1%2C2.3-2.4%2C3c-1%2C0.5-1.7%2C0.7-3%2C0.8%20c-1.3%2C0-2.1-0.3-3-0.8c-0.7-0.4-1.5-0.9-2-1.8l-0.1-0.2c-0.1-0.3-0.2-0.6-0.3-1c-0.1-0.7%2C0-1.4%2C0.4-2.1c0.1-0.1%2C2.4-4.1%2C2.4-4.1%20l1.1%2C2c0.4-0.1%2C1-0.2%2C1.5-0.2c0.5%2C0%2C1.1%2C0%2C1.7%2C0.2l1.2-2c0%2C0%2C0.6%2C1%2C1.2%2C2.1l0.1%2C0.2v0h0c0.4%2C0.8%2C0.9%2C1.5%2C1.1%2C1.9%20C19.3%2C17.2%2C19.4%2C17.8%2C19.3%2C18.6z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2027.8%2025%22%20style%3D%22enable-background%3Anew%200%200%2027.8%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2227.8%22%20x%3D%22101.9%22%20y%3D%22102.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M13.9%2C0L0%2C12h4.9v13H11h5.8h6.2V12h4.9L13.9%2C0z%20M19.3%2C18.6c-0.2%2C1.3-1.1%2C2.3-2.4%2C3c-1%2C0.5-1.7%2C0.7-3%2C0.8%20c-1.3%2C0-2.1-0.3-3-0.8c-0.7-0.4-1.5-0.9-2-1.8l-0.1-0.2c-0.1-0.3-0.2-0.6-0.3-1c-0.1-0.7%2C0-1.4%2C0.4-2.1c0.1-0.1%2C2.4-4.1%2C2.4-4.1%20l1.1%2C2c0.4-0.1%2C1-0.2%2C1.5-0.2c0.5%2C0%2C1.1%2C0%2C1.7%2C0.2l1.2-2c0%2C0%2C0.6%2C1%2C1.2%2C2.1l0.1%2C0.2v0h0c0.4%2C0.8%2C0.9%2C1.5%2C1.1%2C1.9%20C19.3%2C17.2%2C19.4%2C17.8%2C19.3%2C18.6z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=search]::before, [data-icon=search]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2016%2016%22%20style%3D%22enable-background%3Anew%200%200%2016%2016%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2216%22%20width%3D%2216%22%20x%3D%22-70%22%20y%3D%2282.3%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16%2C14.7l-3.8-3.8c2-2.7%2C1.8-6.5-0.6-8.9c-1.3-1.3-3.1-2-4.8-2S3.3%2C0.7%2C2%2C2c-2.7%2C2.7-2.7%2C6.9%2C0%2C9.6c1.3%2C1.3%2C3.1%2C2%2C4.8%2C2%20c1.4%2C0%2C2.9-0.5%2C4.1-1.4l3.8%2C3.8L16%2C14.7z%20M3.3%2C10.3c-1.9-1.9-1.9-5%2C0-6.9c0.9-0.9%2C2.2-1.4%2C3.5-1.4c1.3%2C0%2C2.5%2C0.5%2C3.5%2C1.4%20c1.9%2C1.9%2C1.9%2C5%2C0%2C6.9c-0.9%2C0.9-2.2%2C1.4-3.5%2C1.4C5.5%2C11.7%2C4.3%2C11.2%2C3.3%2C10.3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2016%2016%22%20style%3D%22enable-background%3Anew%200%200%2016%2016%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2216%22%20width%3D%2216%22%20x%3D%22-70%22%20y%3D%2282.3%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16%2C14.7l-3.8-3.8c2-2.7%2C1.8-6.5-0.6-8.9c-1.3-1.3-3.1-2-4.8-2S3.3%2C0.7%2C2%2C2c-2.7%2C2.7-2.7%2C6.9%2C0%2C9.6c1.3%2C1.3%2C3.1%2C2%2C4.8%2C2%20c1.4%2C0%2C2.9-0.5%2C4.1-1.4l3.8%2C3.8L16%2C14.7z%20M3.3%2C10.3c-1.9-1.9-1.9-5%2C0-6.9c0.9-0.9%2C2.2-1.4%2C3.5-1.4c1.3%2C0%2C2.5%2C0.5%2C3.5%2C1.4%20c1.9%2C1.9%2C1.9%2C5%2C0%2C6.9c-0.9%2C0.9-2.2%2C1.4-3.5%2C1.4C5.5%2C11.7%2C4.3%2C11.2%2C3.3%2C10.3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=attention]::before, [data-icon=attention]::after {
+  background: url("/img/icon/attention.svg") no-repeat center center/contain;
+}
+
+[data-icon=beginner]::before, [data-icon=beginner]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2025%22%20style%3D%22enable-background%3Anew%200%200%2018%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2218%22%20x%3D%22106.8%22%20y%3D%22102.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M17.9%2C0.5C17.9%2C0.5%2C17.9%2C0.4%2C17.9%2C0.5c-0.1-0.1-0.1-0.2-0.2-0.2c0%2C0%2C0%2C0%2C0%2C0c-0.1-0.1-0.1-0.1-0.2-0.1c0%2C0%2C0%2C0-0.1%2C0%20c-0.1%2C0-0.1%2C0-0.2%2C0c0%2C0%2C0%2C0%2C0%2C0c0%2C0%2C0%2C0%2C0%2C0c0%2C0-0.1%2C0-0.1%2C0c0%2C0%2C0%2C0-0.1%2C0c-0.1%2C0-0.1%2C0.1-0.2%2C0.1L9.5%2C5.4C9.3%2C5.5%2C9.2%2C5.6%2C9%2C5.6%20c-0.2%2C0-0.3%2C0-0.5-0.1L1.2%2C0.1C1.1%2C0%2C0.9%2C0%2C0.8%2C0C0.4%2C0%2C0%2C0.3%2C0%2C0.8v17.6c0%2C0.2%2C0.1%2C0.5%2C0.3%2C0.6l8.2%2C5.9C8.7%2C25%2C8.8%2C25%2C9%2C25%20s0.3%2C0%2C0.5-0.1l8.2-5.9c0.2-0.1%2C0.3-0.4%2C0.3-0.6V0.8C18%2C0.7%2C18%2C0.6%2C17.9%2C0.5z%20M2%2C17.7V3.2L7.4%2C7c0.5%2C0.3%2C1%2C0.5%2C1.6%2C0.5v15.2L2%2C17.7z%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2025%22%20style%3D%22enable-background%3Anew%200%200%2018%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2218%22%20x%3D%22106.8%22%20y%3D%22102.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M17.9%2C0.5C17.9%2C0.5%2C17.9%2C0.4%2C17.9%2C0.5c-0.1-0.1-0.1-0.2-0.2-0.2c0%2C0%2C0%2C0%2C0%2C0c-0.1-0.1-0.1-0.1-0.2-0.1c0%2C0%2C0%2C0-0.1%2C0%20c-0.1%2C0-0.1%2C0-0.2%2C0c0%2C0%2C0%2C0%2C0%2C0c0%2C0%2C0%2C0%2C0%2C0c0%2C0-0.1%2C0-0.1%2C0c0%2C0%2C0%2C0-0.1%2C0c-0.1%2C0-0.1%2C0.1-0.2%2C0.1L9.5%2C5.4C9.3%2C5.5%2C9.2%2C5.6%2C9%2C5.6%20c-0.2%2C0-0.3%2C0-0.5-0.1L1.2%2C0.1C1.1%2C0%2C0.9%2C0%2C0.8%2C0C0.4%2C0%2C0%2C0.3%2C0%2C0.8v17.6c0%2C0.2%2C0.1%2C0.5%2C0.3%2C0.6l8.2%2C5.9C8.7%2C25%2C8.8%2C25%2C9%2C25%20s0.3%2C0%2C0.5-0.1l8.2-5.9c0.2-0.1%2C0.3-0.4%2C0.3-0.6V0.8C18%2C0.7%2C18%2C0.6%2C17.9%2C0.5z%20M2%2C17.7V3.2L7.4%2C7c0.5%2C0.3%2C1%2C0.5%2C1.6%2C0.5v15.2L2%2C17.7z%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=user]::before, [data-icon=user]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2015.5%2024%22%20style%3D%22enable-background%3Anew%200%200%2015.5%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3A%23000000%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M7.8%2C8.8H7.3c-1.9%2C0-3.5-1.6-3.5-3.5V3.5C3.8%2C1.6%2C5.4%2C0%2C7.3%2C0h0.5c1.9%2C0%2C3.5%2C1.6%2C3.5%2C3.5v1.8%20C11.4%2C7.2%2C9.8%2C8.8%2C7.8%2C8.8z%22%2F%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M9%2C10.7H8.7H6.8H6.5c-3.6%2C0-6.5%2C3.4-6.5%2C7.6V24h2.2v-6.3h1.1V24h3.5h2h3.5v-6.3h1.1V24h2.2v-5.7%20C15.5%2C14.1%2C12.5%2C10.7%2C9%2C10.7z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2015.5%2024%22%20style%3D%22enable-background%3Anew%200%200%2015.5%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3A%23000000%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M7.8%2C8.8H7.3c-1.9%2C0-3.5-1.6-3.5-3.5V3.5C3.8%2C1.6%2C5.4%2C0%2C7.3%2C0h0.5c1.9%2C0%2C3.5%2C1.6%2C3.5%2C3.5v1.8%20C11.4%2C7.2%2C9.8%2C8.8%2C7.8%2C8.8z%22%2F%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M9%2C10.7H8.7H6.8H6.5c-3.6%2C0-6.5%2C3.4-6.5%2C7.6V24h2.2v-6.3h1.1V24h3.5h2h3.5v-6.3h1.1V24h2.2v-5.7%20C15.5%2C14.1%2C12.5%2C10.7%2C9%2C10.7z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=corporation]::before, [data-icon=corporation]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2016%2025%22%20style%3D%22enable-background%3Anew%200%200%2016%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2216%22%20x%3D%22106.8%22%20y%3D%22102.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16%2C0v25h-5.4v-3.9H5.4V25H0V0H16z%20M7.1%2C2.8H2.7v2.8h4.3V2.8z%20M13.3%2C2.8H8.9v2.8h4.3V2.8z%20M7.1%2C7.2H2.7V10h4.3V7.2z%20M13.3%2C7.2H8.9V10h4.3V7.2z%20M7.1%2C11.7H2.7v2.8h4.3V11.7z%20M13.3%2C11.7H8.9v2.8h4.3V11.7z%20M7.1%2C16.1H2.7v2.8h4.3V16.1z%20M13.3%2C16.1H8.9%20v2.8h4.3V16.1z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2016%2025%22%20style%3D%22enable-background%3Anew%200%200%2016%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2216%22%20x%3D%22106.8%22%20y%3D%22102.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16%2C0v25h-5.4v-3.9H5.4V25H0V0H16z%20M7.1%2C2.8H2.7v2.8h4.3V2.8z%20M13.3%2C2.8H8.9v2.8h4.3V2.8z%20M7.1%2C7.2H2.7V10h4.3V7.2z%20M13.3%2C7.2H8.9V10h4.3V7.2z%20M7.1%2C11.7H2.7v2.8h4.3V11.7z%20M13.3%2C11.7H8.9v2.8h4.3V11.7z%20M7.1%2C16.1H2.7v2.8h4.3V16.1z%20M13.3%2C16.1H8.9%20v2.8h4.3V16.1z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=faq]::before, [data-icon=faq]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2016%2016%22%20style%3D%22enable-background%3Anew%200%200%2016%2016%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2216%22%20width%3D%2216%22%20x%3D%2261%22%20y%3D%2240%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M8%2C0C3.6%2C0%2C0%2C3.6%2C0%2C8c0%2C2.4%2C1%2C4.5%2C2.7%2C6L2%2C16h6c4.4%2C0%2C8-3.6%2C8-8S12.4%2C0%2C8%2C0z%20M7.9%2C12.5c-0.6%2C0-1-0.5-1-1.1c0-0.6%2C0.5-1%2C1-1%20s1.1%2C0.5%2C1.1%2C1C9%2C12%2C8.5%2C12.5%2C7.9%2C12.5z%20M9.5%2C8C9.1%2C8.4%2C8.8%2C8.4%2C8.8%2C9c0%2C0.5-0.2%2C0.7-0.9%2C0.7C7.3%2C9.7%2C7%2C9.3%2C7%2C9s0-1.1%2C0.9-1.8%20c0.8-0.6%2C1.2-0.9%2C1.2-1.3c0-0.5-0.4-0.7-1-0.7c-1%2C0-1.1%2C0.7-1.2%2C1C6.9%2C6.7%2C6.2%2C6.7%2C6%2C6.7C5.7%2C6.7%2C5%2C6.7%2C5%2C6c0-0.8%2C0.7-2.5%2C3.2-2.5%20C10%2C3.5%2C11%2C4.6%2C11%2C5.9C11%2C6.8%2C10.6%2C7.1%2C9.5%2C8z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2016%2016%22%20style%3D%22enable-background%3Anew%200%200%2016%2016%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2216%22%20width%3D%2216%22%20x%3D%2261%22%20y%3D%2240%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M8%2C0C3.6%2C0%2C0%2C3.6%2C0%2C8c0%2C2.4%2C1%2C4.5%2C2.7%2C6L2%2C16h6c4.4%2C0%2C8-3.6%2C8-8S12.4%2C0%2C8%2C0z%20M7.9%2C12.5c-0.6%2C0-1-0.5-1-1.1c0-0.6%2C0.5-1%2C1-1%20s1.1%2C0.5%2C1.1%2C1C9%2C12%2C8.5%2C12.5%2C7.9%2C12.5z%20M9.5%2C8C9.1%2C8.4%2C8.8%2C8.4%2C8.8%2C9c0%2C0.5-0.2%2C0.7-0.9%2C0.7C7.3%2C9.7%2C7%2C9.3%2C7%2C9s0-1.1%2C0.9-1.8%20c0.8-0.6%2C1.2-0.9%2C1.2-1.3c0-0.5-0.4-0.7-1-0.7c-1%2C0-1.1%2C0.7-1.2%2C1C6.9%2C6.7%2C6.2%2C6.7%2C6%2C6.7C5.7%2C6.7%2C5%2C6.7%2C5%2C6c0-0.8%2C0.7-2.5%2C3.2-2.5%20C10%2C3.5%2C11%2C4.6%2C11%2C5.9C11%2C6.8%2C10.6%2C7.1%2C9.5%2C8z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=servicearea]::before, [data-icon=servicearea]::after {
+  -webkit-mask: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20id%3D%22a%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016.7345%2019.9373%22%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill%3A%23000%3Bstroke-width%3A0px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cpath%20class%3D%22b%22%20d%3D%22M8.1759.0021C4.0809.0922.6102%2C3.2002.0704%2C7.2026c-.7285%2C5.4007%2C4.374%2C9.6699%2C7.2803%2C12.3388.5735.5267%2C1.458.5283%2C2.0315.0016%2C2.7159-2.4944%2C7.3523-6.387%2C7.3523-11.2952C16.7345%2C3.63%2C12.8845-.1015%2C8.1759.0021ZM8.367%2C14.0579c-3.2456%2C0-5.8862-2.6064-5.8862-5.8096s2.6406-5.8105%2C5.8862-5.8105%2C5.8867%2C2.6064%2C5.8867%2C5.8105-2.6406%2C5.8096-5.8867%2C5.8096Z%22%2F%3E%3Cpolygon%20class%3D%22b%22%20points%3D%227.5975%2011.762%204.3871%208.8889%205.4095%207.7464%207.4715%209.5901%2011.2616%205.3108%2012.41%206.3284%207.5975%2011.762%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20id%3D%22a%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016.7345%2019.9373%22%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill%3A%23000%3Bstroke-width%3A0px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cpath%20class%3D%22b%22%20d%3D%22M8.1759.0021C4.0809.0922.6102%2C3.2002.0704%2C7.2026c-.7285%2C5.4007%2C4.374%2C9.6699%2C7.2803%2C12.3388.5735.5267%2C1.458.5283%2C2.0315.0016%2C2.7159-2.4944%2C7.3523-6.387%2C7.3523-11.2952C16.7345%2C3.63%2C12.8845-.1015%2C8.1759.0021ZM8.367%2C14.0579c-3.2456%2C0-5.8862-2.6064-5.8862-5.8096s2.6406-5.8105%2C5.8862-5.8105%2C5.8867%2C2.6064%2C5.8867%2C5.8105-2.6406%2C5.8096-5.8867%2C5.8096Z%22%2F%3E%3Cpolygon%20class%3D%22b%22%20points%3D%227.5975%2011.762%204.3871%208.8889%205.4095%207.7464%207.4715%209.5901%2011.2616%205.3108%2012.41%206.3284%207.5975%2011.762%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=faq_outline]::before, [data-icon=faq_outline]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026.2%2024.2%22%20style%3D%22enable-background%3Anew%200%200%2026.2%2024.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2224.2%22%20width%3D%2226.2%22%20x%3D%22-1287.1%22%20y%3D%22-909.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20d%3D%22M13.1%2C0C5.9%2C0%2C0%2C5.4%2C0%2C12.1c0%2C2.1%2C0.6%2C4.2%2C1.8%2C6.1l-1.7%2C4.2C0%2C22.6%2C0%2C22.9%2C0.2%2C23.1s0.4%2C0.4%2C0.7%2C0.3l6-0.7%20c1.9%2C0.9%2C4%2C1.4%2C6.2%2C1.4c7.2%2C0%2C13.1-5.4%2C13.1-12.1S20.3%2C0%2C13.1%2C0z%20M13.1%2C22.6c-2%2C0-3.9-0.5-5.7-1.4c-0.1-0.1-0.2-0.1-0.4-0.1%20c0%2C0-0.1%2C0-0.1%2C0l-4.9%2C0.6l1.4-3.3c0.1-0.2%2C0.1-0.5-0.1-0.8c-1.1-1.7-1.7-3.6-1.7-5.5c0-5.8%2C5.2-10.5%2C11.5-10.5%20c6.3%2C0%2C11.5%2C4.7%2C11.5%2C10.5S19.4%2C22.6%2C13.1%2C22.6z%22%2F%3E%20%3Crect%20x%3D%2211.7%22%20y%3D%2215.9%22%20width%3D%222.4%22%20height%3D%222.3%22%2F%3E%20%3Cpath%20d%3D%22M13.3%2C6.2c-1.5%2C0-2.6%2C0.4-3.4%2C1.2c-0.6%2C0.6-0.8%2C1.1-1%2C2.2l2.4%2C0.2c0.1-0.5%2C0.2-0.8%2C0.3-1.1c0.3-0.5%2C0.9-0.7%2C1.5-0.7%20c1.1%2C0%2C1.7%2C0.5%2C1.7%2C1.3c0%2C0.3-0.1%2C0.6-0.3%2C0.8c-0.2%2C0.2-0.5%2C0.5-0.8%2C0.7c-1%2C0.6-1.1%2C0.7-1.4%2C1.1c-0.4%2C0.5-0.6%2C1.1-0.6%2C2%20c0%2C0.5%2C0%2C0.5%2C0%2C0.8H14c0-0.3%2C0-0.4%2C0-0.6c0-0.4%2C0.1-0.8%2C0.3-1c0.2-0.3%2C0.4-0.5%2C1.1-0.9c0.8-0.5%2C1.2-0.9%2C1.5-1.3%20c0.3-0.4%2C0.5-1%2C0.5-1.7C17.3%2C7.4%2C15.8%2C6.2%2C13.3%2C6.2z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026.2%2024.2%22%20style%3D%22enable-background%3Anew%200%200%2026.2%2024.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2224.2%22%20width%3D%2226.2%22%20x%3D%22-1287.1%22%20y%3D%22-909.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20d%3D%22M13.1%2C0C5.9%2C0%2C0%2C5.4%2C0%2C12.1c0%2C2.1%2C0.6%2C4.2%2C1.8%2C6.1l-1.7%2C4.2C0%2C22.6%2C0%2C22.9%2C0.2%2C23.1s0.4%2C0.4%2C0.7%2C0.3l6-0.7%20c1.9%2C0.9%2C4%2C1.4%2C6.2%2C1.4c7.2%2C0%2C13.1-5.4%2C13.1-12.1S20.3%2C0%2C13.1%2C0z%20M13.1%2C22.6c-2%2C0-3.9-0.5-5.7-1.4c-0.1-0.1-0.2-0.1-0.4-0.1%20c0%2C0-0.1%2C0-0.1%2C0l-4.9%2C0.6l1.4-3.3c0.1-0.2%2C0.1-0.5-0.1-0.8c-1.1-1.7-1.7-3.6-1.7-5.5c0-5.8%2C5.2-10.5%2C11.5-10.5%20c6.3%2C0%2C11.5%2C4.7%2C11.5%2C10.5S19.4%2C22.6%2C13.1%2C22.6z%22%2F%3E%20%3Crect%20x%3D%2211.7%22%20y%3D%2215.9%22%20width%3D%222.4%22%20height%3D%222.3%22%2F%3E%20%3Cpath%20d%3D%22M13.3%2C6.2c-1.5%2C0-2.6%2C0.4-3.4%2C1.2c-0.6%2C0.6-0.8%2C1.1-1%2C2.2l2.4%2C0.2c0.1-0.5%2C0.2-0.8%2C0.3-1.1c0.3-0.5%2C0.9-0.7%2C1.5-0.7%20c1.1%2C0%2C1.7%2C0.5%2C1.7%2C1.3c0%2C0.3-0.1%2C0.6-0.3%2C0.8c-0.2%2C0.2-0.5%2C0.5-0.8%2C0.7c-1%2C0.6-1.1%2C0.7-1.4%2C1.1c-0.4%2C0.5-0.6%2C1.1-0.6%2C2%20c0%2C0.5%2C0%2C0.5%2C0%2C0.8H14c0-0.3%2C0-0.4%2C0-0.6c0-0.4%2C0.1-0.8%2C0.3-1c0.2-0.3%2C0.4-0.5%2C1.1-0.9c0.8-0.5%2C1.2-0.9%2C1.5-1.3%20c0.3-0.4%2C0.5-1%2C0.5-1.7C17.3%2C7.4%2C15.8%2C6.2%2C13.3%2C6.2z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=translation]::before, [data-icon=translation]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026%2016%22%20style%3D%22enable-background%3Anew%200%200%2026%2016%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2216%22%20width%3D%2226%22%20x%3D%2256%22%20y%3D%2240%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cg%3E%20%3Cpolygon%20class%3D%22st0%22%20points%3D%226.5%2C5.9%205.6%2C8.5%207.4%2C8.5%206.5%2C5.9%20%22%2F%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M23.9%2C0H11.2H9H2.1C1%2C0%2C0%2C1%2C0%2C2.1v11.8C0%2C15%2C1%2C16%2C2.1%2C16h10.5h2.2h9.1c1.2%2C0%2C2.1-1%2C2.1-2.1V2.1%20C26%2C1%2C25%2C0%2C23.9%2C0z%20M9.3%2C11h-1c-0.1%2C0-0.1%2C0-0.1-0.1L7.8%2C9.6H5.2l-0.4%2C1.3C4.8%2C11%2C4.7%2C11%2C4.6%2C11h-1c-0.1%2C0-0.1%2C0-0.1-0.1l2.3-6.6%20c0-0.1%2C0.1-0.1%2C0.1-0.1H7c0.1%2C0%2C0.1%2C0%2C0.1%2C0.1l2.3%2C6.6C9.4%2C11%2C9.4%2C11%2C9.3%2C11z%20M25.2%2C13.9c0%2C0.7-0.6%2C1.3-1.3%2C1.3h-9.3L11.4%2C0.8%20h12.5c0.7%2C0%2C1.3%2C0.6%2C1.3%2C1.3V13.9z%22%2F%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M21.1%2C6.8c0-0.1%2C0.1-0.1%2C0.1-0.2c0%2C0%2C0.1-0.1%2C0.1-0.1c0-0.1-0.1-0.1-0.2-0.2C21%2C6.2%2C20.6%2C6.1%2C20.3%2C6%20c0%2C0.2-0.1%2C0.5-0.1%2C0.6c-0.4%2C0-1%2C0.1-1.3%2C0.2c0-0.3%2C0-0.5%2C0.1-0.9c0.8-0.1%2C1.3-0.1%2C2.4-0.4c0.1%2C0%2C0.2-0.1%2C0.2-0.2%20c0-0.2%2C0-0.4-0.1-0.6c0-0.1%2C0-0.1-0.1-0.1c-0.8%2C0.2-1.4%2C0.3-2.2%2C0.4c0-0.1%2C0-0.3%2C0.1-0.4c0-0.1%2C0-0.2%2C0.1-0.3c0%2C0%2C0-0.1%2C0-0.1%20c0-0.1-0.1-0.1-0.2-0.2C19%2C4%2C18.7%2C4%2C18.2%2C3.9c0%2C0.1%2C0%2C0.3%2C0%2C0.4c0%2C0.2%2C0%2C0.6-0.1%2C0.9c-0.6%2C0-1.1%2C0-1.6%2C0c0%2C0.2%2C0%2C0.5%2C0%2C0.6%20C16.6%2C6%2C16.6%2C6%2C16.7%2C6c0.1%2C0%2C0.2%2C0%2C0.5%2C0c0.1%2C0%2C0.4%2C0%2C0.9%2C0c0%2C0.3%2C0%2C0.7%2C0%2C1.1c-1%2C0.5-2%2C1.6-2%2C2.6c0%2C0.7%2C0.4%2C1.1%2C0.9%2C1.1%20c0.4%2C0%2C0.9-0.2%2C1.5-0.6c0%2C0.1%2C0.1%2C0.2%2C0.1%2C0.3c0.1%2C0.1%2C0.1%2C0.1%2C0.2%2C0c0.1-0.1%2C0.3-0.2%2C0.5-0.3c0.1-0.1%2C0.1-0.1%2C0.1-0.2%20c-0.1-0.1-0.1-0.2-0.2-0.4c0.6-0.6%2C1.1-1.3%2C1.6-2.2c0.6%2C0.1%2C1.1%2C0.6%2C1.1%2C1.2c0%2C0.6-0.3%2C1-0.7%2C1.3c-0.3%2C0.2-1%2C0.5-1.6%2C0.6%20c0.3%2C0.2%2C0.4%2C0.4%2C0.5%2C0.5c0.1%2C0.2%2C0.2%2C0.2%2C0.4%2C0.2c1.4-0.4%2C2.4-1.2%2C2.4-2.4C22.8%2C7.8%2C22.2%2C7.1%2C21.1%2C6.8z%20M17.2%2C9.9%20c-0.2%2C0-0.3-0.1-0.3-0.3c0-0.6%2C0.4-1.2%2C1.1-1.6c0%2C0.5%2C0.1%2C1%2C0.2%2C1.5C17.8%2C9.7%2C17.4%2C9.9%2C17.2%2C9.9z%20M19%2C8.8%20c-0.1-0.4-0.1-0.8-0.1-1.3c0.4-0.1%2C0.8-0.2%2C1.1-0.2C19.7%2C7.8%2C19.3%2C8.4%2C19%2C8.8z%22%2F%3E%20%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026%2016%22%20style%3D%22enable-background%3Anew%200%200%2026%2016%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2216%22%20width%3D%2226%22%20x%3D%2256%22%20y%3D%2240%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cg%3E%20%3Cpolygon%20class%3D%22st0%22%20points%3D%226.5%2C5.9%205.6%2C8.5%207.4%2C8.5%206.5%2C5.9%20%22%2F%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M23.9%2C0H11.2H9H2.1C1%2C0%2C0%2C1%2C0%2C2.1v11.8C0%2C15%2C1%2C16%2C2.1%2C16h10.5h2.2h9.1c1.2%2C0%2C2.1-1%2C2.1-2.1V2.1%20C26%2C1%2C25%2C0%2C23.9%2C0z%20M9.3%2C11h-1c-0.1%2C0-0.1%2C0-0.1-0.1L7.8%2C9.6H5.2l-0.4%2C1.3C4.8%2C11%2C4.7%2C11%2C4.6%2C11h-1c-0.1%2C0-0.1%2C0-0.1-0.1l2.3-6.6%20c0-0.1%2C0.1-0.1%2C0.1-0.1H7c0.1%2C0%2C0.1%2C0%2C0.1%2C0.1l2.3%2C6.6C9.4%2C11%2C9.4%2C11%2C9.3%2C11z%20M25.2%2C13.9c0%2C0.7-0.6%2C1.3-1.3%2C1.3h-9.3L11.4%2C0.8%20h12.5c0.7%2C0%2C1.3%2C0.6%2C1.3%2C1.3V13.9z%22%2F%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M21.1%2C6.8c0-0.1%2C0.1-0.1%2C0.1-0.2c0%2C0%2C0.1-0.1%2C0.1-0.1c0-0.1-0.1-0.1-0.2-0.2C21%2C6.2%2C20.6%2C6.1%2C20.3%2C6%20c0%2C0.2-0.1%2C0.5-0.1%2C0.6c-0.4%2C0-1%2C0.1-1.3%2C0.2c0-0.3%2C0-0.5%2C0.1-0.9c0.8-0.1%2C1.3-0.1%2C2.4-0.4c0.1%2C0%2C0.2-0.1%2C0.2-0.2%20c0-0.2%2C0-0.4-0.1-0.6c0-0.1%2C0-0.1-0.1-0.1c-0.8%2C0.2-1.4%2C0.3-2.2%2C0.4c0-0.1%2C0-0.3%2C0.1-0.4c0-0.1%2C0-0.2%2C0.1-0.3c0%2C0%2C0-0.1%2C0-0.1%20c0-0.1-0.1-0.1-0.2-0.2C19%2C4%2C18.7%2C4%2C18.2%2C3.9c0%2C0.1%2C0%2C0.3%2C0%2C0.4c0%2C0.2%2C0%2C0.6-0.1%2C0.9c-0.6%2C0-1.1%2C0-1.6%2C0c0%2C0.2%2C0%2C0.5%2C0%2C0.6%20C16.6%2C6%2C16.6%2C6%2C16.7%2C6c0.1%2C0%2C0.2%2C0%2C0.5%2C0c0.1%2C0%2C0.4%2C0%2C0.9%2C0c0%2C0.3%2C0%2C0.7%2C0%2C1.1c-1%2C0.5-2%2C1.6-2%2C2.6c0%2C0.7%2C0.4%2C1.1%2C0.9%2C1.1%20c0.4%2C0%2C0.9-0.2%2C1.5-0.6c0%2C0.1%2C0.1%2C0.2%2C0.1%2C0.3c0.1%2C0.1%2C0.1%2C0.1%2C0.2%2C0c0.1-0.1%2C0.3-0.2%2C0.5-0.3c0.1-0.1%2C0.1-0.1%2C0.1-0.2%20c-0.1-0.1-0.1-0.2-0.2-0.4c0.6-0.6%2C1.1-1.3%2C1.6-2.2c0.6%2C0.1%2C1.1%2C0.6%2C1.1%2C1.2c0%2C0.6-0.3%2C1-0.7%2C1.3c-0.3%2C0.2-1%2C0.5-1.6%2C0.6%20c0.3%2C0.2%2C0.4%2C0.4%2C0.5%2C0.5c0.1%2C0.2%2C0.2%2C0.2%2C0.4%2C0.2c1.4-0.4%2C2.4-1.2%2C2.4-2.4C22.8%2C7.8%2C22.2%2C7.1%2C21.1%2C6.8z%20M17.2%2C9.9%20c-0.2%2C0-0.3-0.1-0.3-0.3c0-0.6%2C0.4-1.2%2C1.1-1.6c0%2C0.5%2C0.1%2C1%2C0.2%2C1.5C17.8%2C9.7%2C17.4%2C9.9%2C17.2%2C9.9z%20M19%2C8.8%20c-0.1-0.4-0.1-0.8-0.1-1.3c0.4-0.1%2C0.8-0.2%2C1.1-0.2C19.7%2C7.8%2C19.3%2C8.4%2C19%2C8.8z%22%2F%3E%20%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=maintenance_outline]::before, [data-icon=maintenance_outline]::after {
+  -webkit-mask: url("/img/icon/scroll_maintenance.svg") no-repeat center center/contain;
+  mask: url("/img/icon/scroll_maintenance.svg") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/*▽グローバルナビで使用*/
+[data-icon=entry]::before, [data-icon=entry]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E7%B7%A8%E9%9B%86%E3%83%A2%E3%83%BC%E3%83%89%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026%2023%22%20style%3D%22enable-background%3Anew%200%200%2026%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2223%22%20width%3D%2226%22%20x%3D%22-1203.7%22%20y%3D%22-856.6%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cg%3E%20%3Cpath%20d%3D%22M11.6%2C18l2.4-0.6l-2.2-2.7l-1%2C2.3c0.1%2C0.2%2C0.3%2C0.3%2C0.4%2C0.5C11.3%2C17.7%2C11.4%2C17.8%2C11.6%2C18z%22%2F%3E%20%3Cpath%20d%3D%22M10.5%2C17.4l-0.3%2C0.6c-0.1%2C0.2%2C0.1%2C0.4%2C0.3%2C0.4l0.6-0.2c-0.1-0.1-0.2-0.3-0.3-0.4C10.7%2C17.6%2C10.6%2C17.5%2C10.5%2C17.4z%22%2F%3E%20%3Cpath%20d%3D%22M23.3%2C8.7c-0.4-0.2-0.7-0.4-1-0.7l0%2C0l0%2C0c-0.3-0.4-0.4-0.7-0.5-1.1c-0.1-0.2-0.1-0.5-0.1-0.7l-9.4%2C8l2.2%2C2.7l9.4-8%20C23.8%2C8.9%2C23.6%2C8.8%2C23.3%2C8.7z%22%2F%3E%20%3Cpath%20d%3D%22M25.5%2C7.5c0-0.1%2C0.1-0.4%2C0.2-0.7l0%2C0l0%2C0l0-0.1C25.9%2C6.4%2C26%2C6%2C26%2C6l-0.7%2C0.1C25.2%2C6%2C25.1%2C5.8%2C25%2C5.7%20c-0.1-0.1-0.2-0.2-0.3-0.3l0.2-0.7c0%2C0-1.4%2C0.3-1.5%2C0.3C23.1%2C5%2C23%2C5.2%2C22.8%2C5.3c-0.1%2C0.1-0.1%2C0.2-0.2%2C0.3l0%2C0.1%20c-0.1%2C0.3-0.1%2C0.6%2C0%2C0.9c0.1%2C0.3%2C0.2%2C0.6%2C0.4%2C0.9c0.3%2C0.3%2C0.5%2C0.5%2C0.8%2C0.6c0.4%2C0.2%2C0.9%2C0.2%2C1.2%2C0C25.3%2C7.9%2C25.4%2C7.7%2C25.5%2C7.5z%22%2F%3E%20%3C%2Fg%3E%20%3Cpolygon%20points%3D%2218%2C23%200%2C23%200%2C0%2018%2C0%2018%2C11.9%2016.4%2C11.9%2016.4%2C1.7%201.6%2C1.7%201.6%2C21.3%2016.4%2C21.3%2016.4%2C18.3%2018%2C18.3%22%2F%3E%20%3Cg%3E%20%3Crect%20x%3D%224.3%22%20y%3D%223.8%22%20width%3D%229.5%22%20height%3D%221.7%22%2F%3E%20%3Crect%20x%3D%224.3%22%20y%3D%228.1%22%20width%3D%229.5%22%20height%3D%221.7%22%2F%3E%20%3Crect%20x%3D%224.3%22%20y%3D%2212.4%22%20width%3D%224.2%22%20height%3D%221.7%22%2F%3E%20%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E7%B7%A8%E9%9B%86%E3%83%A2%E3%83%BC%E3%83%89%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026%2023%22%20style%3D%22enable-background%3Anew%200%200%2026%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2223%22%20width%3D%2226%22%20x%3D%22-1203.7%22%20y%3D%22-856.6%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cg%3E%20%3Cpath%20d%3D%22M11.6%2C18l2.4-0.6l-2.2-2.7l-1%2C2.3c0.1%2C0.2%2C0.3%2C0.3%2C0.4%2C0.5C11.3%2C17.7%2C11.4%2C17.8%2C11.6%2C18z%22%2F%3E%20%3Cpath%20d%3D%22M10.5%2C17.4l-0.3%2C0.6c-0.1%2C0.2%2C0.1%2C0.4%2C0.3%2C0.4l0.6-0.2c-0.1-0.1-0.2-0.3-0.3-0.4C10.7%2C17.6%2C10.6%2C17.5%2C10.5%2C17.4z%22%2F%3E%20%3Cpath%20d%3D%22M23.3%2C8.7c-0.4-0.2-0.7-0.4-1-0.7l0%2C0l0%2C0c-0.3-0.4-0.4-0.7-0.5-1.1c-0.1-0.2-0.1-0.5-0.1-0.7l-9.4%2C8l2.2%2C2.7l9.4-8%20C23.8%2C8.9%2C23.6%2C8.8%2C23.3%2C8.7z%22%2F%3E%20%3Cpath%20d%3D%22M25.5%2C7.5c0-0.1%2C0.1-0.4%2C0.2-0.7l0%2C0l0%2C0l0-0.1C25.9%2C6.4%2C26%2C6%2C26%2C6l-0.7%2C0.1C25.2%2C6%2C25.1%2C5.8%2C25%2C5.7%20c-0.1-0.1-0.2-0.2-0.3-0.3l0.2-0.7c0%2C0-1.4%2C0.3-1.5%2C0.3C23.1%2C5%2C23%2C5.2%2C22.8%2C5.3c-0.1%2C0.1-0.1%2C0.2-0.2%2C0.3l0%2C0.1%20c-0.1%2C0.3-0.1%2C0.6%2C0%2C0.9c0.1%2C0.3%2C0.2%2C0.6%2C0.4%2C0.9c0.3%2C0.3%2C0.5%2C0.5%2C0.8%2C0.6c0.4%2C0.2%2C0.9%2C0.2%2C1.2%2C0C25.3%2C7.9%2C25.4%2C7.7%2C25.5%2C7.5z%22%2F%3E%20%3C%2Fg%3E%20%3Cpolygon%20points%3D%2218%2C23%200%2C23%200%2C0%2018%2C0%2018%2C11.9%2016.4%2C11.9%2016.4%2C1.7%201.6%2C1.7%201.6%2C21.3%2016.4%2C21.3%2016.4%2C18.3%2018%2C18.3%22%2F%3E%20%3Cg%3E%20%3Crect%20x%3D%224.3%22%20y%3D%223.8%22%20width%3D%229.5%22%20height%3D%221.7%22%2F%3E%20%3Crect%20x%3D%224.3%22%20y%3D%228.1%22%20width%3D%229.5%22%20height%3D%221.7%22%2F%3E%20%3Crect%20x%3D%224.3%22%20y%3D%2212.4%22%20width%3D%224.2%22%20height%3D%221.7%22%2F%3E%20%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=service]::before, [data-icon=service]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2023%2023%22%20style%3D%22enable-background%3Anew%200%200%2023%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Crect%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%229%22%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%2218%22%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20y%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%229%22%20y%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2023%2023%22%20style%3D%22enable-background%3Anew%200%200%2023%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Crect%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%229%22%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%2218%22%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20y%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%229%22%20y%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%20%3Crect%20x%3D%2218%22%20y%3D%2218%22%20width%3D%225%22%20height%3D%225%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=price]::before, [data-icon=price]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2025%2023%22%20style%3D%22enable-background%3Anew%200%200%2025%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M24.1%2C9.5c-0.4-0.8-1.4-2.6-2.4-4.4h0v0l-0.2-0.4C20%2C2.3%2C18.7%2C0%2C18.7%2C0L16%2C4.5c-1.2-0.2-2.6-0.4-3.8-0.4%20c-1.1%2C0-2.4%2C0.2-3.4%2C0.4L6.3%2C0c0%2C0-5.3%2C9.2-5.4%2C9.5c-0.8%2C1.6-1%2C3.3-0.8%2C4.9c0.1%2C0.9%2C0.4%2C1.6%2C0.7%2C2.3L1%2C17.1c1.1%2C2%2C3%2C3.3%2C4.6%2C4.1%20c2%2C1.1%2C4%2C1.7%2C6.9%2C1.7c3-0.1%2C4.6-0.5%2C6.9-1.7c3-1.6%2C5.1-3.8%2C5.6-6.9C25.2%2C12.6%2C24.9%2C11.2%2C24.1%2C9.5z%20M16.4%2C9.5l-2.2%2C3.8c0%2C0%2C0%2C0%2C0%2C0.1%20c0%2C0%2C0%2C0%2C0.1%2C0h1.6c0.2%2C0%2C0.3%2C0%2C0.4%2C0.1c0.1%2C0.1%2C0.2%2C0.2%2C0.2%2C0.4c0%2C0.1-0.1%2C0.3-0.2%2C0.4c-0.1%2C0.1-0.2%2C0.1-0.4%2C0.1h-2.1%20c-0.1%2C0-0.1%2C0-0.1%2C0.1v0.7c0%2C0.1%2C0%2C0.1%2C0.1%2C0.1h2.1c0.2%2C0%2C0.3%2C0%2C0.4%2C0.1c0.1%2C0.1%2C0.2%2C0.2%2C0.2%2C0.4c0%2C0.1-0.1%2C0.3-0.2%2C0.4%20c-0.1%2C0.1-0.2%2C0.1-0.4%2C0.1h-2.1c-0.1%2C0-0.1%2C0-0.1%2C0.1v1.4c0%2C0.2-0.1%2C0.4-0.3%2C0.6c-0.2%2C0.2-0.4%2C0.2-0.6%2C0.2h-0.5%20c-0.2%2C0-0.5-0.1-0.6-0.2c-0.2-0.2-0.3-0.3-0.3-0.6v-1.4c0-0.1%2C0-0.1-0.1-0.1H9.2c-0.2%2C0-0.3%2C0-0.4-0.1c-0.1-0.1-0.2-0.2-0.2-0.4%20c0-0.1%2C0.1-0.3%2C0.2-0.4c0.1-0.1%2C0.2-0.1%2C0.4-0.1h2.1c0.1%2C0%2C0.1%2C0%2C0.1-0.1v-0.7c0-0.1%2C0-0.1-0.1-0.1H9.2c-0.2%2C0-0.3%2C0-0.4-0.1%20c-0.1-0.1-0.2-0.2-0.2-0.4c0-0.1%2C0.1-0.3%2C0.2-0.4c0.1-0.1%2C0.2-0.1%2C0.4-0.1h1.6c0%2C0%2C0.1%2C0%2C0.1%2C0c0%2C0%2C0%2C0%2C0-0.1L8.6%2C9.5%20c0-0.1-0.1-0.1-0.1-0.2c0-0.1%2C0-0.2%2C0.1-0.3c0.1-0.2%2C0.3-0.2%2C0.5-0.2h0.6c0.3%2C0%2C0.5%2C0.1%2C0.7%2C0.2c0.2%2C0.1%2C0.4%2C0.3%2C0.5%2C0.5l0.7%2C1.5%20c0.4%2C0.9%2C0.7%2C1.6%2C0.9%2C2c0%2C0%2C0%2C0%2C0.1%2C0c0%2C0%2C0%2C0%2C0.1%2C0c0.3-0.7%2C0.6-1.3%2C0.9-2l0.7-1.5c0.1-0.2%2C0.3-0.4%2C0.5-0.5%20c0.2-0.1%2C0.5-0.2%2C0.7-0.2h0.5c0.2%2C0%2C0.4%2C0.1%2C0.5%2C0.2c0.1%2C0.1%2C0.1%2C0.2%2C0.1%2C0.3C16.5%2C9.4%2C16.5%2C9.4%2C16.4%2C9.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2025%2023%22%20style%3D%22enable-background%3Anew%200%200%2025%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M24.1%2C9.5c-0.4-0.8-1.4-2.6-2.4-4.4h0v0l-0.2-0.4C20%2C2.3%2C18.7%2C0%2C18.7%2C0L16%2C4.5c-1.2-0.2-2.6-0.4-3.8-0.4%20c-1.1%2C0-2.4%2C0.2-3.4%2C0.4L6.3%2C0c0%2C0-5.3%2C9.2-5.4%2C9.5c-0.8%2C1.6-1%2C3.3-0.8%2C4.9c0.1%2C0.9%2C0.4%2C1.6%2C0.7%2C2.3L1%2C17.1c1.1%2C2%2C3%2C3.3%2C4.6%2C4.1%20c2%2C1.1%2C4%2C1.7%2C6.9%2C1.7c3-0.1%2C4.6-0.5%2C6.9-1.7c3-1.6%2C5.1-3.8%2C5.6-6.9C25.2%2C12.6%2C24.9%2C11.2%2C24.1%2C9.5z%20M16.4%2C9.5l-2.2%2C3.8c0%2C0%2C0%2C0%2C0%2C0.1%20c0%2C0%2C0%2C0%2C0.1%2C0h1.6c0.2%2C0%2C0.3%2C0%2C0.4%2C0.1c0.1%2C0.1%2C0.2%2C0.2%2C0.2%2C0.4c0%2C0.1-0.1%2C0.3-0.2%2C0.4c-0.1%2C0.1-0.2%2C0.1-0.4%2C0.1h-2.1%20c-0.1%2C0-0.1%2C0-0.1%2C0.1v0.7c0%2C0.1%2C0%2C0.1%2C0.1%2C0.1h2.1c0.2%2C0%2C0.3%2C0%2C0.4%2C0.1c0.1%2C0.1%2C0.2%2C0.2%2C0.2%2C0.4c0%2C0.1-0.1%2C0.3-0.2%2C0.4%20c-0.1%2C0.1-0.2%2C0.1-0.4%2C0.1h-2.1c-0.1%2C0-0.1%2C0-0.1%2C0.1v1.4c0%2C0.2-0.1%2C0.4-0.3%2C0.6c-0.2%2C0.2-0.4%2C0.2-0.6%2C0.2h-0.5%20c-0.2%2C0-0.5-0.1-0.6-0.2c-0.2-0.2-0.3-0.3-0.3-0.6v-1.4c0-0.1%2C0-0.1-0.1-0.1H9.2c-0.2%2C0-0.3%2C0-0.4-0.1c-0.1-0.1-0.2-0.2-0.2-0.4%20c0-0.1%2C0.1-0.3%2C0.2-0.4c0.1-0.1%2C0.2-0.1%2C0.4-0.1h2.1c0.1%2C0%2C0.1%2C0%2C0.1-0.1v-0.7c0-0.1%2C0-0.1-0.1-0.1H9.2c-0.2%2C0-0.3%2C0-0.4-0.1%20c-0.1-0.1-0.2-0.2-0.2-0.4c0-0.1%2C0.1-0.3%2C0.2-0.4c0.1-0.1%2C0.2-0.1%2C0.4-0.1h1.6c0%2C0%2C0.1%2C0%2C0.1%2C0c0%2C0%2C0%2C0%2C0-0.1L8.6%2C9.5%20c0-0.1-0.1-0.1-0.1-0.2c0-0.1%2C0-0.2%2C0.1-0.3c0.1-0.2%2C0.3-0.2%2C0.5-0.2h0.6c0.3%2C0%2C0.5%2C0.1%2C0.7%2C0.2c0.2%2C0.1%2C0.4%2C0.3%2C0.5%2C0.5l0.7%2C1.5%20c0.4%2C0.9%2C0.7%2C1.6%2C0.9%2C2c0%2C0%2C0%2C0%2C0.1%2C0c0%2C0%2C0%2C0%2C0.1%2C0c0.3-0.7%2C0.6-1.3%2C0.9-2l0.7-1.5c0.1-0.2%2C0.3-0.4%2C0.5-0.5%20c0.2-0.1%2C0.5-0.2%2C0.7-0.2h0.5c0.2%2C0%2C0.4%2C0.1%2C0.5%2C0.2c0.1%2C0.1%2C0.1%2C0.2%2C0.1%2C0.3C16.5%2C9.4%2C16.5%2C9.4%2C16.4%2C9.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=priceSimulate]::before, [data-icon=priceSimulate]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2030.9%2040.1%22%20style%3D%22enable-background%3Anew%200%200%2030.9%2040.1%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M30.9%2C40.1H0V0h30.9V40.1z%20M27.8%2C3.1H3.1v10.8h24.7V3.1z%20M9.3%2C17H3.1v4.6h6.2V17z%20M18.5%2C17h-6.2v4.6h6.2V17z%20M27.8%2C17h-6.2%20v4.6h6.2V17z%20M9.3%2C24.7H3.1v4.6h6.2V24.7z%20M18.5%2C24.7h-6.2v4.6h6.2V24.7z%20M27.8%2C24.7h-6.2v4.6h6.2V24.7z%20M9.3%2C32.4H3.1V37h6.2V32.4z%20M18.5%2C32.4h-6.2V37h6.2V32.4z%20M27.8%2C32.4h-6.2V37h6.2V32.4z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2030.9%2040.1%22%20style%3D%22enable-background%3Anew%200%200%2030.9%2040.1%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M30.9%2C40.1H0V0h30.9V40.1z%20M27.8%2C3.1H3.1v10.8h24.7V3.1z%20M9.3%2C17H3.1v4.6h6.2V17z%20M18.5%2C17h-6.2v4.6h6.2V17z%20M27.8%2C17h-6.2%20v4.6h6.2V17z%20M9.3%2C24.7H3.1v4.6h6.2V24.7z%20M18.5%2C24.7h-6.2v4.6h6.2V24.7z%20M27.8%2C24.7h-6.2v4.6h6.2V24.7z%20M9.3%2C32.4H3.1V37h6.2V32.4z%20M18.5%2C32.4h-6.2V37h6.2V32.4z%20M27.8%2C32.4h-6.2V37h6.2V32.4z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=area]::before, [data-icon=area]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2025.1%2018.6%22%20style%3D%22enable-background%3Anew%200%200%2025.1%2018.6%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218.6%22%20width%3D%2225.1%22%20x%3D%22-1103.8%22%20y%3D%22-853.3%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M9.7%2C18.6c-0.4%2C0-0.7-0.1-1-0.4L0%2C10.4l2-2.2L9.6%2C15L22.9%2C0l2.2%2C2L10.9%2C18.1C10.6%2C18.4%2C10.2%2C18.6%2C9.7%2C18.6%20C9.8%2C18.6%2C9.8%2C18.6%2C9.7%2C18.6z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2025.1%2018.6%22%20style%3D%22enable-background%3Anew%200%200%2025.1%2018.6%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218.6%22%20width%3D%2225.1%22%20x%3D%22-1103.8%22%20y%3D%22-853.3%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M9.7%2C18.6c-0.4%2C0-0.7-0.1-1-0.4L0%2C10.4l2-2.2L9.6%2C15L22.9%2C0l2.2%2C2L10.9%2C18.1C10.6%2C18.4%2C10.2%2C18.6%2C9.7%2C18.6%20C9.8%2C18.6%2C9.8%2C18.6%2C9.7%2C18.6z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=benefit]::before, [data-icon=benefit]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2023%2025%22%20style%3D%22enable-background%3Anew%200%200%2023%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2223%22%20x%3D%22-1070%22%20y%3D%22-856.4%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M20%2C13.1V23H3v-9.9H20%20M22%2C11.1H1V25h21V11.1L22%2C11.1z%22%2F%3E%3Cpolygon%20points%3D%2223%2C13.1%2021%2C13.1%2021%2C8.4%202%2C8.4%202%2C13.1%200%2C13.1%200%2C6.4%2023%2C6.4%20%22%2F%3E%3Crect%20x%3D%2210.5%22%20y%3D%226%22%20width%3D%222%22%20height%3D%2219%22%2F%3E%3Cg%3E%20%3Cpath%20d%3D%22M13.1%2C7.5c-0.5%2C0-0.8%2C0-0.9-0.1l-0.8-0.1l-0.1-0.8c0-0.1-0.4-3.2%2C1.3-4.9c1.8-1.8%2C4.2-2.3%2C5.5-1h0c1.2%2C1.2%2C0.8%2C3.6-1%2C5.5%20C15.9%2C7.3%2C14.1%2C7.5%2C13.1%2C7.5z%20M16.3%2C2c-0.5%2C0-1.4%2C0.3-2.2%2C1.2c-0.6%2C0.6-0.8%2C1.6-0.8%2C2.4c0.8%2C0%2C1.8-0.2%2C2.4-0.8%20c1.1-1.1%2C1.3-2.3%2C1-2.6C16.6%2C2%2C16.5%2C2%2C16.3%2C2z%22%2F%3E%20%3Cpath%20d%3D%22M9.9%2C7.5c-1.1%2C0-2.8-0.2-4-1.4c-1.8-1.8-2.3-4.2-1-5.5h0c1.2-1.2%2C3.6-0.8%2C5.5%2C1c1.7%2C1.7%2C1.3%2C4.8%2C1.3%2C4.9l-0.1%2C0.8l-0.8%2C0.1%20C10.8%2C7.5%2C10.4%2C7.5%2C9.9%2C7.5z%20M6.3%2C2.1C6%2C2.4%2C6.2%2C3.6%2C7.4%2C4.7C7.9%2C5.3%2C9%2C5.5%2C9.7%2C5.5c0-0.8-0.2-1.8-0.8-2.4C7.8%2C2%2C6.6%2C1.8%2C6.3%2C2.1z%22%20%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2023%2025%22%20style%3D%22enable-background%3Anew%200%200%2023%2025%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225%22%20width%3D%2223%22%20x%3D%22-1070%22%20y%3D%22-856.4%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M20%2C13.1V23H3v-9.9H20%20M22%2C11.1H1V25h21V11.1L22%2C11.1z%22%2F%3E%3Cpolygon%20points%3D%2223%2C13.1%2021%2C13.1%2021%2C8.4%202%2C8.4%202%2C13.1%200%2C13.1%200%2C6.4%2023%2C6.4%20%22%2F%3E%3Crect%20x%3D%2210.5%22%20y%3D%226%22%20width%3D%222%22%20height%3D%2219%22%2F%3E%3Cg%3E%20%3Cpath%20d%3D%22M13.1%2C7.5c-0.5%2C0-0.8%2C0-0.9-0.1l-0.8-0.1l-0.1-0.8c0-0.1-0.4-3.2%2C1.3-4.9c1.8-1.8%2C4.2-2.3%2C5.5-1h0c1.2%2C1.2%2C0.8%2C3.6-1%2C5.5%20C15.9%2C7.3%2C14.1%2C7.5%2C13.1%2C7.5z%20M16.3%2C2c-0.5%2C0-1.4%2C0.3-2.2%2C1.2c-0.6%2C0.6-0.8%2C1.6-0.8%2C2.4c0.8%2C0%2C1.8-0.2%2C2.4-0.8%20c1.1-1.1%2C1.3-2.3%2C1-2.6C16.6%2C2%2C16.5%2C2%2C16.3%2C2z%22%2F%3E%20%3Cpath%20d%3D%22M9.9%2C7.5c-1.1%2C0-2.8-0.2-4-1.4c-1.8-1.8-2.3-4.2-1-5.5h0c1.2-1.2%2C3.6-0.8%2C5.5%2C1c1.7%2C1.7%2C1.3%2C4.8%2C1.3%2C4.9l-0.1%2C0.8l-0.8%2C0.1%20C10.8%2C7.5%2C10.4%2C7.5%2C9.9%2C7.5z%20M6.3%2C2.1C6%2C2.4%2C6.2%2C3.6%2C7.4%2C4.7C7.9%2C5.3%2C9%2C5.5%2C9.7%2C5.5c0-0.8-0.2-1.8-0.8-2.4C7.8%2C2%2C6.6%2C1.8%2C6.3%2C2.1z%22%20%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=support]::before, [data-icon=support]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2027.6%2025.8%22%20style%3D%22enable-background%3Anew%200%200%2027.6%2025.8%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225.8%22%20width%3D%2227.6%22%20x%3D%22-1036.6%22%20y%3D%22-857.9%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M27.3%2C17.5c-0.3-0.5-1.3-1.7-4.4-1c-1.6%2C0.4-4.7%2C1.1-6.3%2C1.5c-0.3-0.6-0.8-1.1-1.3-1.3c-0.2-0.1-0.7-0.3-6.9-2.2%20c-1.5-0.5-3.2-0.2-4.5%2C0.8l-3.5%2C2.6c-0.4%2C0.3-0.5%2C1-0.2%2C1.4c0.3%2C0.4%2C1%2C0.5%2C1.4%2C0.2l3.5-2.6c0.8-0.6%2C1.8-0.7%2C2.7-0.5%20c5.8%2C1.7%2C6.5%2C2%2C6.6%2C2.1c0.1%2C0.1%2C0.3%2C0.2%2C0.4%2C0.5c-0.1%2C0.2-0.1%2C0.4%2C0%2C0.5c0%2C0%2C0%2C0.1%2C0%2C0.1c0%2C0.1-0.1%2C0.1-0.2%2C0.2%20c-0.8%2C0.5-1.7%2C0.3-2.4%2C0.1c-0.8-0.2-3.3-1.1-3.4-1.1c-0.5-0.2-1.1%2C0.1-1.3%2C0.6c-0.2%2C0.5%2C0.1%2C1.1%2C0.6%2C1.3c0.1%2C0%2C2.6%2C0.9%2C3.5%2C1.1%20c0.3%2C0.1%2C1%2C0.3%2C1.7%2C0.3c0.7%2C0%2C1.5-0.2%2C2.3-0.7c0.5-0.4%2C0.9-0.8%2C1.1-1.4c1.5-0.4%2C4.8-1.2%2C6.5-1.6c1.5-0.3%2C2.1-0.1%2C2.2%2C0%20c0%2C0.1%2C0.1%2C0.3%2C0%2C0.5c-0.1%2C0.3-0.4%2C0.6-0.8%2C0.8c-0.8%2C0.4-4.5%2C1.8-10.1%2C3.9c-0.6%2C0.2-1.3%2C0.2-2%2C0l-4.2-1.5c-0.8-0.3-1.6-0.2-2.3%2C0.3%20l-1.8%2C1.3c-0.4%2C0.3-0.5%2C1-0.2%2C1.4c0.3%2C0.4%2C1%2C0.5%2C1.4%2C0.2L7.3%2C24c0.1-0.1%2C0.3-0.1%2C0.4-0.1l4.2%2C1.5c0.5%2C0.2%2C1.1%2C0.3%2C1.7%2C0.3%20c0.6%2C0%2C1.2-0.1%2C1.7-0.3c3.3-1.2%2C9.1-3.4%2C10.3-4c1.2-0.6%2C1.7-1.4%2C1.9-2C27.7%2C18.9%2C27.6%2C18.1%2C27.3%2C17.5z%22%2F%3E%3Cpath%20d%3D%22M21.2%2C0.3c-2-0.8-4.3%2C0.2-5.7%2C2.4c-1.3-2.3-3.6-3.2-5.7-2.4C7.6%2C1.2%2C6.9%2C3.7%2C8%2C6.2c1.7%2C3.9%2C7.5%2C7.2%2C7.5%2C7.2s5.8-3.3%2C7.5-7.2%20C24.1%2C3.7%2C23.4%2C1.2%2C21.2%2C0.3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2027.6%2025.8%22%20style%3D%22enable-background%3Anew%200%200%2027.6%2025.8%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2225.8%22%20width%3D%2227.6%22%20x%3D%22-1036.6%22%20y%3D%22-857.9%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M27.3%2C17.5c-0.3-0.5-1.3-1.7-4.4-1c-1.6%2C0.4-4.7%2C1.1-6.3%2C1.5c-0.3-0.6-0.8-1.1-1.3-1.3c-0.2-0.1-0.7-0.3-6.9-2.2%20c-1.5-0.5-3.2-0.2-4.5%2C0.8l-3.5%2C2.6c-0.4%2C0.3-0.5%2C1-0.2%2C1.4c0.3%2C0.4%2C1%2C0.5%2C1.4%2C0.2l3.5-2.6c0.8-0.6%2C1.8-0.7%2C2.7-0.5%20c5.8%2C1.7%2C6.5%2C2%2C6.6%2C2.1c0.1%2C0.1%2C0.3%2C0.2%2C0.4%2C0.5c-0.1%2C0.2-0.1%2C0.4%2C0%2C0.5c0%2C0%2C0%2C0.1%2C0%2C0.1c0%2C0.1-0.1%2C0.1-0.2%2C0.2%20c-0.8%2C0.5-1.7%2C0.3-2.4%2C0.1c-0.8-0.2-3.3-1.1-3.4-1.1c-0.5-0.2-1.1%2C0.1-1.3%2C0.6c-0.2%2C0.5%2C0.1%2C1.1%2C0.6%2C1.3c0.1%2C0%2C2.6%2C0.9%2C3.5%2C1.1%20c0.3%2C0.1%2C1%2C0.3%2C1.7%2C0.3c0.7%2C0%2C1.5-0.2%2C2.3-0.7c0.5-0.4%2C0.9-0.8%2C1.1-1.4c1.5-0.4%2C4.8-1.2%2C6.5-1.6c1.5-0.3%2C2.1-0.1%2C2.2%2C0%20c0%2C0.1%2C0.1%2C0.3%2C0%2C0.5c-0.1%2C0.3-0.4%2C0.6-0.8%2C0.8c-0.8%2C0.4-4.5%2C1.8-10.1%2C3.9c-0.6%2C0.2-1.3%2C0.2-2%2C0l-4.2-1.5c-0.8-0.3-1.6-0.2-2.3%2C0.3%20l-1.8%2C1.3c-0.4%2C0.3-0.5%2C1-0.2%2C1.4c0.3%2C0.4%2C1%2C0.5%2C1.4%2C0.2L7.3%2C24c0.1-0.1%2C0.3-0.1%2C0.4-0.1l4.2%2C1.5c0.5%2C0.2%2C1.1%2C0.3%2C1.7%2C0.3%20c0.6%2C0%2C1.2-0.1%2C1.7-0.3c3.3-1.2%2C9.1-3.4%2C10.3-4c1.2-0.6%2C1.7-1.4%2C1.9-2C27.7%2C18.9%2C27.6%2C18.1%2C27.3%2C17.5z%22%2F%3E%3Cpath%20d%3D%22M21.2%2C0.3c-2-0.8-4.3%2C0.2-5.7%2C2.4c-1.3-2.3-3.6-3.2-5.7-2.4C7.6%2C1.2%2C6.9%2C3.7%2C8%2C6.2c1.7%2C3.9%2C7.5%2C7.2%2C7.5%2C7.2s5.8-3.3%2C7.5-7.2%20C24.1%2C3.7%2C23.4%2C1.2%2C21.2%2C0.3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=corporate]::before, [data-icon=corporate]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2025.6%2023%22%20style%3D%22enable-background%3Anew%200%200%2025.6%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2223%22%20width%3D%2225.6%22%20x%3D%22-997%22%20y%3D%22-858.6%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%2215.9%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%2213.6%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%229.1%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%2211.4%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%229.1%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%2215.9%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Cpath%20d%3D%22M24.6%2C9.5c-0.4-0.8-1.5-2.6-2.5-4.4h0v0l-0.3-0.4C20.4%2C2.3%2C19.1%2C0%2C19.1%2C0l-2.7%2C4.5c-1.2-0.2-2.6-0.4-3.9-0.4%20c-1.2%2C0-2.4%2C0.2-3.4%2C0.4L6.5%2C0c0%2C0-5.4%2C9.2-5.6%2C9.5c-0.9%2C1.6-1.1%2C3.3-0.9%2C4.9c0.1%2C0.9%2C0.4%2C1.6%2C0.7%2C2.3L1%2C17.1%20c1.1%2C2%2C3.1%2C3.3%2C4.7%2C4.1c2.1%2C1.1%2C4.1%2C1.7%2C7%2C1.7c3.1-0.1%2C4.7-0.5%2C7.1-1.7c3.1-1.6%2C5.3-3.8%2C5.7-6.9C25.7%2C12.6%2C25.5%2C11.2%2C24.6%2C9.5z%20M17%2C20.4h-2.8v-2h-2.7v2H8.6V7.7H17V20.4z%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%2211.4%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%2213.6%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2025.6%2023%22%20style%3D%22enable-background%3Anew%200%200%2025.6%2023%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2223%22%20width%3D%2225.6%22%20x%3D%22-997%22%20y%3D%22-858.6%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%2215.9%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%2213.6%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%229.1%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%2211.4%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2213.3%22%20y%3D%229.1%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%2215.9%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Cpath%20d%3D%22M24.6%2C9.5c-0.4-0.8-1.5-2.6-2.5-4.4h0v0l-0.3-0.4C20.4%2C2.3%2C19.1%2C0%2C19.1%2C0l-2.7%2C4.5c-1.2-0.2-2.6-0.4-3.9-0.4%20c-1.2%2C0-2.4%2C0.2-3.4%2C0.4L6.5%2C0c0%2C0-5.4%2C9.2-5.6%2C9.5c-0.9%2C1.6-1.1%2C3.3-0.9%2C4.9c0.1%2C0.9%2C0.4%2C1.6%2C0.7%2C2.3L1%2C17.1%20c1.1%2C2%2C3.1%2C3.3%2C4.7%2C4.1c2.1%2C1.1%2C4.1%2C1.7%2C7%2C1.7c3.1-0.1%2C4.7-0.5%2C7.1-1.7c3.1-1.6%2C5.3-3.8%2C5.7-6.9C25.7%2C12.6%2C25.5%2C11.2%2C24.6%2C9.5z%20M17%2C20.4h-2.8v-2h-2.7v2H8.6V7.7H17V20.4z%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%2211.4%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%20%3Crect%20x%3D%2210%22%20y%3D%2213.6%22%20width%3D%222.3%22%20height%3D%221.4%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=internet]::before, [data-icon=internet]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22a%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2020%2020%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M10%2C0C4.5%2C0%2C0%2C4.5%2C0%2C10s4.5%2C10%2C10%2C10s10-4.5%2C10-10S15.5%2C0%2C10%2C0z%20M1.8%2C10c0-0.8%2C0.1-1.5%2C0.3-2.3h4%20C6.1%2C8.5%2C6.1%2C9.3%2C6.1%2C10s0%2C1.5%2C0.1%2C2.3h-4C2%2C11.5%2C1.8%2C10.8%2C1.8%2C10z%20M7.9%2C10c0-0.8%2C0-1.6%2C0.1-2.3h4c0.1%2C0.7%2C0.1%2C1.4%2C0.1%2C2.3%20s0%2C1.6-0.1%2C2.3H8C7.9%2C11.6%2C7.9%2C10.8%2C7.9%2C10z%20M13.9%2C7.7h4c0.2%2C0.7%2C0.3%2C1.5%2C0.3%2C2.3s-0.1%2C1.5-0.3%2C2.3h-4c0.1-0.7%2C0.1-1.5%2C0.1-2.3%20S13.9%2C8.5%2C13.9%2C7.7z%20M17%2C5.9h-3.4c-0.2-1.4-0.6-2.6-1-3.6C14.5%2C2.9%2C16.1%2C4.2%2C17%2C5.9L17%2C5.9z%20M11.8%2C5.9H8.2C8.7%2C3.2%2C9.6%2C1.8%2C10%2C1.8%20S11.3%2C3.2%2C11.8%2C5.9L11.8%2C5.9z%20M7.4%2C2.3c-0.5%2C1-0.8%2C2.3-1%2C3.6H3C3.9%2C4.2%2C5.5%2C2.9%2C7.4%2C2.3z%20M3%2C14.1h3.4c0.2%2C1.4%2C0.6%2C2.6%2C1%2C3.6%20C5.5%2C17.1%2C3.9%2C15.8%2C3%2C14.1z%20M8.2%2C14.1h3.5c-0.5%2C2.7-1.3%2C4.1-1.8%2C4.1S8.7%2C16.8%2C8.2%2C14.1z%20M12.6%2C17.7c0.5-1%2C0.8-2.3%2C1-3.6H17%20C16.1%2C15.8%2C14.5%2C17.1%2C12.6%2C17.7z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22a%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2020%2020%22%20style%3D%22enable-background%3Anew%200%200%2020%2020%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M10%2C0C4.5%2C0%2C0%2C4.5%2C0%2C10s4.5%2C10%2C10%2C10s10-4.5%2C10-10S15.5%2C0%2C10%2C0z%20M1.8%2C10c0-0.8%2C0.1-1.5%2C0.3-2.3h4%20C6.1%2C8.5%2C6.1%2C9.3%2C6.1%2C10s0%2C1.5%2C0.1%2C2.3h-4C2%2C11.5%2C1.8%2C10.8%2C1.8%2C10z%20M7.9%2C10c0-0.8%2C0-1.6%2C0.1-2.3h4c0.1%2C0.7%2C0.1%2C1.4%2C0.1%2C2.3%20s0%2C1.6-0.1%2C2.3H8C7.9%2C11.6%2C7.9%2C10.8%2C7.9%2C10z%20M13.9%2C7.7h4c0.2%2C0.7%2C0.3%2C1.5%2C0.3%2C2.3s-0.1%2C1.5-0.3%2C2.3h-4c0.1-0.7%2C0.1-1.5%2C0.1-2.3%20S13.9%2C8.5%2C13.9%2C7.7z%20M17%2C5.9h-3.4c-0.2-1.4-0.6-2.6-1-3.6C14.5%2C2.9%2C16.1%2C4.2%2C17%2C5.9L17%2C5.9z%20M11.8%2C5.9H8.2C8.7%2C3.2%2C9.6%2C1.8%2C10%2C1.8%20S11.3%2C3.2%2C11.8%2C5.9L11.8%2C5.9z%20M7.4%2C2.3c-0.5%2C1-0.8%2C2.3-1%2C3.6H3C3.9%2C4.2%2C5.5%2C2.9%2C7.4%2C2.3z%20M3%2C14.1h3.4c0.2%2C1.4%2C0.6%2C2.6%2C1%2C3.6%20C5.5%2C17.1%2C3.9%2C15.8%2C3%2C14.1z%20M8.2%2C14.1h3.5c-0.5%2C2.7-1.3%2C4.1-1.8%2C4.1S8.7%2C16.8%2C8.2%2C14.1z%20M12.6%2C17.7c0.5-1%2C0.8-2.3%2C1-3.6H17%20C16.1%2C15.8%2C14.5%2C17.1%2C12.6%2C17.7z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=tv]::before, [data-icon=tv]::after {
+  -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMi41MjMiIGhlaWdodD0iMTguNTgzIiB2aWV3Qm94PSIwIDAgMzIuNTIzIDE4LjU4MyI+DQogIDxnIGlkPSJkb3dubG9hZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTguMjY0IC0xMy4zMikiPg0KICAgIDxwYXRoIGlkPSLjg5HjgrlfNjExIiBkYXRhLW5hbWU9IuODkeOCuSA2MTEiIGQ9Ik00MywyMi44Mjh2MTQuMDNIMTUuMDNWMjIuODI4SDQzbTIuMjc3LTIuMjc2SDEyLjc1M1YzOS4xMzVINDUuMjc0VjIwLjU1MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjQ4OSAtNy4yMzIpIiBmaWxsPSIjMDAwIi8+DQogICAgPHBhdGggaWQ9IuODkeOCuV82MTIiIGRhdGEtbmFtZT0i44OR44K5IDYxMiIgZD0iTTE3LjE0MiwzNC4yMzJWMjQuOTRINDAuMzcxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQuNjk2IC03LjQ0KSIgZmlsbD0iIzAwMCIvPg0KICA8L2c+DQo8L3N2Zz4NCg==") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMi41MjMiIGhlaWdodD0iMTguNTgzIiB2aWV3Qm94PSIwIDAgMzIuNTIzIDE4LjU4MyI+DQogIDxnIGlkPSJkb3dubG9hZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTguMjY0IC0xMy4zMikiPg0KICAgIDxwYXRoIGlkPSLjg5HjgrlfNjExIiBkYXRhLW5hbWU9IuODkeOCuSA2MTEiIGQ9Ik00MywyMi44Mjh2MTQuMDNIMTUuMDNWMjIuODI4SDQzbTIuMjc3LTIuMjc2SDEyLjc1M1YzOS4xMzVINDUuMjc0VjIwLjU1MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjQ4OSAtNy4yMzIpIiBmaWxsPSIjMDAwIi8+DQogICAgPHBhdGggaWQ9IuODkeOCuV82MTIiIGRhdGEtbmFtZT0i44OR44K5IDYxMiIgZD0iTTE3LjE0MiwzNC4yMzJWMjQuOTRINDAuMzcxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQuNjk2IC03LjQ0KSIgZmlsbD0iIzAwMCIvPg0KICA8L2c+DQo8L3N2Zz4NCg==") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=other]::before, [data-icon=other]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2022%2020%22%20style%3D%22enable-background%3Anew%200%200%2022%2020%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2220%22%20width%3D%2222%22%20x%3D%22330.5%22%20y%3D%2261.2%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20d%3D%22M21.2%2C8.3C20.8%2C7.6%2C19.9%2C6%2C19%2C4.5h0v0l-0.2-0.4C17.6%2C2%2C16.4%2C0%2C16.4%2C0l-2.3%2C3.9c-1.1-0.2-2.2-0.3-3.3-0.3%20c-1%2C0-2.1%2C0.2-3%2C0.3L5.6%2C0c0%2C0-4.6%2C8-4.8%2C8.3c-0.7%2C1.4-0.9%2C2.9-0.7%2C4.2c0.1%2C0.7%2C0.3%2C1.4%2C0.6%2C2l0.2%2C0.4c1%2C1.8%2C2.6%2C2.9%2C4%2C3.6%20c1.8%2C1%2C3.5%2C1.5%2C6%2C1.5c2.6-0.1%2C4.1-0.5%2C6.1-1.5c2.6-1.4%2C4.5-3.3%2C4.9-6C22.1%2C10.9%2C21.9%2C9.7%2C21.2%2C8.3z%20M8.2%2C11.7c0%2C0.1%2C0%2C0.2%2C0%2C0.3%20H5.3c0%2C0.3%2C0.2%2C0.5%2C0.4%2C0.7c0.2%2C0.2%2C0.5%2C0.3%2C0.9%2C0.3c0.2%2C0%2C0.5%2C0%2C0.7-0.1c0.2%2C0%2C0.4-0.1%2C0.6-0.2L8%2C13.8c-0.1%2C0-0.2%2C0.1-0.3%2C0.1%20C7.6%2C14%2C7.4%2C14%2C7.3%2C14c-0.1%2C0-0.3%2C0.1-0.5%2C0.1c-0.2%2C0-0.3%2C0-0.5%2C0c-0.4%2C0-0.8-0.1-1.1-0.2c-0.3-0.1-0.6-0.3-0.8-0.6%20c-0.2-0.2-0.3-0.5-0.4-0.8c-0.1-0.3-0.1-0.7-0.1-1c0-0.4%2C0.1-0.8%2C0.2-1.2C4.3%2C10%2C4.4%2C9.7%2C4.6%2C9.5C4.8%2C9.2%2C5.1%2C9.1%2C5.3%2C9%20c0.3-0.1%2C0.5-0.2%2C0.8-0.2c0.6%2C0%2C1.2%2C0.2%2C1.5%2C0.7c0.4%2C0.4%2C0.6%2C1.1%2C0.6%2C1.9C8.2%2C11.5%2C8.2%2C11.6%2C8.2%2C11.7z%20M11.7%2C14%20c-0.2%2C0.1-0.4%2C0.1-0.7%2C0.1c-0.4%2C0-0.6-0.1-0.9-0.2c-0.2-0.1-0.4-0.3-0.6-0.4c-0.1-0.2-0.2-0.4-0.3-0.7c-0.1-0.3-0.1-0.6-0.1-0.9%20V7.7l1.3-0.2v1.5H12v1.2h-1.6v1.8c0%2C0.3%2C0%2C0.5%2C0.1%2C0.7c0.1%2C0.2%2C0.3%2C0.3%2C0.6%2C0.3c0.1%2C0%2C0.3%2C0%2C0.4%2C0c0.1%2C0%2C0.3-0.1%2C0.4-0.1l0.2%2C1.1%20C12.1%2C13.9%2C11.9%2C14%2C11.7%2C14z%20M16%2C14c-0.2%2C0.1-0.5%2C0.1-0.7%2C0.1c-0.4%2C0-0.8-0.1-1.1-0.2c-0.3-0.1-0.5-0.3-0.7-0.6%20c-0.2-0.2-0.3-0.5-0.4-0.8c-0.1-0.3-0.1-0.7-0.1-1.1c0-0.4%2C0.1-0.7%2C0.2-1c0.1-0.3%2C0.3-0.6%2C0.5-0.8c0.2-0.2%2C0.4-0.4%2C0.7-0.6%20c0.3-0.1%2C0.6-0.2%2C1-0.2c0.2%2C0%2C0.5%2C0%2C0.7%2C0.1c0.2%2C0%2C0.4%2C0.1%2C0.6%2C0.2l-0.3%2C1.1c-0.1-0.1-0.3-0.1-0.4-0.1c-0.1%2C0-0.3-0.1-0.5-0.1%20c-0.4%2C0-0.7%2C0.1-0.9%2C0.4c-0.2%2C0.3-0.3%2C0.6-0.3%2C1c0%2C0.5%2C0.1%2C0.8%2C0.3%2C1.1c0.2%2C0.3%2C0.5%2C0.4%2C0.9%2C0.4c0.2%2C0%2C0.3%2C0%2C0.5%2C0%20c0.2%2C0%2C0.3-0.1%2C0.5-0.2l0.2%2C1.2C16.4%2C13.9%2C16.2%2C14%2C16%2C14z%20M18.4%2C13.9c-0.2%2C0.2-0.4%2C0.2-0.6%2C0.2s-0.4-0.1-0.6-0.2%20c-0.2-0.2-0.2-0.4-0.2-0.7c0-0.3%2C0.1-0.5%2C0.2-0.7c0.2-0.2%2C0.4-0.2%2C0.6-0.2s0.4%2C0.1%2C0.6%2C0.2c0.2%2C0.2%2C0.2%2C0.4%2C0.2%2C0.7%20C18.7%2C13.5%2C18.6%2C13.7%2C18.4%2C13.9z%22%2F%3E%20%3Cpath%20d%3D%22M6.8%2C10.3c-0.1-0.1-0.2-0.2-0.3-0.2C6.4%2C10%2C6.3%2C10%2C6.2%2C10c-0.1%2C0-0.3%2C0-0.4%2C0.1c-0.1%2C0.1-0.2%2C0.1-0.3%2C0.2%20c-0.1%2C0.1-0.1%2C0.2-0.2%2C0.3c0%2C0.1-0.1%2C0.2-0.1%2C0.4H7c0-0.1%2C0-0.2-0.1-0.4C6.9%2C10.5%2C6.8%2C10.4%2C6.8%2C10.3z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2022%2020%22%20style%3D%22enable-background%3Anew%200%200%2022%2020%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2220%22%20width%3D%2222%22%20x%3D%22330.5%22%20y%3D%2261.2%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20d%3D%22M21.2%2C8.3C20.8%2C7.6%2C19.9%2C6%2C19%2C4.5h0v0l-0.2-0.4C17.6%2C2%2C16.4%2C0%2C16.4%2C0l-2.3%2C3.9c-1.1-0.2-2.2-0.3-3.3-0.3%20c-1%2C0-2.1%2C0.2-3%2C0.3L5.6%2C0c0%2C0-4.6%2C8-4.8%2C8.3c-0.7%2C1.4-0.9%2C2.9-0.7%2C4.2c0.1%2C0.7%2C0.3%2C1.4%2C0.6%2C2l0.2%2C0.4c1%2C1.8%2C2.6%2C2.9%2C4%2C3.6%20c1.8%2C1%2C3.5%2C1.5%2C6%2C1.5c2.6-0.1%2C4.1-0.5%2C6.1-1.5c2.6-1.4%2C4.5-3.3%2C4.9-6C22.1%2C10.9%2C21.9%2C9.7%2C21.2%2C8.3z%20M8.2%2C11.7c0%2C0.1%2C0%2C0.2%2C0%2C0.3%20H5.3c0%2C0.3%2C0.2%2C0.5%2C0.4%2C0.7c0.2%2C0.2%2C0.5%2C0.3%2C0.9%2C0.3c0.2%2C0%2C0.5%2C0%2C0.7-0.1c0.2%2C0%2C0.4-0.1%2C0.6-0.2L8%2C13.8c-0.1%2C0-0.2%2C0.1-0.3%2C0.1%20C7.6%2C14%2C7.4%2C14%2C7.3%2C14c-0.1%2C0-0.3%2C0.1-0.5%2C0.1c-0.2%2C0-0.3%2C0-0.5%2C0c-0.4%2C0-0.8-0.1-1.1-0.2c-0.3-0.1-0.6-0.3-0.8-0.6%20c-0.2-0.2-0.3-0.5-0.4-0.8c-0.1-0.3-0.1-0.7-0.1-1c0-0.4%2C0.1-0.8%2C0.2-1.2C4.3%2C10%2C4.4%2C9.7%2C4.6%2C9.5C4.8%2C9.2%2C5.1%2C9.1%2C5.3%2C9%20c0.3-0.1%2C0.5-0.2%2C0.8-0.2c0.6%2C0%2C1.2%2C0.2%2C1.5%2C0.7c0.4%2C0.4%2C0.6%2C1.1%2C0.6%2C1.9C8.2%2C11.5%2C8.2%2C11.6%2C8.2%2C11.7z%20M11.7%2C14%20c-0.2%2C0.1-0.4%2C0.1-0.7%2C0.1c-0.4%2C0-0.6-0.1-0.9-0.2c-0.2-0.1-0.4-0.3-0.6-0.4c-0.1-0.2-0.2-0.4-0.3-0.7c-0.1-0.3-0.1-0.6-0.1-0.9%20V7.7l1.3-0.2v1.5H12v1.2h-1.6v1.8c0%2C0.3%2C0%2C0.5%2C0.1%2C0.7c0.1%2C0.2%2C0.3%2C0.3%2C0.6%2C0.3c0.1%2C0%2C0.3%2C0%2C0.4%2C0c0.1%2C0%2C0.3-0.1%2C0.4-0.1l0.2%2C1.1%20C12.1%2C13.9%2C11.9%2C14%2C11.7%2C14z%20M16%2C14c-0.2%2C0.1-0.5%2C0.1-0.7%2C0.1c-0.4%2C0-0.8-0.1-1.1-0.2c-0.3-0.1-0.5-0.3-0.7-0.6%20c-0.2-0.2-0.3-0.5-0.4-0.8c-0.1-0.3-0.1-0.7-0.1-1.1c0-0.4%2C0.1-0.7%2C0.2-1c0.1-0.3%2C0.3-0.6%2C0.5-0.8c0.2-0.2%2C0.4-0.4%2C0.7-0.6%20c0.3-0.1%2C0.6-0.2%2C1-0.2c0.2%2C0%2C0.5%2C0%2C0.7%2C0.1c0.2%2C0%2C0.4%2C0.1%2C0.6%2C0.2l-0.3%2C1.1c-0.1-0.1-0.3-0.1-0.4-0.1c-0.1%2C0-0.3-0.1-0.5-0.1%20c-0.4%2C0-0.7%2C0.1-0.9%2C0.4c-0.2%2C0.3-0.3%2C0.6-0.3%2C1c0%2C0.5%2C0.1%2C0.8%2C0.3%2C1.1c0.2%2C0.3%2C0.5%2C0.4%2C0.9%2C0.4c0.2%2C0%2C0.3%2C0%2C0.5%2C0%20c0.2%2C0%2C0.3-0.1%2C0.5-0.2l0.2%2C1.2C16.4%2C13.9%2C16.2%2C14%2C16%2C14z%20M18.4%2C13.9c-0.2%2C0.2-0.4%2C0.2-0.6%2C0.2s-0.4-0.1-0.6-0.2%20c-0.2-0.2-0.2-0.4-0.2-0.7c0-0.3%2C0.1-0.5%2C0.2-0.7c0.2-0.2%2C0.4-0.2%2C0.6-0.2s0.4%2C0.1%2C0.6%2C0.2c0.2%2C0.2%2C0.2%2C0.4%2C0.2%2C0.7%20C18.7%2C13.5%2C18.6%2C13.7%2C18.4%2C13.9z%22%2F%3E%20%3Cpath%20d%3D%22M6.8%2C10.3c-0.1-0.1-0.2-0.2-0.3-0.2C6.4%2C10%2C6.3%2C10%2C6.2%2C10c-0.1%2C0-0.3%2C0-0.4%2C0.1c-0.1%2C0.1-0.2%2C0.1-0.3%2C0.2%20c-0.1%2C0.1-0.1%2C0.2-0.2%2C0.3c0%2C0.1-0.1%2C0.2-0.1%2C0.4H7c0-0.1%2C0-0.2-0.1-0.4C6.9%2C10.5%2C6.8%2C10.4%2C6.8%2C10.3z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/*▽トップページで使用*/
+[data-icon=entryFaq]::before, [data-icon=entryFaq]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026.9%2029.7%22%20style%3D%22enable-background%3Anew%200%200%2026.9%2029.7%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3A%23000000%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%22102%22%20width%3D%2246.7%22%20x%3D%22-161.1%22%20y%3D%226.8%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M18.4%2C10.8c-0.6%2C0-1%2C0.5-1%2C1c0%2C0.6%2C0.5%2C1.1%2C1%2C1.1c0.6%2C0%2C1.1-0.5%2C1.1-1.1C19.5%2C11.2%2C19%2C10.8%2C18.4%2C10.8z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M24.2%2C2.2c-1.8-1.7-4.3-2.5-6.7-2.2c-3.7%2C0.4-6.7%2C3.4-7.2%2C7.1c-0.4%2C2.6%2C0.5%2C5.3%2C2.4%2C7.1l-0.3%2C0.9%20c-0.1%2C0.4-0.1%2C0.7%2C0.2%2C1.1c0.2%2C0.3%2C0.6%2C0.5%2C0.9%2C0.5h4.9c4.6%2C0%2C8.4-3.5%2C8.6-8C27%2C6.3%2C26%2C3.9%2C24.2%2C2.2z%20M18.2%2C15.2h-4.4l0.5-1.4%20l-0.4-0.3c-1.7-1.5-2.6-3.8-2.2-6.1c0.4-3%2C2.9-5.4%2C5.9-5.8c2-0.2%2C4.1%2C0.4%2C5.5%2C1.8c1.5%2C1.4%2C2.3%2C3.3%2C2.2%2C5.4%20C25.2%2C12.3%2C22%2C15.2%2C18.2%2C15.2z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M18.7%2C3.9c-2.4%2C0-3.2%2C1.7-3.2%2C2.5c0%2C0.7%2C0.7%2C0.7%2C1%2C0.7c0.3%2C0%2C0.9-0.1%2C1-0.5c0-0.3%2C0.1-1%2C1.2-1%20c0.6%2C0%2C1%2C0.2%2C1%2C0.7c0%2C0.4-0.3%2C0.7-1.2%2C1.3c-0.9%2C0.7-0.9%2C1.4-0.9%2C1.8s0.3%2C0.8%2C1%2C0.8c0.6%2C0%2C0.9-0.2%2C0.9-0.7c0-0.6%2C0.2-0.6%2C0.7-1%20c1.1-0.9%2C1.5-1.2%2C1.5-2.2C21.5%2C5%2C20.5%2C3.9%2C18.7%2C3.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M13.1%2C18.4c-0.8%2C0-1.5-0.4-2-1c-0.5-0.6-0.6-1.5-0.3-2.2l0.1-0.3c-0.3-0.3-0.5-0.6-0.7-0.9%20c-0.1-0.1-0.2-0.2-0.2-0.4c-0.1-0.2-0.2-0.4-0.3-0.6c-0.1-0.2-0.2-0.3-0.2-0.5c-0.1-0.2-0.2-0.4-0.2-0.6C9.1%2C11.7%2C9%2C11.6%2C9%2C11.4v0%20c-0.1-0.4-0.2-0.8-0.3-1.2c0%2C0-0.1%2C0-0.1-0.1L1.2%2C4.9C1.1%2C4.8%2C0.9%2C4.7%2C0.8%2C4.7C0.4%2C4.7%2C0%2C5%2C0%2C5.5v17.6c0%2C0.2%2C0.1%2C0.5%2C0.3%2C0.6%20l8.2%2C5.9c0.1%2C0.1%2C0.3%2C0.1%2C0.5%2C0.1c0.2%2C0%2C0.3%2C0%2C0.5-0.1l0.8-0.6l0%2C0l7.5-5.4c0.2-0.1%2C0.3-0.4%2C0.3-0.6v-4.7h-1.9H13.1z%20M9%2C28.3%20l-7.7-5.5V6.6L7.5%2C11c0.3%2C1.2%2C0.8%2C2.4%2C1.5%2C3.5V28.3z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2026.9%2029.7%22%20style%3D%22enable-background%3Anew%200%200%2026.9%2029.7%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3A%23000000%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%22102%22%20width%3D%2246.7%22%20x%3D%22-161.1%22%20y%3D%226.8%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M18.4%2C10.8c-0.6%2C0-1%2C0.5-1%2C1c0%2C0.6%2C0.5%2C1.1%2C1%2C1.1c0.6%2C0%2C1.1-0.5%2C1.1-1.1C19.5%2C11.2%2C19%2C10.8%2C18.4%2C10.8z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M24.2%2C2.2c-1.8-1.7-4.3-2.5-6.7-2.2c-3.7%2C0.4-6.7%2C3.4-7.2%2C7.1c-0.4%2C2.6%2C0.5%2C5.3%2C2.4%2C7.1l-0.3%2C0.9%20c-0.1%2C0.4-0.1%2C0.7%2C0.2%2C1.1c0.2%2C0.3%2C0.6%2C0.5%2C0.9%2C0.5h4.9c4.6%2C0%2C8.4-3.5%2C8.6-8C27%2C6.3%2C26%2C3.9%2C24.2%2C2.2z%20M18.2%2C15.2h-4.4l0.5-1.4%20l-0.4-0.3c-1.7-1.5-2.6-3.8-2.2-6.1c0.4-3%2C2.9-5.4%2C5.9-5.8c2-0.2%2C4.1%2C0.4%2C5.5%2C1.8c1.5%2C1.4%2C2.3%2C3.3%2C2.2%2C5.4%20C25.2%2C12.3%2C22%2C15.2%2C18.2%2C15.2z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M18.7%2C3.9c-2.4%2C0-3.2%2C1.7-3.2%2C2.5c0%2C0.7%2C0.7%2C0.7%2C1%2C0.7c0.3%2C0%2C0.9-0.1%2C1-0.5c0-0.3%2C0.1-1%2C1.2-1%20c0.6%2C0%2C1%2C0.2%2C1%2C0.7c0%2C0.4-0.3%2C0.7-1.2%2C1.3c-0.9%2C0.7-0.9%2C1.4-0.9%2C1.8s0.3%2C0.8%2C1%2C0.8c0.6%2C0%2C0.9-0.2%2C0.9-0.7c0-0.6%2C0.2-0.6%2C0.7-1%20c1.1-0.9%2C1.5-1.2%2C1.5-2.2C21.5%2C5%2C20.5%2C3.9%2C18.7%2C3.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M13.1%2C18.4c-0.8%2C0-1.5-0.4-2-1c-0.5-0.6-0.6-1.5-0.3-2.2l0.1-0.3c-0.3-0.3-0.5-0.6-0.7-0.9%20c-0.1-0.1-0.2-0.2-0.2-0.4c-0.1-0.2-0.2-0.4-0.3-0.6c-0.1-0.2-0.2-0.3-0.2-0.5c-0.1-0.2-0.2-0.4-0.2-0.6C9.1%2C11.7%2C9%2C11.6%2C9%2C11.4v0%20c-0.1-0.4-0.2-0.8-0.3-1.2c0%2C0-0.1%2C0-0.1-0.1L1.2%2C4.9C1.1%2C4.8%2C0.9%2C4.7%2C0.8%2C4.7C0.4%2C4.7%2C0%2C5%2C0%2C5.5v17.6c0%2C0.2%2C0.1%2C0.5%2C0.3%2C0.6%20l8.2%2C5.9c0.1%2C0.1%2C0.3%2C0.1%2C0.5%2C0.1c0.2%2C0%2C0.3%2C0%2C0.5-0.1l0.8-0.6l0%2C0l7.5-5.4c0.2-0.1%2C0.3-0.4%2C0.3-0.6v-4.7h-1.9H13.1z%20M9%2C28.3%20l-7.7-5.5V6.6L7.5%2C11c0.3%2C1.2%2C0.8%2C2.4%2C1.5%2C3.5V28.3z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=addService]::before, [data-icon=addService]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2024.8%2021.4%22%20style%3D%22enable-background%3Anew%200%200%2024.8%2021.4%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2221.4%22%20width%3D%2224.8%22%20x%3D%22-1011.3%22%20y%3D%22-228.6%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20d%3D%22M19.2%2C10.1c-0.9%2C0-1.7%2C0.2-2.4%2C0.6c-1.9%2C0.9-3.2%2C2.8-3.2%2C5.1c0%2C0.7%2C0.1%2C1.3%2C0.3%2C1.9c0.8%2C2.2%2C2.9%2C3.8%2C5.3%2C3.8%20c3.1%2C0%2C5.6-2.5%2C5.6-5.6S22.3%2C10.1%2C19.2%2C10.1z%20M19.2%2C20.3c-2.2%2C0-4-1.5-4.5-3.5c-0.1-0.3-0.1-0.7-0.1-1.1c0-1.7%2C0.9-3.2%2C2.3-4%20c0.7-0.4%2C1.5-0.6%2C2.3-0.6c2.5%2C0%2C4.6%2C2.1%2C4.6%2C4.6S21.7%2C20.3%2C19.2%2C20.3z%22%2F%3E%20%3Cpath%20d%3D%22M12.5%2C18.1c-0.3-0.7-0.4-1.5-0.4-2.4c0-2.8%2C1.7-5.3%2C4-6.4c0.9-0.4%2C1.9-0.7%2C3-0.7c1%2C0%2C2%2C0.2%2C2.9%2C0.6%20c-0.1-0.3-0.2-0.6-0.4-0.9c-0.4-0.7-1.3-2.3-2.2-3.8h0v0l-0.2-0.4C17.9%2C2%2C16.7%2C0%2C16.7%2C0l-2.4%2C4c-1.1-0.2-2.3-0.3-3.4-0.3%20c-1%2C0-2.1%2C0.2-3%2C0.3L5.7%2C0c0%2C0-4.7%2C8.1-4.9%2C8.3c-0.8%2C1.4-0.9%2C2.9-0.8%2C4.3c0.1%2C0.8%2C0.3%2C1.4%2C0.6%2C2L0.9%2C15c1%2C1.8%2C2.7%2C2.9%2C4.1%2C3.6%20c1.8%2C1%2C3.6%2C1.5%2C6.2%2C1.5c0.9%2C0%2C1.6-0.1%2C2.3-0.2C13.1%2C19.4%2C12.7%2C18.8%2C12.5%2C18.1z%22%2F%3E%20%3Cpolygon%20points%3D%2221.6%2C15.1%2019.8%2C15.1%2019.8%2C13.3%2018.5%2C13.3%2018.5%2C15.1%2016.7%2C15.1%2016.7%2C16.4%2018.5%2C16.4%2018.5%2C18.2%2019.8%2C18.2%2019.8%2C16.4%2021.6%2C16.4%20%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2024.8%2021.4%22%20style%3D%22enable-background%3Anew%200%200%2024.8%2021.4%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2221.4%22%20width%3D%2224.8%22%20x%3D%22-1011.3%22%20y%3D%22-228.6%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20d%3D%22M19.2%2C10.1c-0.9%2C0-1.7%2C0.2-2.4%2C0.6c-1.9%2C0.9-3.2%2C2.8-3.2%2C5.1c0%2C0.7%2C0.1%2C1.3%2C0.3%2C1.9c0.8%2C2.2%2C2.9%2C3.8%2C5.3%2C3.8%20c3.1%2C0%2C5.6-2.5%2C5.6-5.6S22.3%2C10.1%2C19.2%2C10.1z%20M19.2%2C20.3c-2.2%2C0-4-1.5-4.5-3.5c-0.1-0.3-0.1-0.7-0.1-1.1c0-1.7%2C0.9-3.2%2C2.3-4%20c0.7-0.4%2C1.5-0.6%2C2.3-0.6c2.5%2C0%2C4.6%2C2.1%2C4.6%2C4.6S21.7%2C20.3%2C19.2%2C20.3z%22%2F%3E%20%3Cpath%20d%3D%22M12.5%2C18.1c-0.3-0.7-0.4-1.5-0.4-2.4c0-2.8%2C1.7-5.3%2C4-6.4c0.9-0.4%2C1.9-0.7%2C3-0.7c1%2C0%2C2%2C0.2%2C2.9%2C0.6%20c-0.1-0.3-0.2-0.6-0.4-0.9c-0.4-0.7-1.3-2.3-2.2-3.8h0v0l-0.2-0.4C17.9%2C2%2C16.7%2C0%2C16.7%2C0l-2.4%2C4c-1.1-0.2-2.3-0.3-3.4-0.3%20c-1%2C0-2.1%2C0.2-3%2C0.3L5.7%2C0c0%2C0-4.7%2C8.1-4.9%2C8.3c-0.8%2C1.4-0.9%2C2.9-0.8%2C4.3c0.1%2C0.8%2C0.3%2C1.4%2C0.6%2C2L0.9%2C15c1%2C1.8%2C2.7%2C2.9%2C4.1%2C3.6%20c1.8%2C1%2C3.6%2C1.5%2C6.2%2C1.5c0.9%2C0%2C1.6-0.1%2C2.3-0.2C13.1%2C19.4%2C12.7%2C18.8%2C12.5%2C18.1z%22%2F%3E%20%3Cpolygon%20points%3D%2221.6%2C15.1%2019.8%2C15.1%2019.8%2C13.3%2018.5%2C13.3%2018.5%2C15.1%2016.7%2C15.1%2016.7%2C16.4%2018.5%2C16.4%2018.5%2C18.2%2019.8%2C18.2%2019.8%2C16.4%2021.6%2C16.4%20%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/*▽トップページ_サービスエリアで使用*/
+[data-icon=service_internet]::before, [data-icon=service_internet]::after {
+  background: url("/img/icon/starcat_net_icon.svg") no-repeat center center/contain;
+}
+
+[data-icon=service_tv]::before, [data-icon=service_tv]::after {
+  background: url("/img/icon/starcat_tv_icon.svg") no-repeat center center/contain;
+}
+
+[data-icon=service_tel]::before, [data-icon=service_tel]::after {
+  background: url("/img/icon/starcat_tel_icon.svg") no-repeat center center/contain;
+}
+
+[data-icon=service_other]::before, [data-icon=service_other]::after {
+  background: url("/img/icon/starcat_other_icon.svg") no-repeat center center/contain;
+}
+
+/*▽トップページ_サポート情報で使用*/
+[data-icon=support_internet]::before, [data-icon=support_internet]::after {
+  background: url("/img/icon/support_internet_icon.svg") no-repeat center center/contain;
+}
+
+[data-icon=support_tv]::before, [data-icon=support_tv]::after {
+  background: url("/img/icon/support_tv_icon.svg") no-repeat center center/contain;
+}
+
+[data-icon=support_tel]::before, [data-icon=support_tel]::after {
+  background: url("/img/icon/support_tel_icon.svg") no-repeat center center/contain;
+}
+
+[data-icon=support_other]::before, [data-icon=support_other]::after {
+  background: url("/img/icon/support_other_icon.svg") no-repeat center center/contain;
+}
+
+[data-icon=webMail]::before, [data-icon=webMail]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2030%2023.468%22%3E%20%3Cg%3E%20%3Cg%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M5.438%2C18.729H7.613V16.157H5.083A14.618%2C14.618%2C0%2C0%2C0%2C5.438%2C18.729Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M7.613%2C7.872a4.966%2C4.966%2C0%2C0%2C0-1.637%2C2.285H7.613Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M5.083%2C14.443h2.53V11.871H5.438A14.618%2C14.618%2C0%2C0%2C0%2C5.083%2C14.443Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M7.613%2C22.728V20.443H5.976A4.966%2C4.966%2C0%2C0%2C0%2C7.613%2C22.728Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M9.314%2C22.728a4.972%2C4.972%2C0%2C0%2C0%2C1.636-2.285H9.314Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M13.225%2C18.729h3.032a8.577%2C8.577%2C0%2C0%2C0%2C.669-2.572H13.544A16.6%2C16.6%2C0%2C0%2C1%2C13.225%2C18.729Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M4.167%2C20.443H1.67a8.513%2C8.513%2C0%2C0%2C0%2C4.215%2C3.025A8.461%2C8.461%2C0%2C0%2C1%2C4.167%2C20.443Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M12.76%2C20.443a8.491%2C8.491%2C0%2C0%2C1-1.718%2C3.025%2C8.514%2C8.514%2C0%2C0%2C0%2C4.214-3.025Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M.67%2C11.871A8.549%2C8.549%2C0%2C0%2C0%2C0%2C14.443H3.382A16.724%2C16.724%2C0%2C0%2C1%2C3.7%2C11.871Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M11.843%2C16.157H9.314v2.572h2.175A14.715%2C14.715%2C0%2C0%2C0%2C11.843%2C16.157Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M4.167%2C10.157A8.475%2C8.475%2C0%2C0%2C1%2C5.884%2C7.132%2C8.514%2C8.514%2C0%2C0%2C0%2C1.67%2C10.157Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M3.382%2C16.157H0a8.549%2C8.549%2C0%2C0%2C0%2C.67%2C2.572H3.7A16.724%2C16.724%2C0%2C0%2C1%2C3.382%2C16.157Z%22%2F%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2222.151%207.699%2028.75%200%2010.564%200%2017.163%207.699%2022.151%207.699%22%2F%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2214.123%207.071%209.314%201.459%209.314%2013.04%2014.123%207.071%22%2F%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2225.191%207.071%2030%2013.04%2030%201.459%2025.191%207.071%22%2F%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2223.934%208.537%2023.017%209.607%2016.296%209.607%2015.38%208.537%2010.533%2014.552%2028.781%2014.552%2023.934%208.537%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2030%2023.468%22%3E%20%3Cg%3E%20%3Cg%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M5.438%2C18.729H7.613V16.157H5.083A14.618%2C14.618%2C0%2C0%2C0%2C5.438%2C18.729Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M7.613%2C7.872a4.966%2C4.966%2C0%2C0%2C0-1.637%2C2.285H7.613Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M5.083%2C14.443h2.53V11.871H5.438A14.618%2C14.618%2C0%2C0%2C0%2C5.083%2C14.443Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M7.613%2C22.728V20.443H5.976A4.966%2C4.966%2C0%2C0%2C0%2C7.613%2C22.728Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M9.314%2C22.728a4.972%2C4.972%2C0%2C0%2C0%2C1.636-2.285H9.314Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M13.225%2C18.729h3.032a8.577%2C8.577%2C0%2C0%2C0%2C.669-2.572H13.544A16.6%2C16.6%2C0%2C0%2C1%2C13.225%2C18.729Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M4.167%2C20.443H1.67a8.513%2C8.513%2C0%2C0%2C0%2C4.215%2C3.025A8.461%2C8.461%2C0%2C0%2C1%2C4.167%2C20.443Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M12.76%2C20.443a8.491%2C8.491%2C0%2C0%2C1-1.718%2C3.025%2C8.514%2C8.514%2C0%2C0%2C0%2C4.214-3.025Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M.67%2C11.871A8.549%2C8.549%2C0%2C0%2C0%2C0%2C14.443H3.382A16.724%2C16.724%2C0%2C0%2C1%2C3.7%2C11.871Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M11.843%2C16.157H9.314v2.572h2.175A14.715%2C14.715%2C0%2C0%2C0%2C11.843%2C16.157Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M4.167%2C10.157A8.475%2C8.475%2C0%2C0%2C1%2C5.884%2C7.132%2C8.514%2C8.514%2C0%2C0%2C0%2C1.67%2C10.157Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M3.382%2C16.157H0a8.549%2C8.549%2C0%2C0%2C0%2C.67%2C2.572H3.7A16.724%2C16.724%2C0%2C0%2C1%2C3.382%2C16.157Z%22%2F%3E%20%3C%2Fg%3E%20%3Cg%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2222.151%207.699%2028.75%200%2010.564%200%2017.163%207.699%2022.151%207.699%22%2F%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2214.123%207.071%209.314%201.459%209.314%2013.04%2014.123%207.071%22%2F%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2225.191%207.071%2030%2013.04%2030%201.459%2025.191%207.071%22%2F%3E%20%3Cpolygon%20class%3D%22a%22%20points%3D%2223.934%208.537%2023.017%209.607%2016.296%209.607%2015.38%208.537%2010.533%2014.552%2028.781%2014.552%2023.934%208.537%22%2F%3E%20%3C%2Fg%3E%20%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=tvList]::before, [data-icon=tvList]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2022.941%22%3E%20%3Cg%3E%20%3Crect%20class%3D%22a%22%20x%3D%2211.471%22%20y%3D%2218.353%22%20width%3D%223.059%22%20height%3D%222.294%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%225.353%22%20y%3D%2220.647%22%20width%3D%2215.294%22%20height%3D%222.294%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M26%2C18.353H0V0H26ZM23.706%2C2.294H2.294V16.059H23.706Z%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%227.647%22%20y%3D%225.353%22%20width%3D%221.529%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%2210.706%22%20y%3D%225.353%22%20width%3D%227.647%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%227.647%22%20y%3D%228.412%22%20width%3D%221.529%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%2210.706%22%20y%3D%228.412%22%20width%3D%227.647%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%227.647%22%20y%3D%2211.471%22%20width%3D%221.529%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%2210.706%22%20y%3D%2211.471%22%20width%3D%227.647%22%20height%3D%221.529%22%2F%3E%20%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2026%2022.941%22%3E%20%3Cg%3E%20%3Crect%20class%3D%22a%22%20x%3D%2211.471%22%20y%3D%2218.353%22%20width%3D%223.059%22%20height%3D%222.294%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%225.353%22%20y%3D%2220.647%22%20width%3D%2215.294%22%20height%3D%222.294%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M26%2C18.353H0V0H26ZM23.706%2C2.294H2.294V16.059H23.706Z%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%227.647%22%20y%3D%225.353%22%20width%3D%221.529%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%2210.706%22%20y%3D%225.353%22%20width%3D%227.647%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%227.647%22%20y%3D%228.412%22%20width%3D%221.529%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%2210.706%22%20y%3D%228.412%22%20width%3D%227.647%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%227.647%22%20y%3D%2211.471%22%20width%3D%221.529%22%20height%3D%221.529%22%2F%3E%20%3Crect%20class%3D%22a%22%20x%3D%2210.706%22%20y%3D%2211.471%22%20width%3D%227.647%22%20height%3D%221.529%22%2F%3E%20%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=phoneConfig]::before, [data-icon=phoneConfig]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2027%2025.313%22%3E%20%3Cg%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M0%2C18.984V1A1%2C1%2C0%2C0%2C1%2C1%2C0H11.657a1%2C1%2C0%2C0%2C1%2C1%2C1V18.984a1%2C1%2C0%2C0%2C1-1%2C1H1A1%2C1%2C0%2C0%2C1%2C0%2C18.984Zm10.991-1.665V2.664H1.665V17.319Zm-3-15.987H4.663V2h3.33Zm-1%2C16.653H5.662v.666H6.994Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M27%2C19.958V18.011l-1.581-.093a4.853%2C4.853%2C0%2C0%2C0-.637-1.535L25.835%2C15.2l-1.377-1.377-1.185%2C1.054a4.832%2C4.832%2C0%2C0%2C0-1.535-.638l-.093-1.581H19.7l-.093%2C1.581a4.826%2C4.826%2C0%2C0%2C0-1.534.638l-1.185-1.054L15.509%2C15.2l1.053%2C1.185a4.853%2C4.853%2C0%2C0%2C0-.637%2C1.535l-1.581.093v1.947l1.581.093a4.862%2C4.862%2C0%2C0%2C0%2C.637%2C1.535l-1.053%2C1.185%2C1.377%2C1.376%2C1.185-1.053a4.824%2C4.824%2C0%2C0%2C0%2C1.534.637l.093%2C1.581h1.947l.093-1.581a4.83%2C4.83%2C0%2C0%2C0%2C1.535-.637l1.185%2C1.053%2C1.377-1.376-1.053-1.185a4.862%2C4.862%2C0%2C0%2C0%2C.637-1.535Zm-6.328%2C1.26a2.234%2C2.234%2C0%2C1%2C1%2C2.233-2.234A2.234%2C2.234%2C0%2C0%2C1%2C20.672%2C21.218Z%22%2F%3E%20%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2027%2025.313%22%3E%20%3Cg%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M0%2C18.984V1A1%2C1%2C0%2C0%2C1%2C1%2C0H11.657a1%2C1%2C0%2C0%2C1%2C1%2C1V18.984a1%2C1%2C0%2C0%2C1-1%2C1H1A1%2C1%2C0%2C0%2C1%2C0%2C18.984Zm10.991-1.665V2.664H1.665V17.319Zm-3-15.987H4.663V2h3.33Zm-1%2C16.653H5.662v.666H6.994Z%22%2F%3E%20%3Cpath%20class%3D%22a%22%20d%3D%22M27%2C19.958V18.011l-1.581-.093a4.853%2C4.853%2C0%2C0%2C0-.637-1.535L25.835%2C15.2l-1.377-1.377-1.185%2C1.054a4.832%2C4.832%2C0%2C0%2C0-1.535-.638l-.093-1.581H19.7l-.093%2C1.581a4.826%2C4.826%2C0%2C0%2C0-1.534.638l-1.185-1.054L15.509%2C15.2l1.053%2C1.185a4.853%2C4.853%2C0%2C0%2C0-.637%2C1.535l-1.581.093v1.947l1.581.093a4.862%2C4.862%2C0%2C0%2C0%2C.637%2C1.535l-1.053%2C1.185%2C1.377%2C1.376%2C1.185-1.053a4.824%2C4.824%2C0%2C0%2C0%2C1.534.637l.093%2C1.581h1.947l.093-1.581a4.83%2C4.83%2C0%2C0%2C0%2C1.535-.637l1.185%2C1.053%2C1.377-1.376-1.053-1.185a4.862%2C4.862%2C0%2C0%2C0%2C.637-1.535Zm-6.328%2C1.26a2.234%2C2.234%2C0%2C1%2C1%2C2.233-2.234A2.234%2C2.234%2C0%2C0%2C1%2C20.672%2C21.218Z%22%2F%3E%20%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/*▽▽▽ご利用中の方トップページ*/
+/*サポート情報*/
+[data-icon=supportInfo]::before, [data-icon=supportInfo]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2027.1%2022.7%22%20style%3D%22enable-background%3Anew%200%200%2027.1%2022.7%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2222.7%22%20width%3D%2227.1%22%20x%3D%22-1255.8%22%20y%3D%22-907%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M13.6%2C6.9c-1.2%2C0-2.1%2C0.9-2.1%2C2.1c0%2C1.2%2C0.9%2C2.1%2C2.1%2C2.1c1.2%2C0%2C2.1-0.8%2C2.1-2.1C15.7%2C7.7%2C14.8%2C6.9%2C13.6%2C6.9z%22%20%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M14.4%2C11.8l-1.7%2C0c-0.4%2C0-0.6%2C0.2-0.6%2C0.4l0%2C5.8c0%2C0.3%2C0.3%2C0.5%2C0.6%2C0.5l1.7%2C0c0.4%2C0%2C0.6-0.2%2C0.6-0.4l0-5.8%20C15%2C12%2C14.7%2C11.8%2C14.4%2C11.8z%22%2F%3E%20%3Cpath%20d%3D%22M23.2%2C0.6c-3.4-1.4-7.3%2C0.3-9.6%2C4.1C11.3%2C0.8%2C7.4-0.9%2C4%2C0.5C0.2%2C2-1%2C6.2%2C0.8%2C10.5c2.8%2C6.6%2C12.6%2C12.2%2C12.6%2C12.2%20s9.9-5.5%2C12.8-12.1C28.1%2C6.4%2C27%2C2.1%2C23.2%2C0.6z%20M15%2C18.1c0%2C0.3-0.3%2C0.5-0.6%2C0.4l-1.7%2C0c-0.4%2C0-0.6-0.2-0.6-0.5l0-5.8%20c0-0.3%2C0.3-0.5%2C0.6-0.4l1.7%2C0c0.4%2C0%2C0.6%2C0.2%2C0.6%2C0.5L15%2C18.1z%20M13.5%2C11c-1.2%2C0-2.1-0.9-2.1-2.1c0-1.2%2C0.9-2.1%2C2.1-2.1%20c1.2%2C0%2C2.1%2C0.9%2C2.1%2C2.1C15.6%2C10.2%2C14.7%2C11%2C13.5%2C11z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2027.1%2022.7%22%20style%3D%22enable-background%3Anew%200%200%2027.1%2022.7%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2222.7%22%20width%3D%2227.1%22%20x%3D%22-1255.8%22%20y%3D%22-907%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M13.6%2C6.9c-1.2%2C0-2.1%2C0.9-2.1%2C2.1c0%2C1.2%2C0.9%2C2.1%2C2.1%2C2.1c1.2%2C0%2C2.1-0.8%2C2.1-2.1C15.7%2C7.7%2C14.8%2C6.9%2C13.6%2C6.9z%22%20%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M14.4%2C11.8l-1.7%2C0c-0.4%2C0-0.6%2C0.2-0.6%2C0.4l0%2C5.8c0%2C0.3%2C0.3%2C0.5%2C0.6%2C0.5l1.7%2C0c0.4%2C0%2C0.6-0.2%2C0.6-0.4l0-5.8%20C15%2C12%2C14.7%2C11.8%2C14.4%2C11.8z%22%2F%3E%20%3Cpath%20d%3D%22M23.2%2C0.6c-3.4-1.4-7.3%2C0.3-9.6%2C4.1C11.3%2C0.8%2C7.4-0.9%2C4%2C0.5C0.2%2C2-1%2C6.2%2C0.8%2C10.5c2.8%2C6.6%2C12.6%2C12.2%2C12.6%2C12.2%20s9.9-5.5%2C12.8-12.1C28.1%2C6.4%2C27%2C2.1%2C23.2%2C0.6z%20M15%2C18.1c0%2C0.3-0.3%2C0.5-0.6%2C0.4l-1.7%2C0c-0.4%2C0-0.6-0.2-0.6-0.5l0-5.8%20c0-0.3%2C0.3-0.5%2C0.6-0.4l1.7%2C0c0.4%2C0%2C0.6%2C0.2%2C0.6%2C0.5L15%2C18.1z%20M13.5%2C11c-1.2%2C0-2.1-0.9-2.1-2.1c0-1.2%2C0.9-2.1%2C2.1-2.1%20c1.2%2C0%2C2.1%2C0.9%2C2.1%2C2.1C15.6%2C10.2%2C14.7%2C11%2C13.5%2C11z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/*各種お手続き*/
+[data-icon=procedures]::before, [data-icon=procedures]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2020.4%2023.4%22%20style%3D%22enable-background%3Anew%200%200%2020.4%2023.4%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2223.4%22%20width%3D%2220.4%22%20x%3D%22-1222.3%22%20y%3D%22-909%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M20.4%2C23.4H6.9V6.7h13.4V23.4z%20M8.5%2C21.8h10.2V8.3H8.5V21.8z%22%2F%3E%3Cpolygon%20points%3D%225%2C19.1%203.4%2C19.1%203.4%2C3.2%2016%2C3.2%2016%2C4.8%205%2C4.8%20%22%2F%3E%3Cpolygon%20points%3D%221.6%2C16%200%2C16%200%2C0%2012.6%2C0%2012.6%2C1.6%201.6%2C1.6%20%22%2F%3E%3Crect%20x%3D%2210.9%22%20y%3D%2210.7%22%20width%3D%225.2%22%20height%3D%221%22%2F%3E%3Crect%20x%3D%2210.9%22%20y%3D%2213.2%22%20width%3D%225.2%22%20height%3D%221%22%2F%3E%3Crect%20x%3D%2210.9%22%20y%3D%2215.8%22%20width%3D%223.1%22%20height%3D%221%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2020.4%2023.4%22%20style%3D%22enable-background%3Anew%200%200%2020.4%2023.4%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2223.4%22%20width%3D%2220.4%22%20x%3D%22-1222.3%22%20y%3D%22-909%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M20.4%2C23.4H6.9V6.7h13.4V23.4z%20M8.5%2C21.8h10.2V8.3H8.5V21.8z%22%2F%3E%3Cpolygon%20points%3D%225%2C19.1%203.4%2C19.1%203.4%2C3.2%2016%2C3.2%2016%2C4.8%205%2C4.8%20%22%2F%3E%3Cpolygon%20points%3D%221.6%2C16%200%2C16%200%2C0%2012.6%2C0%2012.6%2C1.6%201.6%2C1.6%20%22%2F%3E%3Crect%20x%3D%2210.9%22%20y%3D%2210.7%22%20width%3D%225.2%22%20height%3D%221%22%2F%3E%3Crect%20x%3D%2210.9%22%20y%3D%2213.2%22%20width%3D%225.2%22%20height%3D%221%22%2F%3E%3Crect%20x%3D%2210.9%22%20y%3D%2215.8%22%20width%3D%223.1%22%20height%3D%221%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/*▽スターキャットの形のアイコン*/
+[data-icon=starcat_net]::before, [data-icon=starcat_net]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2059.4%2054%22%20style%3D%22enable-background%3Anew%200%200%2059.4%2054%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M20.2%2C26.4h4.6c0.2-1.7%2C0.7-3.3%2C1.4-4.9l0%2C0C23.6%2C22.4%2C21.5%2C24.1%2C20.2%2C26.4z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M20.2%2C37.4c1.3%2C2.3%2C3.4%2C4%2C6%2C4.9c-0.7-1.6-1.1-3.2-1.4-4.9H20.2z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M32.1%2C26.4c-0.6-3.6-1.8-5.5-2.4-5.5s-1.7%2C1.9-2.4%2C5.5L32.1%2C26.4L32.1%2C26.4z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M24.4%2C31.9c0-1%2C0-2%2C0.1-3h-5.4c-0.3%2C1-0.4%2C2-0.4%2C3c0%2C1%2C0.1%2C2%2C0.4%2C3h5.4C24.4%2C33.9%2C24.4%2C32.9%2C24.4%2C31.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M29.7%2C42.9c0.6%2C0%2C1.7-1.9%2C2.4-5.5h-4.8C27.9%2C41%2C29.1%2C42.9%2C29.7%2C42.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M33.2%2C42.3L33.2%2C42.3c2.5-0.9%2C4.6-2.6%2C6-4.9h-4.6C34.3%2C39.1%2C33.9%2C40.7%2C33.2%2C42.3z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M57.1%2C22.3c-1-1.9-3.4-6-5.8-10.2h0l-0.6-1C47.5%2C5.4%2C44.3%2C0%2C44.3%2C0L38%2C10.6c-2.9-0.6-5.9-0.9-9-0.8%20c-2.7%2C0.1-5.4%2C0.3-8%2C0.8L15.1%2C0c0%2C0-12.5%2C21.5-12.9%2C22.3c-1.8%2C3.5-2.5%2C7.5-2%2C11.4c0.2%2C1.9%2C0.8%2C3.7%2C1.6%2C5.4l0.5%2C1%20C5%2C45%2C9.4%2C47.9%2C13.2%2C49.9c5%2C2.8%2C10.6%2C4.2%2C16.3%2C4.1c7.1-0.2%2C11-1.2%2C16.4-4.1c7.1-3.7%2C12.2-8.9%2C13.2-16.2%20C59.8%2C29.8%2C59.1%2C25.8%2C57.1%2C22.3z%20M29.7%2C45.4c-7.4%2C0-13.5-6-13.5-13.5c0-6.4%2C4.4-11.7%2C10.4-13.1v-0.4h5.1v0.3%20c6.5%2C1%2C11.4%2C6.6%2C11.4%2C13.3C43.1%2C39.3%2C37.1%2C45.4%2C29.7%2C45.4z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M27%2C28.9c-0.1%2C0.9-0.1%2C1.9-0.1%2C3c0%2C1.1%2C0.1%2C2.1%2C0.1%2C3h5.4c0.1-0.9%2C0.1-1.9%2C0.1-3c0-1.1-0.1-2.1-0.1-3H27z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M35%2C31.9c0%2C1%2C0%2C2-0.1%2C3h5.4c0.6-2%2C0.6-4.1%2C0-6.1h-5.4C35%2C29.9%2C35%2C30.9%2C35%2C31.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M39.2%2C26.4L39.2%2C26.4c-1.3-2.3-3.5-4-6-4.9c0.7%2C1.6%2C1.1%2C3.2%2C1.4%2C4.9H39.2z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2059.4%2054%22%20style%3D%22enable-background%3Anew%200%200%2059.4%2054%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M20.2%2C26.4h4.6c0.2-1.7%2C0.7-3.3%2C1.4-4.9l0%2C0C23.6%2C22.4%2C21.5%2C24.1%2C20.2%2C26.4z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M20.2%2C37.4c1.3%2C2.3%2C3.4%2C4%2C6%2C4.9c-0.7-1.6-1.1-3.2-1.4-4.9H20.2z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M32.1%2C26.4c-0.6-3.6-1.8-5.5-2.4-5.5s-1.7%2C1.9-2.4%2C5.5L32.1%2C26.4L32.1%2C26.4z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M24.4%2C31.9c0-1%2C0-2%2C0.1-3h-5.4c-0.3%2C1-0.4%2C2-0.4%2C3c0%2C1%2C0.1%2C2%2C0.4%2C3h5.4C24.4%2C33.9%2C24.4%2C32.9%2C24.4%2C31.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M29.7%2C42.9c0.6%2C0%2C1.7-1.9%2C2.4-5.5h-4.8C27.9%2C41%2C29.1%2C42.9%2C29.7%2C42.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M33.2%2C42.3L33.2%2C42.3c2.5-0.9%2C4.6-2.6%2C6-4.9h-4.6C34.3%2C39.1%2C33.9%2C40.7%2C33.2%2C42.3z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M57.1%2C22.3c-1-1.9-3.4-6-5.8-10.2h0l-0.6-1C47.5%2C5.4%2C44.3%2C0%2C44.3%2C0L38%2C10.6c-2.9-0.6-5.9-0.9-9-0.8%20c-2.7%2C0.1-5.4%2C0.3-8%2C0.8L15.1%2C0c0%2C0-12.5%2C21.5-12.9%2C22.3c-1.8%2C3.5-2.5%2C7.5-2%2C11.4c0.2%2C1.9%2C0.8%2C3.7%2C1.6%2C5.4l0.5%2C1%20C5%2C45%2C9.4%2C47.9%2C13.2%2C49.9c5%2C2.8%2C10.6%2C4.2%2C16.3%2C4.1c7.1-0.2%2C11-1.2%2C16.4-4.1c7.1-3.7%2C12.2-8.9%2C13.2-16.2%20C59.8%2C29.8%2C59.1%2C25.8%2C57.1%2C22.3z%20M29.7%2C45.4c-7.4%2C0-13.5-6-13.5-13.5c0-6.4%2C4.4-11.7%2C10.4-13.1v-0.4h5.1v0.3%20c6.5%2C1%2C11.4%2C6.6%2C11.4%2C13.3C43.1%2C39.3%2C37.1%2C45.4%2C29.7%2C45.4z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M27%2C28.9c-0.1%2C0.9-0.1%2C1.9-0.1%2C3c0%2C1.1%2C0.1%2C2.1%2C0.1%2C3h5.4c0.1-0.9%2C0.1-1.9%2C0.1-3c0-1.1-0.1-2.1-0.1-3H27z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M35%2C31.9c0%2C1%2C0%2C2-0.1%2C3h5.4c0.6-2%2C0.6-4.1%2C0-6.1h-5.4C35%2C29.9%2C35%2C30.9%2C35%2C31.9z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M39.2%2C26.4L39.2%2C26.4c-1.3-2.3-3.5-4-6-4.9c0.7%2C1.6%2C1.1%2C3.2%2C1.4%2C4.9H39.2z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=starcat_tv]::before, [data-icon=starcat_tv]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2059.5%2054%22%20style%3D%22enable-background%3Anew%200%200%2059.5%2054%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M57.3%2C22.3c-1-1.9-3.4-6-5.8-10.2h0l-0.6-1C47.6%2C5.4%2C44.4%2C0%2C44.4%2C0l-6.2%2C10.6c-3-0.6-6-0.9-9-0.8%20c-2.7%2C0.1-5.4%2C0.3-8%2C0.8L15.1%2C0c0%2C0-12.6%2C21.5-12.9%2C22.3c-1.8%2C3.5-2.5%2C7.5-2%2C11.4c0.2%2C1.9%2C0.8%2C3.7%2C1.6%2C5.4l0.5%2C1%20C5%2C45%2C9.5%2C47.9%2C13.3%2C49.9c5%2C2.8%2C10.7%2C4.2%2C16.4%2C4.1c7.1-0.2%2C11-1.2%2C16.4-4.1c7.1-3.7%2C12.2-8.9%2C13.2-16.2%20C59.9%2C29.8%2C59.2%2C25.8%2C57.3%2C22.3z%20M46.9%2C44H43v-2h3.9V44z%20M46.9%2C40.1H12.8V20.6h34.1V40.1z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M44.5%2C22.9H15.1v14.7h29.4V22.9z%20M17.1%2C34.7v-9.8h24.4L17.1%2C34.7z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2059.5%2054%22%20style%3D%22enable-background%3Anew%200%200%2059.5%2054%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M57.3%2C22.3c-1-1.9-3.4-6-5.8-10.2h0l-0.6-1C47.6%2C5.4%2C44.4%2C0%2C44.4%2C0l-6.2%2C10.6c-3-0.6-6-0.9-9-0.8%20c-2.7%2C0.1-5.4%2C0.3-8%2C0.8L15.1%2C0c0%2C0-12.6%2C21.5-12.9%2C22.3c-1.8%2C3.5-2.5%2C7.5-2%2C11.4c0.2%2C1.9%2C0.8%2C3.7%2C1.6%2C5.4l0.5%2C1%20C5%2C45%2C9.5%2C47.9%2C13.3%2C49.9c5%2C2.8%2C10.7%2C4.2%2C16.4%2C4.1c7.1-0.2%2C11-1.2%2C16.4-4.1c7.1-3.7%2C12.2-8.9%2C13.2-16.2%20C59.9%2C29.8%2C59.2%2C25.8%2C57.3%2C22.3z%20M46.9%2C44H43v-2h3.9V44z%20M46.9%2C40.1H12.8V20.6h34.1V40.1z%22%2F%3E%20%3Cpath%20class%3D%22st0%22%20d%3D%22M44.5%2C22.9H15.1v14.7h29.4V22.9z%20M17.1%2C34.7v-9.8h24.4L17.1%2C34.7z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+[data-icon=starcat_tel]::before, [data-icon=starcat_tel]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2059.4%2054%22%20style%3D%22enable-background%3Anew%200%200%2059.4%2054%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M57.1%2C22.3c-1-1.9-3.4-6-5.8-10.2h0l-0.6-1C47.5%2C5.4%2C44.3%2C0%2C44.3%2C0L38%2C10.6c-2.9-0.6-5.9-0.9-9-0.8%20c-2.7%2C0.1-5.4%2C0.3-8%2C0.8L15.1%2C0c0%2C0-12.5%2C21.5-12.9%2C22.3c-1.8%2C3.5-2.5%2C7.5-2%2C11.4c0.2%2C1.9%2C0.8%2C3.7%2C1.6%2C5.4l0.5%2C1%20C5%2C45%2C9.4%2C47.9%2C13.2%2C49.9c5%2C2.8%2C10.6%2C4.2%2C16.3%2C4.1c7.1-0.2%2C11-1.2%2C16.4-4.1c7.1-3.7%2C12.2-8.9%2C13.2-16.2%20C59.8%2C29.8%2C59.1%2C25.8%2C57.1%2C22.3z%20M41.8%2C42.8C41.8%2C42.8%2C41.8%2C42.8%2C41.8%2C42.8c-3.3%2C3.2-7.3%2C3.3-9.4%2C2.1c-1.9-1.1-4.5-2.6-8.8-7.9%20c-4.3-5.3-5.3-8.2-5.9-10.3c-0.7-2.3%2C0.2-6.2%2C4-8.8c0.4-0.3%2C0.9-0.2%2C1.1%2C0.2c0%2C0%2C0%2C0%2C0%2C0l4%2C6.4c0.2%2C0.4%2C0.1%2C0.9-0.3%2C1.1%20c0%2C0%2C0%2C0-0.1%2C0c-0.4%2C0.2-0.7%2C0.4-1%2C0.6c-0.9%2C0.7-0.9%2C1.8-0.4%2C3.1c0.6%2C1.6%2C1.4%2C3%2C2.5%2C4.3c1%2C1.3%2C2.3%2C2.5%2C3.7%2C3.4%20c1.2%2C0.8%2C2.3%2C1%2C3.1%2C0.3c0.3-0.3%2C0.6-0.6%2C0.8-0.9c0.3-0.3%2C0.8-0.4%2C1.1-0.1c0%2C0%2C0%2C0%2C0%2C0l5.5%2C5.2C42.1%2C42%2C42.1%2C42.5%2C41.8%2C42.8z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2059.4%2054%22%20style%3D%22enable-background%3Anew%200%200%2059.4%2054%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M57.1%2C22.3c-1-1.9-3.4-6-5.8-10.2h0l-0.6-1C47.5%2C5.4%2C44.3%2C0%2C44.3%2C0L38%2C10.6c-2.9-0.6-5.9-0.9-9-0.8%20c-2.7%2C0.1-5.4%2C0.3-8%2C0.8L15.1%2C0c0%2C0-12.5%2C21.5-12.9%2C22.3c-1.8%2C3.5-2.5%2C7.5-2%2C11.4c0.2%2C1.9%2C0.8%2C3.7%2C1.6%2C5.4l0.5%2C1%20C5%2C45%2C9.4%2C47.9%2C13.2%2C49.9c5%2C2.8%2C10.6%2C4.2%2C16.3%2C4.1c7.1-0.2%2C11-1.2%2C16.4-4.1c7.1-3.7%2C12.2-8.9%2C13.2-16.2%20C59.8%2C29.8%2C59.1%2C25.8%2C57.1%2C22.3z%20M41.8%2C42.8C41.8%2C42.8%2C41.8%2C42.8%2C41.8%2C42.8c-3.3%2C3.2-7.3%2C3.3-9.4%2C2.1c-1.9-1.1-4.5-2.6-8.8-7.9%20c-4.3-5.3-5.3-8.2-5.9-10.3c-0.7-2.3%2C0.2-6.2%2C4-8.8c0.4-0.3%2C0.9-0.2%2C1.1%2C0.2c0%2C0%2C0%2C0%2C0%2C0l4%2C6.4c0.2%2C0.4%2C0.1%2C0.9-0.3%2C1.1%20c0%2C0%2C0%2C0-0.1%2C0c-0.4%2C0.2-0.7%2C0.4-1%2C0.6c-0.9%2C0.7-0.9%2C1.8-0.4%2C3.1c0.6%2C1.6%2C1.4%2C3%2C2.5%2C4.3c1%2C1.3%2C2.3%2C2.5%2C3.7%2C3.4%20c1.2%2C0.8%2C2.3%2C1%2C3.1%2C0.3c0.3-0.3%2C0.6-0.6%2C0.8-0.9c0.3-0.3%2C0.8-0.4%2C1.1-0.1c0%2C0%2C0%2C0%2C0%2C0l5.5%2C5.2C42.1%2C42%2C42.1%2C42.5%2C41.8%2C42.8z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/*||| common |||*/
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 769px) {
+  .inner {
+    padding: 0 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    padding: 0 2.604vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  main .inner {
+    padding: 0 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .inner {
+    padding: 0 2.604vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  main .inner {
+    padding: 0 5.333vw;
+  }
+}
+
+.fixedContent_top, .fixedContent_bottom {
+  position: fixed;
+}
+.fixedContent_top {
+  top: 0;
+}
+.fixedContent_bottom {
+  bottom: 0;
+}
+
+/*▽カラム数*/
+[data-column] {
+  display: grid;
+}
+@media screen and (min-width: 769px) {
+  [data-column] {
+    gap: 0 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-column] {
+    gap: 0 1.25rem;
+  }
+}
+[data-column][data-column="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 769px) {
+  [data-column][data-column="2"].column_pc {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-column][data-column="2"].column_pc {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (min-width: 769px) {
+  [data-column][data-column="2"].column_sp {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-column][data-column="2"].column_sp {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+[data-column][data-column="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (min-width: 769px) {
+  [data-column][data-column="3"].column_pc {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-column][data-column="3"].column_pc {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (min-width: 769px) {
+  [data-column][data-column="3"].column_sp {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-column][data-column="3"].column_sp {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+[data-column][data-column="4"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (min-width: 769px) {
+  [data-column][data-column="4"].column_pc {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-column][data-column="4"].column_pc {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (min-width: 769px) {
+  [data-column][data-column="4"].column_sp {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-column][data-column="4"].column_sp {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*▽出し分け*/
+@media screen and (min-width: 1201px) {
+  .showMaxPC {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .showPC01 {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1101px) {
+  .showContainer {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .showOverContainer {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .showPC {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 769px) {
+  .showTB {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 376px) {
+  .showSP {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .showOverSP {
+    display: none !important;
+  }
+}
+/*▽画像類*/
+.imageWrap img {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  vertical-align: top;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.bannerLink {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/*▽テキスト類*/
+/*右寄せ、左寄せ*/
+.textL:not(_pc):not(_sp) {
+  text-align: left !important;
+  -webkit-box-pack: start !important;
+  -webkit-justify-content: flex-start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+}
+@media screen and (min-width: 769px) {
+  .textL_pc {
+    text-align: left !important;
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .textL_sp {
+    text-align: left !important;
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+.textC:not(_pc):not(_sp) {
+  text-align: center !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+@media screen and (min-width: 769px) {
+  .textC_pc {
+    text-align: center !important;
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .textC_sp {
+    text-align: center !important;
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+}
+
+.textR:not(_pc):not(_sp) {
+  text-align: right !important;
+  -webkit-box-pack: end !important;
+  -webkit-justify-content: flex-end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+}
+@media screen and (min-width: 769px) {
+  .textR_pc {
+    text-align: right !important;
+    -webkit-box-pack: end !important;
+    -webkit-justify-content: flex-end !important;
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .textR_sp {
+    text-align: right !important;
+    -webkit-box-pack: end !important;
+    -webkit-justify-content: flex-end !important;
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+  }
+}
+
+/*フォントサイズ*/
+.fontSizeXS {
+  font-size: 0.6em !important;
+}
+
+.fontSizeS {
+  font-size: 0.8em !important;
+}
+
+.fontSizeM {
+  font-size: 1em !important;
+}
+
+.fontSizeL {
+  font-size: 1.2em !important;
+}
+
+.fontSizeXL {
+  font-size: 1.4em !important;
+}
+
+.fontSizeXXL {
+  font-size: 1.8em !important;
+}
+
+.fontSizeXXXL {
+  font-size: 2em !important;
+}
+
+/*フォント太さ*/
+.weight400 {
+  font-weight: 400 !important;
+}
+
+.weight500 {
+  font-weight: 500 !important;
+}
+
+.weight700 {
+  font-weight: 700 !important;
+}
+
+/*フォントカラー*/
+.colorDefault {
+  color: #333 !important;
+}
+
+.colorBlue {
+  color: #005bac !important;
+}
+
+.colorYellow {
+  color: #fccf00 !important;
+}
+
+[data-background=important] {
+  background-color: #fff0f0 !important;
+}
+
+[data-background=blue] {
+  background-color: #005bac !important;
+}
+
+[data-background=yellow] {
+  background-color: #fccf00 !important;
+}
+
+/*▽ブロック類*/
+.margin_auto {
+  margin: auto;
+}
+
+.mT_10:not(_pc):not(_tb):not(_sp) {
+  margin-top: 0.625rem;
+}
+@media screen and (min-width: 769px) {
+  .mT_10_pc {
+    margin-top: 0.625rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mT_10_tb {
+    margin-top: 1.302vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mT_10_sp {
+    margin-top: 2.667vw !important;
+  }
+}
+
+.mT_20:not(_pc):not(_tb):not(_sp) {
+  margin-top: 1.25rem;
+}
+@media screen and (min-width: 769px) {
+  .mT_20_pc {
+    margin-top: 1.25rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mT_20_tb {
+    margin-top: 2.604vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mT_20_sp {
+    margin-top: 5.333vw !important;
+  }
+}
+
+.mT_30:not(_pc):not(_tb):not(_sp) {
+  margin-top: 1.875rem;
+}
+@media screen and (min-width: 769px) {
+  .mT_30_pc {
+    margin-top: 1.875rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mT_30_tb {
+    margin-top: 3.906vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mT_30_sp {
+    margin-top: 8vw !important;
+  }
+}
+
+.mT_40:not(_pc):not(_tb):not(_sp) {
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 769px) {
+  .mT_40_pc {
+    margin-top: 2.5rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mT_40_tb {
+    margin-top: 5.208vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mT_40_sp {
+    margin-top: 10.667vw !important;
+  }
+}
+
+.mT_50:not(_pc):not(_tb):not(_sp) {
+  margin-top: 3.125rem;
+}
+@media screen and (min-width: 769px) {
+  .mT_50_pc {
+    margin-top: 3.125rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mT_50_tb {
+    margin-top: 6.51vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mT_50_sp {
+    margin-top: 13.333vw !important;
+  }
+}
+
+.mB_10:not(_pc):not(_tb):not(_sp) {
+  margin-bottom: 0.625rem;
+}
+@media screen and (min-width: 769px) {
+  .mB_10_pc {
+    margin-bottom: 0.625rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mB_10_tb {
+    margin-bottom: 1.302vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mB_10_sp {
+    margin-bottom: 2.667vw !important;
+  }
+}
+
+.mB_20:not(_pc):not(_tb):not(_sp) {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 769px) {
+  .mB_20_pc {
+    margin-bottom: 1.25rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mB_20_tb {
+    margin-bottom: 2.604vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mB_20_sp {
+    margin-bottom: 5.333vw !important;
+  }
+}
+
+.mB_30:not(_pc):not(_tb):not(_sp) {
+  margin-bottom: 1.875rem;
+}
+@media screen and (min-width: 769px) {
+  .mB_30_pc {
+    margin-bottom: 1.875rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mB_30_tb {
+    margin-bottom: 3.906vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mB_30_sp {
+    margin-bottom: 8vw !important;
+  }
+}
+
+.mB_40:not(_pc):not(_tb):not(_sp) {
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 769px) {
+  .mB_40_pc {
+    margin-bottom: 2.5rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mB_40_tb {
+    margin-bottom: 5.208vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mB_40_sp {
+    margin-bottom: 10.667vw !important;
+  }
+}
+
+.mB_50:not(_pc):not(_tb):not(_sp) {
+  margin-bottom: 3.125rem;
+}
+@media screen and (min-width: 769px) {
+  .mB_50_pc {
+    margin-bottom: 3.125rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mB_50_tb {
+    margin-bottom: 6.51vw !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mB_50_sp {
+    margin-bottom: 13.333vw !important;
+  }
+}
+
+.mB_80:not(_pc):not(_sp) {
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 769px) {
+  .mB_80_pc {
+    margin-bottom: 5rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mB_80_sp {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.mL_10 {
+  margin-left: 0.625rem;
+}
+
+.mL_30 {
+  margin-left: 1.875rem;
+}
+
+/*▽sectioning*/
+.sectionArea {
+  /*上下paddingではなく、下部のみに余白が欲しい時。sectionAreaとは入れ子になってOK*/
+}
+@media screen and (min-width: 769px) {
+  .sectionArea {
+    padding: 5rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sectionArea {
+    padding: 6.51vw 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sectionArea {
+    padding: 8vw 0;
+  }
+}
+.sectionArea[data-background] {
+  border-radius: 1.875rem;
+}
+.sectionArea[data-background][data-background=yellow] .sectionTitle {
+  color: #1c1c1c;
+}
+.sectionArea[data-background][data-background=blue] .sectionTitle {
+  color: #fff;
+}
+@media screen and (min-width: 769px) {
+  .sectionArea_margin {
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sectionArea_margin {
+    margin-bottom: 6.51vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sectionArea_margin {
+    margin-bottom: 8vw;
+  }
+}
+
+/*▽sectionにborderが付く場合*/
+.section.border_pc, .section.border_tb, .section.border_sp {
+  margin: 0 auto;
+  width: calc(100% - 2.5rem);
+  border-radius: 8px;
+}
+.section.border_pc .inner, .section.border_tb .inner, .section.border_sp .inner {
+  padding: 0;
+}
+@media screen and (min-width: 769px) {
+  .section.border_pc {
+    border: 3px solid #005bac;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section.border_tb {
+    border: 3px solid #005bac;
+  }
+}
+.section.border:not(_pc):not(_tb) {
+  border: 3px solid #005bac;
+}
+.section.border:not(_pc):not(_tb) .inner {
+  padding: 0;
+}
+
+/*▽タイトル類*/
+.pageTitle {
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 376px) {
+  .pageTitle {
+    padding: 2.5rem 0.625rem 3.125rem;
+    font-size: 2.125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pageTitle {
+    padding: 1.875rem 0.625rem 2.5rem;
+    font-size: 9.067vw;
+  }
+}
+.pageTitle::after {
+  display: block;
+  width: 5rem;
+  height: 5px;
+  background-color: #ff7e0c;
+  content: "";
+}
+@media screen and (min-width: 376px) {
+  .pageTitle::after {
+    margin-top: 0.625rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pageTitle::after {
+    margin-top: 1.3335vw;
+  }
+}
+.pageTitle img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+/*sectionArea内で使用*/
+.sectionTitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 769px) {
+  .sectionTitle {
+    margin-bottom: 4.375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sectionTitle {
+    margin-bottom: 6.51vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sectionTitle {
+    margin-bottom: 10.667vw;
+  }
+}
+
+.catch {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0 0.5em;
+  font-weight: 700;
+}
+.catch::before, .catch::after {
+  display: block;
+  width: 1em;
+  height: 1.2em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%205%2080%22%20style%3D%22enable-background%3Anew%200%200%205%2080%3B%22%20xml%3Aspace%3D%22preserve%22%3E%20%3Crect%20width%3D%225%22%20height%3D%2280%22%2F%3E%3C%2Fsvg%3E") no-repeat center bottom/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%205%2080%22%20style%3D%22enable-background%3Anew%200%200%205%2080%3B%22%20xml%3Aspace%3D%22preserve%22%3E%20%3Crect%20width%3D%225%22%20height%3D%2280%22%2F%3E%3C%2Fsvg%3E") no-repeat center bottom/contain;
+  mask-mode: alpha;
+  background-color: #fccf00;
+  font-weight: 700;
+  content: "";
+}
+.catch::before {
+  -webkit-transform: scale(1.5) rotate(-30deg);
+  transform: scale(1.5) rotate(-30deg);
+}
+.catch::after {
+  -webkit-transform: scale(1.5) rotate(30deg);
+  transform: scale(1.5) rotate(30deg);
+}
+
+/*▽タイトルの前にimgタグを配置する*/
+.iconTitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 0 0.875rem;
+  width: 100%;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: unset;
+}
+.iconTitle[data-icon]::before, .iconTitle[data-icon]::after {
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  .iconTitle img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .iconTitle img {
+    width: 5.208vw;
+    height: 5.208vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .iconTitle img {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+.iconTitle > p,
+.iconTitle > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.iconTitle p {
+  -webkit-box-pack: start !important;
+  -webkit-justify-content: flex-start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+  color: #005bac;
+  font-weight: 700;
+}
+@media screen and (min-width: 376px) {
+  .iconTitle p {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .iconTitle p {
+    font-size: 4.267vw;
+  }
+}
+
+button.iconTitle,
+a.iconTitle {
+  padding: 1em 1.2em;
+  height: 70px;
+}
+
+button.iconTitle:not(.active)[data-icon]::before, button.iconTitle:not(.active)[data-icon]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2018%22%20style%3D%22enable-background%3Anew%200%200%2018%2018%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-379%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C7.5h-6v-6C10.5%2C0.7%2C9.8%2C0%2C9%2C0S7.5%2C0.7%2C7.5%2C1.5v6h-6C0.7%2C7.5%2C0%2C8.2%2C0%2C9s0.7%2C1.5%2C1.5%2C1.5h6v6C7.5%2C17.3%2C8.2%2C18%2C9%2C18%20s1.5-0.7%2C1.5-1.5v-6h6c0.8%2C0%2C1.5-0.7%2C1.5-1.5S17.3%2C7.5%2C16.5%2C7.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2018%22%20style%3D%22enable-background%3Anew%200%200%2018%2018%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-379%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C7.5h-6v-6C10.5%2C0.7%2C9.8%2C0%2C9%2C0S7.5%2C0.7%2C7.5%2C1.5v6h-6C0.7%2C7.5%2C0%2C8.2%2C0%2C9s0.7%2C1.5%2C1.5%2C1.5h6v6C7.5%2C17.3%2C8.2%2C18%2C9%2C18%20s1.5-0.7%2C1.5-1.5v-6h6c0.8%2C0%2C1.5-0.7%2C1.5-1.5S17.3%2C7.5%2C16.5%2C7.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+}
+button.iconTitle.active[data-icon]::before, button.iconTitle.active[data-icon]::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%203%22%20style%3D%22enable-background%3Anew%200%200%2018%203%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%223%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-371.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C3h-15C0.7%2C3%2C0%2C2.3%2C0%2C1.5S0.7%2C0%2C1.5%2C0h15C17.3%2C0%2C18%2C0.7%2C18%2C1.5S17.3%2C3%2C16.5%2C3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%203%22%20style%3D%22enable-background%3Anew%200%200%2018%203%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%223%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-371.5%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C3h-15C0.7%2C3%2C0%2C2.3%2C0%2C1.5S0.7%2C0%2C1.5%2C0h15C17.3%2C0%2C18%2C0.7%2C18%2C1.5S17.3%2C3%2C16.5%2C3z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+}
+
+/*▽下層のaとbuttonがarrowになる。*/
+.arrowLinkArea {
+  font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  .arrowLinkArea {
+    margin-top: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .arrowLinkArea {
+    margin-top: 1.5rem;
+  }
+}
+.arrowLinkArea a[data-icon=arrow_next]::before, .arrowLinkArea a[data-icon=arrow_next]::after {
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  .arrowLinkArea a:hover {
+    text-decoration: underline;
+  }
+}
+
+/*背景色があるパターン*/
+[data-background=blue] .arrowLinkArea a {
+  color: #fff;
+}
+[data-background=blue] .arrowLinkArea a[data-icon=arrow_next]::before, [data-background=blue] .arrowLinkArea a[data-icon=arrow_next]::after {
+  background-color: #fccf00;
+}
+[data-background=blue] .arrowLinkArea a:hover {
+  -webkit-text-decoration-color: #fff;
+  text-decoration-color: #fff;
+}
+
+/*▽下層のaとbuttonがarrowになる*/
+.arrowLinkList_before a, .arrowLinkList_after a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.arrowLinkList_before a::before, .arrowLinkList_before a::after, .arrowLinkList_after a::before, .arrowLinkList_after a::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask-mode: alpha;
+  background-color: #333;
+}
+@media screen and (min-width: 769px) {
+  .arrowLinkList_before a:hover, .arrowLinkList_after a:hover {
+    text-decoration: underline;
+  }
+}
+.arrowLinkList_before a {
+  gap: 0.2em;
+}
+.arrowLinkList_before a::before {
+  display: block;
+  content: "";
+}
+.arrowLinkList_before a::after {
+  display: none;
+}
+.arrowLinkList_after a {
+  gap: 0.5em;
+}
+.arrowLinkList_after a::before {
+  display: none;
+}
+.arrowLinkList_after a::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: block;
+  margin-left: auto;
+  content: "";
+}
+
+/*||| ボタン、リンク類 |||*/
+/*▽ボタンっぽくなる*/
+.button:not(_orange), .button_orange {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: unset;
+}
+.button:not(_orange) {
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  .button:not(_orange):hover {
+    background-color: #2f8fe5;
+  }
+}
+.button_orange {
+  background-color: #ff7e0c;
+}
+@media screen and (min-width: 769px) {
+  .button_orange:hover {
+    background-color: #ffc28c;
+  }
+}
+.button.arrow_before, .button.arrow_after, .button.plus_before, .button.plus_after {
+  gap: 0.5em;
+}
+.button.arrow_before::before, .button.arrow_before::after, .button.arrow_after::before, .button.arrow_after::after, .button.plus_before::before, .button.plus_before::after, .button.plus_after::before, .button.plus_after::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 0.8em;
+  height: 0.8em;
+  mask-mode: alpha;
+  background-color: #fccf00;
+}
+.button.arrow_before > p,
+.button.arrow_before > div, .button.arrow_after > p,
+.button.arrow_after > div, .button.plus_before > p,
+.button.plus_before > div, .button.plus_after > p,
+.button.plus_after > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.button.arrow_before > p, .button.arrow_after > p, .button.plus_before > p, .button.plus_after > p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.button.arrow_before::before, .button.plus_before::before {
+  display: block;
+  content: "";
+}
+.button.arrow_before::after, .button.plus_before::after {
+  display: none;
+}
+.button.arrow_after::before, .button.plus_after::before {
+  display: none;
+}
+.button.arrow_after::after, .button.plus_after::after {
+  display: block;
+  content: "";
+}
+.button.arrow_before::before, .button.arrow_before::after, .button.arrow_after::before, .button.arrow_after::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+}
+.button.plus_before::before, .button.plus_before::after, .button.plus_after::before, .button.plus_after::after {
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2018%22%20style%3D%22enable-background%3Anew%200%200%2018%2018%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-379%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C7.5h-6v-6C10.5%2C0.7%2C9.8%2C0%2C9%2C0S7.5%2C0.7%2C7.5%2C1.5v6h-6C0.7%2C7.5%2C0%2C8.2%2C0%2C9s0.7%2C1.5%2C1.5%2C1.5h6v6C7.5%2C17.3%2C8.2%2C18%2C9%2C18%20s1.5-0.7%2C1.5-1.5v-6h6c0.8%2C0%2C1.5-0.7%2C1.5-1.5S17.3%2C7.5%2C16.5%2C7.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2018%2018%22%20style%3D%22enable-background%3Anew%200%200%2018%2018%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%20%3Csfw%3E%20%3CsliceSourceBounds%20bottomLeftOrigin%3D%22true%22%20height%3D%2218%22%20width%3D%2218%22%20x%3D%22-767.5%22%20y%3D%22-379%22%3E%3C%2FsliceSourceBounds%3E%20%3C%2Fsfw%3E%3C%2Fmetadata%3E%3Cpath%20d%3D%22M16.5%2C7.5h-6v-6C10.5%2C0.7%2C9.8%2C0%2C9%2C0S7.5%2C0.7%2C7.5%2C1.5v6h-6C0.7%2C7.5%2C0%2C8.2%2C0%2C9s0.7%2C1.5%2C1.5%2C1.5h6v6C7.5%2C17.3%2C8.2%2C18%2C9%2C18%20s1.5-0.7%2C1.5-1.5v-6h6c0.8%2C0%2C1.5-0.7%2C1.5-1.5S17.3%2C7.5%2C16.5%2C7.5z%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+}
+.button.outline {
+  background-color: #fff;
+  border: 3px solid #005bac;
+}
+@media screen and (min-width: 769px) {
+  .button.outline:hover {
+    background-color: #ffea04;
+  }
+}
+.button.outline.arrow_before::before, .button.outline.arrow_before::after, .button.outline.arrow_after::before, .button.outline.arrow_after::after, .button.outline.plus_before::before, .button.outline.plus_before::after, .button.outline.plus_after::before, .button.outline.plus_after::after {
+  background-color: #005bac;
+}
+
+/*▽arrowが右下固定のボタン*/
+.bottomArrowLinkButton_fill, .bottomArrowLinkButton_border {
+  position: relative;
+  display: block;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; /*flex用*/
+  border-radius: 8px;
+  text-decoration: unset;
+  font-weight: 700;
+  overflow: hidden;
+}
+.bottomArrowLinkButton_fill::before, .bottomArrowLinkButton_fill::after, .bottomArrowLinkButton_border::before, .bottomArrowLinkButton_border::after {
+  position: absolute;
+  display: block;
+  content: "";
+}
+.bottomArrowLinkButton_fill::after, .bottomArrowLinkButton_border::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/contain;
+  mask-mode: alpha;
+  background-color: #fccf00;
+}
+.bottomArrowLinkButton_fill {
+  padding: 1.5rem;
+  background-color: #005bac;
+  color: #fff;
+}
+@media screen and (min-width: 769px) {
+  .bottomArrowLinkButton_fill:hover {
+    background-color: #2f8fe5;
+  }
+}
+.bottomArrowLinkButton_fill::after {
+  right: 10px;
+  bottom: 10px;
+}
+.bottomArrowLinkButton_border {
+  outline: 3px solid #005bac;
+  outline-offset: -3px;
+  background-color: #fff;
+  color: #005bac;
+  -webkit-transition: unset;
+  transition: unset;
+}
+@media screen and (min-width: 769px) {
+  .bottomArrowLinkButton_border {
+    padding: 0.875rem 1.5rem;
+  }
+  .bottomArrowLinkButton_border:hover {
+    outline: 5px solid #2f8fe5;
+    outline-offset: -5px;
+  }
+  .bottomArrowLinkButton_border:hover::before {
+    background-color: #2f8fe5;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bottomArrowLinkButton_border {
+    padding: 0.875rem;
+  }
+}
+.bottomArrowLinkButton_border::before {
+  right: 0;
+  bottom: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 12px 0 0 0;
+  background-color: #005bac;
+}
+.bottomArrowLinkButton_border::after {
+  right: 6px;
+  bottom: 7px;
+}
+.bottomArrowLinkButton_border.orange {
+  outline-color: #ffc28c;
+}
+@media screen and (min-width: 769px) {
+  .bottomArrowLinkButton_border.orange:hover::before {
+    background-color: #ffc28c;
+  }
+}
+.bottomArrowLinkButton_border.orange::before {
+  background-color: #ff7e0c;
+}
+.bottomArrowLinkButton_border.orange::after {
+  background-color: #fff;
+}
+
+/*▽スライダーの共通デザイン*/
+#bannerSlider {
+  display: none;
+}
+#bannerSlider.slick-initialized {
+  display: block;
+}
+.slick-dotted .slick-dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 8px;
+}
+.slick-dotted .slick-dots li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+}
+.slick-dotted .slick-dots li button {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 0.625rem;
+  background-color: #a7a7a7;
+}
+.slick-dotted .slick-dots li button::before {
+  content: "";
+}
+.slick-dotted .slick-dots li.slick-active button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: #fccf00;
+}
+
+/*□□□□□□□□□□ 各component □□□□□□□□□□*/
+[data-commonNav] a,
+[data-commonNav] button {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+[data-commonNav] a[data-icon]::after,
+[data-commonNav] button[data-icon]::after {
+  /* display: none; */
+}
+@media screen and (min-width: 769px) {
+  [data-commonNav] a,
+  [data-commonNav] button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-commonNav] a,
+  [data-commonNav] button {
+    display: grid;
+  }
+}
+[data-commonNav] [data-icon=beginner]::before {
+  background-color: #94be27;
+}
+[data-commonNav] [data-icon=beginner]:hover, [data-commonNav] [data-icon=beginner].active {
+  color: #94be27;
+}
+[data-commonNav] [data-icon=mypage]::before {
+  background-color: #ff7e0c;
+}
+[data-commonNav] [data-icon=mypage]:hover, [data-commonNav] [data-icon=mypage].active {
+  color: #ff7e0c;
+}
+[data-commonNav] [data-icon=corporation]::before {
+  background-color: #005bac;
+}
+[data-commonNav] [data-icon=corporation]:hover, [data-commonNav] [data-icon=corporation].active {
+  color: #005bac;
+}
+
+[data-commonNav="1"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  border-radius: 0.625rem;
+  background-color: #fff;
+}
+[data-commonNav="1"] a,
+[data-commonNav="1"] button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0 5px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+[data-commonNav="1"] a::before,
+[data-commonNav="1"] button::before {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+/*||| searchForm |||*/
+.searchForm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.searchForm label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0 0.625rem;
+  padding: 0.875rem 1rem;
+  width: 100%;
+  border-radius: 0.625rem;
+  background-color: #f3f3f3;
+}
+.searchForm label[data-icon=search]::before {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.searchForm .search_text {
+  width: 100%;
+  border: unset;
+  background: unset;
+}
+.searchForm .search_text ::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: #939393;
+}
+.searchForm .search_text ::-moz-placeholder {
+  font-size: 1rem;
+  color: #939393;
+}
+.searchForm .search_text :-ms-input-placeholder {
+  font-size: 1rem;
+  color: #939393;
+}
+.searchForm .search_text ::-ms-input-placeholder {
+  font-size: 1rem;
+  color: #939393;
+}
+.searchForm .search_text ::placeholder {
+  font-size: 1rem;
+  color: #939393;
+}
+
+#languageList {
+  display: none; /*初期表示用*/
+  position: absolute;
+  right: 0;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.625rem;
+  background-color: #333;
+  -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  z-index: 101;
+}
+@media screen and (min-width: 376px) {
+  #languageList {
+    top: 4.375rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #languageList {
+    top: 3.125rem;
+  }
+}
+#languageList li:not(:last-child) {
+  margin-bottom: 5px;
+}
+#languageList li a {
+  color: #fff;
+  font-size: 0.875rem;
+}
+#languageList li a:not(:hover) {
+  text-decoration: none;
+}
+
+/*||| menuButton |||*/
+.menuButton {
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  width: 60px;
+  height: 100%;
+  border: unset;
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  .menuButton:hover {
+    background-color: #2f8fe5;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menuButton {
+    -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+    box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  }
+}
+.menuButton div {
+  display: grid;
+  gap: 6px 0;
+  margin: 0 auto;
+  width: 26px;
+}
+.menuButton div span {
+  display: block;
+  height: 2px;
+  background: #fff;
+  width: 100%;
+}
+.menuButton p {
+  margin-bottom: -5px;
+  color: #fff;
+  font-size: 0.625rem;
+}
+@media screen and (max-width: 768px) {
+  .menuButton {
+    border-radius: 0 0.875rem 0.875rem 0;
+  }
+}
+
+/*||| modalArea |||*/
+.modalArea {
+  display: none; /*初期表示用*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+}
+.modalArea .modalContents .inner {
+  padding: 0;
+}
+
+.modalArea:not(#navMenuArea) .modalContents {
+  width: 100%;
+  background-color: #fff;
+}
+@media screen and (min-width: 769px) {
+  .modalArea:not(#navMenuArea) .modalContents {
+    padding: 3.75rem;
+    border-radius: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modalArea:not(#navMenuArea) .modalContents {
+    padding: 1.875rem 5.208vw;
+    /*デバイス高さからmodalCloseボタンとgナビ分を引いています。*/
+    max-height: calc(100dvh - 6.25rem);
+    border-radius: 0.875rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .modalArea:not(#navMenuArea) .modalContents {
+    padding: 10.667vw 5.333vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .modalArea:not(#navMenuArea) .modalContents.notPadding {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modalArea:not(#navMenuArea) .modalContents.notPadding {
+    padding: 1.875rem 0;
+  }
+}
+.modalArea:not(#navMenuArea) .modalContents > .inner {
+  overflow-y: auto;
+}
+@media screen and (max-width: 768px) {
+  .modalArea:not(#navMenuArea) .modalContents > .inner {
+    /*デバイス高さからmodalCloseボタンとgナビ分と上下のpadding分を引いています。*/
+    max-height: calc(100dvh - 10rem);
+  }
+}
+@media screen and (max-width: 375px) {
+  .modalArea:not(#navMenuArea) .modalContents > .inner {
+    /*デバイス高さからmodalCloseボタンとgナビ分と上下のpadding分を引いています。*/
+    max-height: calc(100dvh - (6.25rem + 21.334vw));
+  }
+}
+@media screen and (min-width: 376px) {
+  .modalArea:not(#navMenuArea) [onclick*=modalClose] {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modalArea:not(#navMenuArea) [onclick*=modalClose] {
+    display: grid;
+    place-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #000;
+  }
+}
+.modalArea:not(#navMenuArea) [onclick*=modalClose]::before {
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .modalArea:not(#navMenuArea) [onclick*=modalClose]::before {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/*||| mainVisual |||*/
+#mainVisual img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*||| bannerSlider |||*/
+@media screen and (min-width: 769px) {
+  #bannerSlider li {
+    margin: 0 7px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #bannerSlider li {
+    margin: 0 5px;
+  }
+}
+
+/*||| newsList_important |||*/
+#newsArea_important {
+  position: relative;
+  padding: 0.625rem;
+}
+#newsArea_important [data-background] {
+  border-radius: 0.625rem;
+}
+#newsArea_important dl {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  #newsArea_important dl {
+    padding: 0.625rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #newsArea_important dl {
+    padding: 0.625rem 0;
+  }
+}
+@media screen and (min-width: 376px) {
+  #newsArea_important dl {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 375px) {
+  #newsArea_important dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "newsList_importantICON newsList_importantDT" "newsList_importantICON newsList_importantDD";
+  }
+  #newsArea_important dl::before {
+    grid-area: newsList_importantICON;
+  }
+}
+@media screen and (max-width: 375px) {
+  #newsArea_important dl dt {
+    grid-area: newsList_importantDT;
+    margin-bottom: 3px;
+  }
+}
+#newsArea_important dl dd {
+  color: #f00;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+@media screen and (max-width: 375px) {
+  #newsArea_important dl dd {
+    grid-area: newsList_importantDD;
+  }
+}
+#newsArea_important dl a {
+  color: inherit;
+  text-decoration: unset;
+}
+@media screen and (min-width: 769px) {
+  #newsArea_important dl a:hover {
+    text-decoration: underline;
+  }
+}
+#newsArea_important [data-icon=attention]::before, #newsArea_important [data-icon=attention]::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/*||| newsArea |||*/
+@media screen and (max-width: 375px) {
+  #newsArea .sectionTitle {
+    margin-bottom: 5.333vw;
+  }
+}
+#newsArea dl {
+  position: relative;
+  border-radius: 0.875rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  #newsArea dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+#newsArea dl:not(:first-of-type) {
+  margin-top: 0.625rem;
+}
+#newsArea dl.important {
+  background-color: #fff0f0;
+}
+@media screen and (min-width: 769px) {
+  #newsArea dl.important {
+    padding-top: 0.9375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #newsArea dl.important {
+    padding-top: 0.3125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #newsArea dl.important {
+    padding-top: 0rem;
+  }
+}
+#newsArea dl.important::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  background: url("/img/icon/attention.svg") no-repeat center center/contain;
+  content: "";
+}
+@media screen and (min-width: 769px) {
+  #newsArea dl.important::before {
+    top: -1.5625rem;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #newsArea dl.important::before {
+    top: -0.9375rem;
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #newsArea dl.important::before {
+    top: -0.625rem;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+#newsArea dl.important dd a {
+  color: #f00;
+}
+#newsArea dl:not(.important) {
+  background-color: #e8f1ff;
+}
+@media screen and (min-width: 769px) {
+  #newsArea dl dt, #newsArea dl dd {
+    display: grid;
+    align-self: stretch;
+    padding: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #newsArea dl dt, #newsArea dl dd {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  #newsArea dl dt:not(:first-of-type), #newsArea dl dd:not(:first-of-type) {
+    border-top: 1px solid #fff;
+  }
+}
+#newsArea dl dt {
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 769px) {
+  #newsArea dl dt {
+    padding-right: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  #newsArea dl dt {
+    padding-bottom: unset;
+  }
+  #newsArea dl dt:not(:first-of-type) {
+    border-top: 1px solid #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  #newsArea dl dd {
+    padding-top: unset;
+  }
+}
+#newsArea a {
+  text-decoration: unset;
+}
+@media screen and (min-width: 769px) {
+  #newsArea a:hover {
+    text-decoration: underline;
+  }
+}
+
+/*||| entryLinks |||*/
+@media screen and (min-width: 769px) {
+  main .entryLinks {
+    padding: 1.875rem 0 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .entryLinks {
+    padding: 1.25rem 0;
+  }
+}
+
+.entryLinks {
+  /*初めての方*/
+  /*ご利用中の方*/
+}
+.entryLinks > div {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks > div {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks > div {
+    place-content: stretch;
+    gap: 1.25rem;
+  }
+}
+.entryLinks [data-icon]::before {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: #fff;
+}
+.entryLinks a,
+.entryLinks button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0.875rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: unset;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks a,
+  .entryLinks button {
+    padding: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks a,
+  .entryLinks button {
+    padding: 0.875rem;
+    font-size: 0.875rem;
+  }
+}
+.entryLinks a::before,
+.entryLinks button::before {
+  background-color: #fff;
+}
+.entryLinks section {
+  margin: 0;
+  border-radius: 0.875rem;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks section {
+    padding: 1.5rem 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks section {
+    padding: 1.5rem 1.25rem;
+  }
+}
+.entryLinks section .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0 8px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.25rem;
+  color: #282728;
+  padding-bottom: 0;
+  line-height: 1.5;
+  border-bottom: 0;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks section .title {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks section .title {
+    font-size: 1rem;
+  }
+}
+.entryLinks section .linkWrap {
+  display: grid;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks section .linkWrap {
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks section .linkWrap {
+    gap: 1.25rem;
+  }
+}
+.entryLinks .entryLinkArea {
+  background-color: #f0fbef;
+}
+.entryLinks .entryLinkArea .title::before {
+  background-color: #94be27;
+}
+.entryLinks .entryLinkArea a,
+.entryLinks .entryLinkArea button {
+  background-color: #94be27;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks .entryLinkArea a:hover,
+  .entryLinks .entryLinkArea button:hover {
+    background-color: #a3e200;
+  }
+}
+.entryLinks .entryLinkArea a.entryLink,
+.entryLinks .entryLinkArea button.entryLink {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks .entryLinkArea a.entryLink,
+  .entryLinks .entryLinkArea button.entryLink {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .entryLinks .entryLinkArea a.entryLink,
+  .entryLinks .entryLinkArea button.entryLink {
+    font-size: clamp(10px, (100vw - 375px) * 10 / 725 + 1.818vw, 1.25rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks .entryLinkArea a.entryLink,
+  .entryLinks .entryLinkArea button.entryLink {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .entryLinks .entryLinkArea a.entryLink,
+  .entryLinks .entryLinkArea button.entryLink {
+    font-size: 5.333vw;
+  }
+}
+.entryLinks .entryLinkArea a.entryLink img,
+.entryLinks .entryLinkArea button.entryLink img {
+  position: absolute;
+  right: 0;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks .entryLinkArea a.entryLink img,
+  .entryLinks .entryLinkArea button.entryLink img {
+    width: 240px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .entryLinks .entryLinkArea a.entryLink img,
+  .entryLinks .entryLinkArea button.entryLink img {
+    right: -3%;
+  }
+}
+@media screen and (min-width: 376px) {
+  .entryLinks .entryLinkArea a.entryLink img,
+  .entryLinks .entryLinkArea button.entryLink img {
+    bottom: -1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks .entryLinkArea a.entryLink img,
+  .entryLinks .entryLinkArea button.entryLink img {
+    bottom: -1.25rem;
+    right: -3%;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .entryLinks .entryLinkArea a.entryLink img,
+  .entryLinks .entryLinkArea button.entryLink img {
+    width: 43vw;
+  }
+}
+.entryLinks .entryLinkArea .linkWrap {
+  display: grid;
+}
+.entryLinks .userLinkArea {
+  background-color: #fff4ed;
+}
+.entryLinks .userLinkArea .title::before {
+  background-color: #ff7e0c;
+}
+.entryLinks .userLinkArea a, .entryLinks .userLinkArea button {
+  background-color: #ff7e0c;
+}
+@media screen and (min-width: 769px) {
+  .entryLinks .userLinkArea a:hover, .entryLinks .userLinkArea button:hover {
+    background-color: #fdb300;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks .userLinkArea a, .entryLinks .userLinkArea button {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) {
+  .entryLinks .userLinkArea a.mypage, .entryLinks .userLinkArea button.mypage {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks .userLinkArea a.mypage, .entryLinks .userLinkArea button.mypage {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entryLinks .userLinkArea .linkWrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*||| overScrollList |||*/
+/*▽オーバーフロー時にスクロール*/
+.overScrollList {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1.875rem;
+  margin: -2.5rem auto 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  /*▽listナビ設定*/
+}
+@media screen and (max-width: 375px) {
+  .overScrollList {
+    gap: 1.5rem;
+  }
+}
+.overScrollList:not(.active) + .listNav {
+  display: none;
+}
+.overScrollList.active {
+  padding: 0 1.25rem 2.5rem;
+}
+@media screen and (min-width: 376px) {
+  .overScrollList.active {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 375px) {
+  .overScrollList.active {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.overScrollList.active + .listNav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: unset;
+}
+@media screen and (min-width: 769px) {
+  .overScrollList.active + .listNav {
+    margin: -1.25rem 1.25rem 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .overScrollList.active + .listNav {
+    margin: -1.25rem 2.604vw 2.5rem;
+    width: calc(100dvw - 2.5rem);
+  }
+}
+@media screen and (max-width: 375px) {
+  .overScrollList.active + .listNav {
+    margin: -1.25rem 5.333vw 2.5rem;
+    width: calc(100dvw - 10.666vw);
+  }
+}
+.overScrollList.active + .listNav li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.overScrollList.active + .listNav li:not(.current) {
+  height: 4px;
+  border-radius: unset;
+  background: rgba(0, 0, 0, 0.2);
+}
+.overScrollList.active + .listNav li.current {
+  height: 8px;
+  border-radius: 2px;
+  background: #005bac;
+}
+.overScrollList section {
+  padding-top: 2.5rem;
+}
+.overScrollList .sectionInner {
+  height: 100%;
+  border-radius: 1.25rem;
+  background-color: #FCF9F9;
+  -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+}
+@media screen and (min-width: 376px) {
+  .overScrollList .sectionInner {
+    min-width: 330px;
+    width: 330px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .overScrollList .sectionInner {
+    min-width: 300px;
+    width: 300px;
+  }
+}
+.overScrollList .sectionInner .title {
+  margin-bottom: 5px;
+  text-align: center;
+  color: #005bac;
+  font-size: 1.5rem;
+}
+.overScrollList .sectionInner .catch {
+  margin-bottom: 1.75rem;
+}
+.overScrollList .sectionInner .arrowLinkList_before, .overScrollList .sectionInner .arrowLinkList_after {
+  border-top: 1px solid #000;
+}
+.overScrollList .sectionInner .arrowLinkList_before a,
+.overScrollList .sectionInner .arrowLinkList_before button, .overScrollList .sectionInner .arrowLinkList_after a,
+.overScrollList .sectionInner .arrowLinkList_after button {
+  padding: 1.25rem;
+  border-bottom: 1px solid #000;
+  text-decoration: unset;
+  font-weight: 500;
+}
+.overScrollList .sectionInner .arrowLinkList_before a::before, .overScrollList .sectionInner .arrowLinkList_before a::after,
+.overScrollList .sectionInner .arrowLinkList_before button::before,
+.overScrollList .sectionInner .arrowLinkList_before button::after, .overScrollList .sectionInner .arrowLinkList_after a::before, .overScrollList .sectionInner .arrowLinkList_after a::after,
+.overScrollList .sectionInner .arrowLinkList_after button::before,
+.overScrollList .sectionInner .arrowLinkList_after button::after {
+  background-color: #005bac;
+}
+.overScrollList .sectionInner .arrowLinkList_before a[style="border-bottom: unset;"],
+.overScrollList .sectionInner .arrowLinkList_before button[style="border-bottom: unset;"], .overScrollList .sectionInner .arrowLinkList_after a[style="border-bottom: unset;"],
+.overScrollList .sectionInner .arrowLinkList_after button[style="border-bottom: unset;"] {
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+@media screen and (min-width: 769px) {
+  .overScrollList .sectionInner .arrowLinkList_before a:hover:hover,
+  .overScrollList .sectionInner .arrowLinkList_before button:hover:hover, .overScrollList .sectionInner .arrowLinkList_after a:hover:hover,
+  .overScrollList .sectionInner .arrowLinkList_after button:hover:hover {
+    background-color: #ffea04;
+  }
+}
+
+/*▽sectionにアイコン表示*/
+.service_other > section[data-icon],
+.overScrollList .sectionInner[data-icon] {
+  position: relative;
+  padding-top: 2.5rem;
+}
+.service_other > section[data-icon]::before,
+.overScrollList .sectionInner[data-icon]::before {
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+/*▽背景色別*/
+[data-background=yellow] .overScrollList.active section:not(.current) .sectionInner {
+  outline: 4px solid transparent;
+}
+[data-background=yellow] .overScrollList.active section.current .sectionInner {
+  outline: 4px solid #005bac;
+}
+[data-background=yellow] .overScrollList.active + .listNav li.current {
+  background-color: #005bac;
+}
+
+[data-background=blue] .overScrollList.active section:not(.current) .sectionInner {
+  outline: 4px solid transparent;
+}
+[data-background=blue] .overScrollList.active section.current .sectionInner {
+  outline: 4px solid #fccf00;
+}
+[data-background=blue] .overScrollList.active + .listNav li.current {
+  background-color: #fccf00;
+}
+
+/*||| serviceBannerArea |||*/
+@media screen and (max-width: 768px) {
+  #serviceBannerArea .inner {
+    padding: 0;
+  }
+}
+#serviceBannerArea .inner.slick-slider .slick-list .slick-track {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 769px) {
+  #serviceBannerArea .inner.slick-slider .slick-list .slick-track {
+    gap: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #serviceBannerArea .inner.slick-slider .slick-list .slick-track {
+    gap: 3.125vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #serviceBannerArea .inner.slick-slider .slick-list .slick-track {
+    gap: 2.667vw;
+  }
+}
+#serviceBannerArea .inner:not(.slick-slider) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 769px) {
+  #serviceBannerArea .inner:not(.slick-slider) {
+    gap: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #serviceBannerArea .inner:not(.slick-slider) {
+    gap: 3.125vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #serviceBannerArea .inner:not(.slick-slider) {
+    gap: 2.667vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #serviceBannerArea a {
+    width: 250px;
+  }
+}
+
+/*||| bannerArea |||*/
+#bannerArea .inner {
+  display: grid;
+}
+@media screen and (min-width: 769px) {
+  #bannerArea .inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #bannerArea .inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.083vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #bannerArea .inner {
+    grid-template-columns: unset;
+    gap: 2.667vw;
+  }
+}
+
+/*||| freeCallArea |||*/
+.freeCallArea {
+  margin: 0 auto;
+  border-radius: 0.875rem;
+  background-color: #fff;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  .freeCallArea {
+    padding: 3.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .freeCallArea {
+    padding: 1.25rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .freeCallArea {
+    padding: 5.333vw;
+  }
+}
+.freeCallArea .message {
+  margin-bottom: 5px;
+  font-weight: 900;
+}
+@media screen and (min-width: 769px) {
+  .freeCallArea .message {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #005bac;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .freeCallArea .message {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .freeCallArea .message {
+    font-size: 3.733vw;
+  }
+}
+.freeCallArea .freeCallLink {
+  display: grid;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 1;
+}
+@media screen and (min-width: 769px) {
+  .freeCallArea .freeCallLink {
+    grid-template-columns: 3.125rem 1fr;
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .freeCallArea .freeCallLink {
+    grid-template-columns: 1.875rem 1fr;
+    gap: 0.625rem;
+  }
+}
+.freeCallArea .freeCallLink a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  .freeCallArea .freeCallLink a {
+    font-size: 4.375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .freeCallArea .freeCallLink a {
+    font-size: 2.125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .freeCallArea .freeCallLink a {
+    font-size: 9.067vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .freeCallArea .freeCallLink .freeCallIcon {
+    max-width: 3.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .freeCallArea .freeCallLink .freeCallIcon {
+    max-width: 2.125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .freeCallArea .freeCallLink .freeCallIcon {
+    font-size: 9.067vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .freeCallArea .freeCallLink .callNumber {
+    pointer-events: none;
+  }
+}
+.freeCallArea .time {
+  font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  .freeCallArea .time {
+    margin-top: 0.625rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 768px) {
+  .freeCallArea .time {
+    margin-top: 5px;
+    font-size: 2.083vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .freeCallArea .time {
+    font-size: 2.667vw;
+  }
+}
+
+/*▽障害・メンテナンスエリア*/
+#trouble_maintenanceArea {
+  font-weight: 500;
+  /*▽障害エリア、メンテナンスエリア内コンテンツ*/
+}
+@media screen and (min-width: 769px) {
+  #trouble_maintenanceArea #trouble_maintenance {
+    display: block !important; /*初期表示用*/
+  }
+}
+@media screen and (max-width: 768px) {
+  #trouble_maintenanceArea #trouble_maintenance {
+    display: none; /*初期表示用*/
+    padding: 0 1.2em 1em;
+  }
+}
+#trouble_maintenanceArea .inner {
+  display: grid;
+}
+@media screen and (min-width: 769px) {
+  #trouble_maintenanceArea .inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.125rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #trouble_maintenanceArea .inner {
+    gap: 3.906vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #trouble_maintenanceArea .inner {
+    gap: 8vw;
+  }
+}
+#trouble_maintenanceArea .inner > section {
+  border-radius: 0.875rem;
+  background-color: #f3f3f3;
+}
+@media screen and (min-width: 769px) {
+  #trouble_maintenanceArea .inner > section {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #trouble_maintenanceArea .inner > section {
+    padding: 3.906vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #trouble_maintenanceArea .inner > section {
+    padding: 5.333vw;
+  }
+}
+#trouble_maintenanceArea .inner > section .title {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #676767;
+  font-size: 1.25rem;
+}
+#trouble_maintenanceArea .linkArea {
+  display: grid;
+  gap: 0.625rem 0;
+  margin-top: 1.25rem;
+}
+#trouble_maintenanceArea .linkArea a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 1em;
+  padding: 0.625rem 1.25rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  border: 1px solid #005bac;
+  background-color: #fff;
+  line-height: 1em;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+#trouble_maintenanceArea .linkArea a[data-icon=blank] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  text-decoration: none;
+}
+#trouble_maintenanceArea .linkArea a[data-icon=blank]::after {
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  #trouble_maintenanceArea .linkArea a:hover {
+    background-color: #ffea04;
+  }
+}
+#trouble_maintenanceArea h3 {
+  text-align: center;
+  color: #676767;
+  margin-bottom: 0.875rem;
+}
+#trouble_maintenanceArea .message {
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.75rem;
+  background-color: #fff;
+}
+#trouble_maintenanceArea .information_list a {
+  display: block;
+  padding: 1.25rem 1rem;
+  border-radius: 0.875rem;
+  background-color: #fff;
+  text-decoration: none;
+}
+#trouble_maintenanceArea .information_list a:not(:first-child) {
+  margin-top: 5px;
+}
+@media screen and (min-width: 769px) {
+  #trouble_maintenanceArea .information_list a:hover {
+    background-color: #ffea04;
+  }
+}
+#trouble_maintenanceArea .information_list a[data-icon=arrow_next] {
+  position: relative;
+  padding-right: 2.625rem;
+}
+#trouble_maintenanceArea .information_list a[data-icon=arrow_next]::before {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background-color: #005bac;
+}
+#trouble_maintenanceArea .information_list .date {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.625rem;
+  font-family: "Noto Sans JP";
+  font-size: 1rem;
+}
+#trouble_maintenanceArea .information_list .date span {
+  padding: 2px 0.625rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+#trouble_maintenanceArea .information_list .date span.today {
+  background-color: #ff9000;
+}
+#trouble_maintenanceArea .information_list .date span.end {
+  background-color: #b0b0b0;
+}
+#trouble_maintenanceArea .information_list .date span.working {
+  background-color: #77b614;
+}
+#trouble_maintenanceArea .information_list .date span.restoration {
+  background-color: #1fb2d2;
+}
+#trouble_maintenanceArea .information_list .date span.emergency {
+  background-color: #eb3c3c;
+}
+#trouble_maintenanceArea .information_list .date span.plan {
+  background-color: #b0b0b0;
+}
+#trouble_maintenanceArea .information_list .data dt {
+  margin-bottom: 4px;
+  color: #005bac;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+#trouble_maintenanceArea .information_list .data dd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 7px;
+}
+#trouble_maintenanceArea .information_list .data dd img {
+  width: 1.875rem;
+}
+@media screen and (min-width: 769px) {
+  #trouble_maintenanceArea .arrowLinkArea {
+    text-align: center;
+  }
+}
+
+/*▽スターキャットプラザ*/
+@media screen and (min-width: 769px) {
+  #starcatPlazaArea {
+    margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #starcatPlazaArea {
+    margin-top: 3.906vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  #starcatPlazaArea {
+    margin-top: 5.333vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #starcatPlazaArea #starcatPlaza {
+    display: none; /*初期表示用*/
+  }
+}
+@media screen and (min-width: 769px) {
+  #starcatPlazaArea .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+#starcatPlazaArea .inner .text {
+  display: grid;
+  place-content: center;
+  font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  #starcatPlazaArea .inner .text {
+    width: 80%;
+  }
+}
+/*▽サービスエリア*/
+#serviceArea section {
+  /*▽各サービス*/
+}
+#serviceArea section[data-icon=service_other] {
+  margin-top: 3.75rem;
+  padding: 1.875rem 2.5rem 2.5rem;
+  border-radius: 1.25rem;
+  background-color: #fff;
+}
+#serviceArea section[data-icon=service_other] .title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+#serviceArea section[data-icon=service_other] a {
+  margin: 0.625rem 0;
+  padding: 0.625rem;
+  width: 100%;
+  border-radius: 5px;
+  color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  #serviceArea section[data-icon=service_other] a:hover {
+    background-color: #ffea04;
+  }
+}
+#serviceArea section[data-icon=service_other] a p {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+#serviceArea #serviceList .sectionInner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#serviceArea #serviceList .sectionInner[data-icon] {
+  padding-top: 2.5rem !important;
+}
+#serviceArea #serviceList .arrowLinkList_before, #serviceArea #serviceList .arrowLinkList_after {
+  border-color: #005bac;
+}
+#serviceArea #serviceList .arrowLinkList_before a, #serviceArea #serviceList .arrowLinkList_before button, #serviceArea #serviceList .arrowLinkList_after a, #serviceArea #serviceList .arrowLinkList_after button {
+  border-color: #005bac;
+}
+#serviceArea #serviceList .bottomLinkArea {
+  padding: 1.875rem;
+}
+#serviceArea #serviceList .bottomLinkArea .bannerLink {
+  width: 85%;
+  -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+}
+
+/*▽サポート情報*/
+#supportArea #supportList .sectionInner .title {
+  margin-bottom: 1.25rem;
+}
+#supportArea #supportList .sectionInner > a {
+  margin: 0 1.25rem 1rem;
+  padding: 0.875rem 1.25rem;
+  border-radius: 6px;
+  background-color: #fccf00;
+  color: #005bac;
+  text-decoration: none;
+  font-weight: 700;
+}
+#supportArea #supportList .sectionInner > a[data-icon] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+#supportArea #supportList .sectionInner > a[data-icon]::after {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  #supportArea #supportList .sectionInner > a:hover {
+    background-color: #ffea04;
+  }
+}
+#supportArea #supportList .arrowLinkList_before, #supportArea #supportList .arrowLinkList_after {
+  border-color: #fccf00;
+}
+#supportArea #supportList .arrowLinkList_before a, #supportArea #supportList .arrowLinkList_before button, #supportArea #supportList .arrowLinkList_after a, #supportArea #supportList .arrowLinkList_after button {
+  border-color: #fccf00;
+}
+@media screen and (min-width: 769px) {
+  #supportArea .arrowLinkArea {
+    text-align: center;
+  }
+}
+
+.userSupportContentsLinks .bottomArrowLinkButton_fill, .userSupportContentsLinks .bottomArrowLinkButton_border {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 769px) {
+  .userSupportContentsLinks .bottomArrowLinkButton_fill, .userSupportContentsLinks .bottomArrowLinkButton_border {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  .userSupportContentsLinks .bottomArrowLinkButton_fill, .userSupportContentsLinks .bottomArrowLinkButton_border {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 5px;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .userSupportContentsLinks .bottomArrowLinkButton_fill, .userSupportContentsLinks .bottomArrowLinkButton_border {
+    font-size: 3.733vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .userSupportContentsLinks .bottomArrowLinkButton_fill#userSupportButton, .userSupportContentsLinks .bottomArrowLinkButton_border#userSupportButton {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+    gap: 5px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .userSupportContentsLinks .bottomArrowLinkButton_fill img, .userSupportContentsLinks .bottomArrowLinkButton_border img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .userSupportContentsLinks .bottomArrowLinkButton_fill img, .userSupportContentsLinks .bottomArrowLinkButton_border img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+
+/*▽mainの中の*/
+main .userSupportContentsLinks {
+  outline: 3px solid #ffc28c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media screen and (min-width: 769px) {
+  main .userSupportContentsLinks {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .userSupportContentsLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+main .userSupportContentsLinks a.bottomArrowLinkButton_fill, main .userSupportContentsLinks a.bottomArrowLinkButton_border,
+main .userSupportContentsLinks button.bottomArrowLinkButton_fill,
+main .userSupportContentsLinks button.bottomArrowLinkButton_border {
+  height: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 5px;
+  height: 100px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  outline-style: unset;
+  border-radius: unset;
+}
+@media screen and (min-width: 769px) {
+  main .userSupportContentsLinks a.bottomArrowLinkButton_fill:not(:first-child), main .userSupportContentsLinks a.bottomArrowLinkButton_border:not(:first-child),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_fill:not(:first-child),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_border:not(:first-child) {
+    border-left-style: solid;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .userSupportContentsLinks a.bottomArrowLinkButton_fill:nth-child(n+3), main .userSupportContentsLinks a.bottomArrowLinkButton_border:nth-child(n+3),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_fill:nth-child(n+3),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_border:nth-child(n+3) {
+    border-top-style: solid;
+  }
+  main .userSupportContentsLinks a.bottomArrowLinkButton_fill:nth-child(odd), main .userSupportContentsLinks a.bottomArrowLinkButton_border:nth-child(odd),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_fill:nth-child(odd),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_border:nth-child(odd) {
+    border-right-style: solid;
+  }
+}
+@media screen and (min-width: 769px) {
+  main .userSupportContentsLinks a.bottomArrowLinkButton_fill.orange:not(:first-child), main .userSupportContentsLinks a.bottomArrowLinkButton_border.orange:not(:first-child),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_fill.orange:not(:first-child),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_border.orange:not(:first-child) {
+    border-left-color: #ffc28c;
+  }
+  main .userSupportContentsLinks a.bottomArrowLinkButton_fill.orange:hover, main .userSupportContentsLinks a.bottomArrowLinkButton_border.orange:hover,
+  main .userSupportContentsLinks button.bottomArrowLinkButton_fill.orange:hover,
+  main .userSupportContentsLinks button.bottomArrowLinkButton_border.orange:hover {
+    outline: 5px solid #ffc28c;
+    outline-offset: -3px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .userSupportContentsLinks a.bottomArrowLinkButton_fill.orange:nth-child(n+3), main .userSupportContentsLinks a.bottomArrowLinkButton_border.orange:nth-child(n+3),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_fill.orange:nth-child(n+3),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_border.orange:nth-child(n+3) {
+    border-top-color: #ffc28c;
+  }
+  main .userSupportContentsLinks a.bottomArrowLinkButton_fill.orange:nth-child(odd), main .userSupportContentsLinks a.bottomArrowLinkButton_border.orange:nth-child(odd),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_fill.orange:nth-child(odd),
+  main .userSupportContentsLinks button.bottomArrowLinkButton_border.orange:nth-child(odd) {
+    border-right-color: #ffc28c;
+  }
+}
+main .userSupportContentsLinks a.bottomArrowLinkButton img,
+main .userSupportContentsLinks button.bottomArrowLinkButton img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.maintenance_link{
+	font-weight: bold;
+	color: #005bac;
+	text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .maintenance_link{
+	text-align: center;
+}
+}
+.maintenance_link_wrap{
+	text-align: center;
+        border-radius: 0.875rem;
+        background-color: #f3f3f3;
+        padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .maintenance_link_wrap{
+	text-align: center;
+}
+}
+/*その他のサービス*/
+.otherServiceList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.otherServiceList li {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 495 / 250;
+  border: 1px solid #f1c40f;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.otherServiceList li a {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.otherServiceList li:hover img {
+  opacity: 1 !important;
+}
+
+.otherServiceList img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.otherServiceList_note {
+  font-size: 12px;
+  margin-top: 1em;
+}
+@media screen and (max-width: 768px) {
+  .otherServiceList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .otherServiceList li {
+    aspect-ratio: 190 / 150;
+  }
+
+  #serviceArea section[data-icon=service_other] .otherServiceList a {
+    padding: 1rem;
+  }
+  #serviceArea section[data-icon=service_other] {
+    padding: 1.875rem 1.25rem 1.25rem;
+  }
+  .otherServiceList_note {
+    font-size: 10px;
+    margin-top: 1em;
+  }
+}
+@media screen and (min-width: 769px) {
+  #serviceArea .arrowLinkArea {
+    text-align: center;
+  }
+}
+
+

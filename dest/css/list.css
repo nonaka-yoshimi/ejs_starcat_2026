@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* CSS Document */
+/* イベント一覧 */
+.list,
+.list_item{
+    margin-bottom: 80px;
+}
+.list_item .title{
+    font-size: 20px;
+    line-height: 1em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 30px;
+}
+.list_item .date{
+    font-size: 14px;
+    line-height: 1em;
+    color: #7a7a7a;
+    margin-bottom: 16px;
+}
+.list_item .text{
+    margin-bottom: 16px;
+}
+p.detail_link {
+    line-height: 1em;
+}
+.list_item .title a,
+.list_item .detail_link a{
+    font-weight: bold;
+    position: relative;
+    color: #005bac;
+}
+.list_item .title a:hover,
+.list_item .detail_link a:hover{
+    color: #2f8fe5;
+}
+.list_item .title a::after,
+.list_item .detail_link a::after{
+    position: absolute;
+    content: url(/img/icon/link_blue_icon.svg);
+    width: 8px;
+    margin-left: 10px;
+}
+.list_item .detail_link a::after{
+    margin-top: 1px;
+}
+.list_item .title a:hover::after,
+.list_item .detail_link a:hover::after{
+    content: url(/img/icon/link_blue_ov_icon.svg);
+}
+@media screen and (max-width:767px){
+    .list{
+        margin-bottom: 50px;
+    }
+    .list_item{
+        margin-bottom: 40px;
+    }
+    .list_item .title{
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+

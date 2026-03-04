@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* バナー */
+.banner{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.banner .banner_inner{
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: #fff;
+}
+.banner .image{
+    max-width: 400px;
+    width: 40%;
+    overflow: hidden;
+}
+.banner p{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.banner .text{
+    width: 60%;
+    padding-left: 60px;
+    padding-right: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.banner .text .title{
+    font-size: 40px;
+    line-height: 1.4em;
+}
+.banner .text .blank::after{
+    background: url(/img/icon/blank_c_icon.svg) no-repeat;
+}
+@media screen and (max-width:1100px){
+    .banner .text{
+        padding-left: 5.6%;
+    }
+    .banner .text .title{
+        font-size: 3.6vw;
+    }
+}
+@media screen and (max-width:767px){
+    .banner .banner_inner{
+        display: block;
+    }
+    .banner .image{
+        max-width: 100%;
+        width: 100%;
+    }
+    .banner .text{
+        width:auto;
+        padding: 30px;
+    }
+    .banner .text .title{
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+/* バナー - ホバー時の処理 */
+.banner:hover .banner_inner{
+    color: #fccf00;
+}
+.banner:hover .image img{
+    transform: scale(1.1 ,1.1);
+    transition: 1s all;
+}
+.banner .image img{
+    transition: 1s all;
+}
+
+/* キャンペーンバナー */
+.cp_banner .banner_inner{
+    box-sizing: border-box;
+    transition: background 0.4s ease-in-out;
+    background: #f3f3f3;
+    color: #005bac;
+    border: 5px solid #f3f3f3;
+}
+.cp_banner .image{
+    margin-top: -5px;
+    margin-bottom: -5px;
+    margin-left: -5px;
+}
+.cp_banner .text p{
+    padding-left: 16px;
+}
+.cp_banner .text .title{
+    position: relative;
+    font-size: 26px;
+}
+.cp_banner .text .title::before{
+    position: absolute;
+    content: url(/img/icon/link_blue_icon.svg);
+    width: 8px;
+    left: 0;
+    top: calc(50% - 24px);
+}
+.cp_banner:hover .banner_inner{
+    transition: background 0.4s ease-in-out;
+    background: #fff;
+    color: #2f8fe5;
+}
+.cp_banner:hover .text .title::before{
+    content: url(/img/icon/link_blue_ov_icon.svg);
+}
+@media screen and (max-width:1100px){
+    .cp_banner .text .title{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:767px){
+    .cp_banner .banner_inner{
+        border: none;
+    }
+    .cp_banner .image{
+        margin: 0;
+    }
+    .cp_banner .text{
+        border: 3px solid #f3f3f3;
+    }
+    .cp_banner .text p{
+        font-size: 16px;
+    }
+    .cp_banner .text .title{
+        font-size: 20px;
+        line-height: 1.4em;
+    }
+    .cp_banner .text .title::before{
+        top: calc(50% - 16px);
+    }
+}
+
+
+

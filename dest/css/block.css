@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 黒枠囲み */
+.black_line_block{
+    padding: 25px;
+    border: 5px solid #ededed;
+    margin-bottom: 40px;
+}
+.black_line_block *:last-child{
+    margin-bottom: 0;
+}
+@media screen and (max-width:767px){
+    .black_line_block{
+        padding: 15px;
+        border: 3px solid #ededed;
+    }
+}
+
+/* 赤枠囲み */
+.red_line_block{
+    padding: 30px;
+    border: 1px solid #f00;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.red_line_block > *:last-child.text{
+    margin-bottom: 0;
+}
+.red_line_block p.text{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:767px){
+    .red_line_block{
+        padding: 20px;
+    }
+}
+
+/* 黒枠囲み角丸 */
+.black_line_block_round_corner{
+    padding: 35px;
+    border: 5px solid #ededed;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.black_line_block_round_corner .text{
+    width: 61%;
+    margin-right: 5%;
+}
+.black_line_block_round_corner .text *:last-child{
+    margin-bottom: 0;
+}
+.black_line_block_round_corner .image{
+    width: 34%;
+}
+@media screen and (max-width:767px){
+    .black_line_block_round_corner{
+        display: block;
+        padding: 25px;
+        border: 3px solid #ededed;
+    }
+    .black_line_block_round_corner .text{
+        width: 100%;
+        margin-right: 0;
+    }
+    .black_line_block_round_corner .image{
+        width: 100%;
+    }
+    .black_line_block_round_corner .text *:last-child{
+        margin-bottom: 20px;
+    }
+}
+
+/* 背景グレー囲み */
+.gray_back_block{
+    background: #f4f4f4;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.gray_back_block h5{
+    margin-top: 0;
+}
+.gray_back_block .flex{
+    margin-bottom: 20px;
+}
+.gray_back_block *:last-child{
+    margin-bottom: 0!important;
+}
+.gray_back_block .image{
+    width: 33%;
+    margin-right: 5%;
+}
+.gray_back_block .text{
+    width: 62%;
+}
+.gray_back_block .text *:last-child{
+    margin-bottom: 0;
+}
+@media screen and (max-width:767px){
+    .gray_back_block{
+        display: block;
+        padding: 30px;
+    }
+    .gray_back_block .image{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .gray_back_block .text{
+        width: 100%;
+    }
+}
+
+

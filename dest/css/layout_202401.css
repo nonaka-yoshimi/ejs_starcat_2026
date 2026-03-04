@@ -1,0 +1,1450 @@
+@charset "UTF-8";
+/*□□□□□□□□□□ 全ページ共通 □□□□□□□□□□*/
+/*||| header |||*/
+header {
+  /*▽header内のモーダルの共通設定*/
+  /*▽ご利用中の方モーダルコンテンツ*/
+  position: inherit;
+  box-sizing: inherit;
+  z-index: inherit;
+  width: 100%;
+}
+.globalNav p, .modalArea p, footer p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: inherit;
+}
+header > .inner {
+  display: grid;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 100%;
+  background-color: #fff;
+}
+@media screen and (min-width: 769px) {
+  header > .inner {
+    gap: 0 1.875rem;
+  }
+}
+@media screen and (min-width: 376px) {
+  header > .inner {
+    grid-template-columns: 1fr auto auto;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 375px) {
+  header > .inner {
+    grid-template-columns: 1fr auto;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 769px) {
+  header .header_logo:hover {
+    opacity: 0.8;
+  }
+}
+/*追加したコード*/
+@media screen and (min-width: 360px) {
+  header .header_logo {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 359px) {
+  header .header_logo {
+    width: 110px;
+  }
+}
+
+@media screen and (max-width: 349px) {
+  header .header_logo {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 339px) {
+  header .header_logo {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 327px) {
+  header .header_logo {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 317px) {
+  header .header_logo {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 307px) {
+  header .header_logo {
+    width: 60px;
+  }
+}
+/*追加したコード*/
+
+/*元々のコード*
+@media screen and (min-width: 376px) {
+  header .header_logo {
+    width: 143px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .header_logo {
+    width: 100px;
+  }
+}
+/**/
+header .searchArea {
+  display: none; /*初期表示用*/
+}
+
+@media screen and (min-width: 769px) {
+#ConOrg_servicearea{
+display: none;
+}
+}
+
+@media screen and (min-width: 769px) {
+  header .searchArea {
+    padding: 0.625rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .searchArea {
+    padding: 0 0.625rem;
+  }
+}
+
+header .searchArea .searchForm .search_text ::-webkit-input-placeholder {
+  font-size: 0.875rem;
+}
+header .searchArea .searchForm .search_text ::-moz-placeholder {
+  font-size: 0.875rem;
+}
+header .searchArea .searchForm .search_text :-ms-input-placeholder {
+  font-size: 0.875rem;
+}
+header .searchArea .searchForm .search_text ::-ms-input-placeholder {
+  font-size: 0.875rem;
+}
+header .searchArea .searchForm .search_text ::placeholder {
+  font-size: 0.875rem;
+}
+[data-commonNav] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #4c4c4c;
+  font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  [data-commonNav] {
+    gap: 0 1.875rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  [data-commonNav] {
+    gap: 0 clamp(10px, (100vw - 375px) * 10 / 725 + 1.818vw, 1.25rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-commonNav] {
+    gap: 0 2.604vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  [data-commonNav] {
+    gap: 0 2.667vw;
+  }
+}
+[data-commonNav] > a[data-icon]::before,
+[data-commonNav] > button[data-icon]::before {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+[data-commonNav="1"] > a.active,
+[data-commonNav="1"] > button.active {
+  position: relative;
+  z-index: 102;
+  pointer-events: none;
+}
+[data-commonNav="1"] > a.active::after,
+[data-commonNav="1"] > button.active::after {
+  position: absolute;
+  top: -0.9375rem;
+  left: -1.25rem;
+  display: block;
+  width: 140%;
+  height: 100%;
+  border-radius: 0.625rem 0.625rem 0 0;
+  background-color: #fff;
+  -webkit-mask: unset;
+  mask: unset;
+  z-index: -1;
+  content: "";
+}
+@media screen and (min-width: 1101px) {
+  [data-commonNav="1"] > a.active::after,
+  [data-commonNav="1"] > button.active::after {
+    padding: 1.875rem 0 2.5rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  [data-commonNav="1"] > a.active::after,
+  [data-commonNav="1"] > button.active::after {
+    padding: 2.5rem 0 2.5rem;
+  }
+}
+header [data-commonNav="2"] {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+header [data-commonNav="2"] > a,
+header [data-commonNav="2"] > button {
+  margin-top: auto;
+  /*各アイコンサイズ*/
+}
+@media screen and (min-width: 769px) {
+  header [data-commonNav="2"] > a,
+  header [data-commonNav="2"] > button {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header [data-commonNav="2"] > a,
+  header [data-commonNav="2"] > button {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  header [data-commonNav="2"] > a,
+  header [data-commonNav="2"] > button {
+    font-size: 0.6875rem;
+  }
+}
+header [data-commonNav="2"] > a[data-icon],
+header [data-commonNav="2"] > button[data-icon] {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media screen and (min-width: 769px) {
+  header [data-commonNav="2"] > a[data-icon],
+  header [data-commonNav="2"] > button[data-icon] {
+    gap: 5px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  header [data-commonNav="2"] > a[data-icon],
+  header [data-commonNav="2"] > button[data-icon] {
+    gap: 3px 0;
+  }
+}
+header [data-commonNav="2"] > a[data-icon]::before,
+header [data-commonNav="2"] > button[data-icon]::before {
+  background-color: #4c4c4c;
+}
+@media screen and (max-width: 375px) {
+  header [data-commonNav="2"] > a[data-icon]::before,
+  header [data-commonNav="2"] > button[data-icon]::before {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+header [data-commonNav="2"] > a[data-icon]:hover, header [data-commonNav="2"] > a[data-icon].active,
+header [data-commonNav="2"] > button[data-icon]:hover,
+header [data-commonNav="2"] > button[data-icon].active {
+  color: #005bac;
+}
+header [data-commonNav="2"] > a[data-icon]:hover::before, header [data-commonNav="2"] > a[data-icon]:hover::after, header [data-commonNav="2"] > a[data-icon].active::before, header [data-commonNav="2"] > a[data-icon].active::after,
+header [data-commonNav="2"] > button[data-icon]:hover::before,
+header [data-commonNav="2"] > button[data-icon]:hover::after,
+header [data-commonNav="2"] > button[data-icon].active::before,
+header [data-commonNav="2"] > button[data-icon].active::after {
+  background-color: #005bac;
+}
+header [data-commonNav="2"] > a[data-icon=translation]::before,
+header [data-commonNav="2"] > button[data-icon=translation]::before {
+  width: 1.875rem;
+}
+@media screen and (min-width: 376px) {
+  header [data-commonNav="2"] > a[data-icon=translation]::before,
+  header [data-commonNav="2"] > button[data-icon=translation]::before {
+    width: 2.5rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  header [data-commonNav="2"] > a[data-icon=translation]::before,
+  header [data-commonNav="2"] > button[data-icon=translation]::before {
+    width: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .commonNav {
+    padding: 0.625rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .commonNav [data-commonNav="1"] {
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    padding: 0.875rem;
+    border-radius: 0.625rem;
+    -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+    box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  }
+}
+@media screen and (max-width: 375px) {
+  .commonNav [data-commonNav="1"] {
+    padding: 0.875rem 2.667vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .commonNav [data-commonNav="1"] a,
+  .commonNav [data-commonNav="1"] button {
+    font-size: clamp(10px, (100vw - 375px) * 10 / 725 + 1.455vw, 1rem);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .commonNav [data-commonNav="1"] a,
+  .commonNav [data-commonNav="1"] button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: clamp(10px, (100vw - 375px) * 10 / 725 + 1.273vw, 0.875rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .commonNav [data-commonNav="1"] a,
+  .commonNav [data-commonNav="1"] button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0 5px;
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .commonNav [data-commonNav="1"] a,
+  .commonNav [data-commonNav="1"] button {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .commonNav [data-commonNav="1"] a[data-icon],
+  .commonNav [data-commonNav="1"] button[data-icon] {
+    gap: 0 5px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .commonNav [data-commonNav="1"] a[data-icon],
+  .commonNav [data-commonNav="1"] button[data-icon] {
+    gap: 5px 0;
+  }
+}
+header .modalArea .modalContents {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 376px) {
+  header .modalArea .modalContents {
+    top: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .modalArea .modalContents {
+    top: 140px;
+  }
+}
+@media screen and (max-width: 375px) {
+  header .modalArea .modalContents {
+    top: 120px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .modalArea [onclick*=modalClose] {
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+header #menuCustomerArea {
+  z-index: 101;
+}
+header #menuCustomerArea .modalContents {
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media screen and (min-width: 769px) {
+  header #menuCustomerArea .modalContents {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header #menuCustomerArea .modalContents {
+    width: calc(100% - 1.25rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  header #menuCustomerArea .modalContents > .inner {
+    /*デバイス高さからmodalCloseボタンとgナビ分と上下のpadding分、headerを引いています。*/
+    max-height: calc(100dvh - 14.375rem) !important;
+  }
+}
+header #menuCustomerArea .buttonArea {
+  display: grid;
+}
+@media screen and (min-width: 769px) {
+  header #menuCustomerArea .buttonArea {
+    grid-template-columns: 1fr 2fr;
+    gap: 0 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header #menuCustomerArea .buttonArea {
+    grid-template-columns: unset;
+    gap: 1.25rem 0;
+  }
+}
+header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 769px) {
+  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 5px;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+    font-size: 3.733vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill#userSupportButton, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border#userSupportButton {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+    gap: 5px;
+  }
+}
+@media screen and (min-width: 769px) {
+  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill img, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill img, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+header #menuCustomerArea .buttonArea .userSupportContentsLinks {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+header #menuCustomerArea .bannerArea {
+  margin-top: 1.25rem;
+}
+header #menuCustomerArea .bannerArea img {
+  display: block;
+  margin: 0 auto;
+  width: 315px;
+  max-width: 100%;
+}
+
+/*||| globalNav |||*/
+.globalNav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+  color: #fff;
+  /*slickしない*/
+  position: relative;
+  z-index: 100;
+}
+@media screen and (min-width: 769px) {
+  .globalNav {
+    width: 100%;
+    min-width: 1260px;
+    // -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+    // box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  }
+}
+@media screen and (max-width: 768px) {
+  .globalNav {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    gap: 0 0.625rem;
+    width: 100%;
+    //z-index: 80;
+  }
+}
+@media screen and (min-width: 769px) {
+  .globalNav.notSlick .nav {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .globalNav.notSlick .nav a,
+  .globalNav.notSlick .nav button {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+  }
+}
+/* @media screen and (min-width: 769px) { */
+  header.overHeader {
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+  }
+/* } */
+.globalNav #firstMessageImg {
+  display: none;
+  width: 92px;
+  position: absolute;
+  bottom: 60px;
+  left: -5px;
+}
+
+/*▽デザイン的に.globalNavから出しています*/
+.nav {
+  width: calc(100vw - 60px);
+  height: 100%;
+  // z-index: 1001;
+}
+@media screen and (min-width: 769px) {
+  .nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #4e4e4e;
+    /*▽スライダーになったら*/
+  }
+  .nav a:not(.active),
+  .nav button:not(.active) {
+    font-weight: 500;
+  }
+  .nav a.active,
+  .nav button.active {
+    border-radius: 0.75rem 0.75rem 0 0;
+    font-weight: 700;
+  }
+  .nav a.active::after,
+  .nav button.active::after {
+    border-left: unset !important;
+  }
+  .nav.slick-slider .slick-list {
+    padding: 0 30px;
+  }
+  .nav.slick-slider .slick-prev,
+  .nav.slick-slider .slick-next {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    width: 30px;
+    height: 60px;
+    background-color: #000;
+    -webkit-transform: unset;
+    transform: unset;
+    z-index: 1;
+  }
+  .nav.slick-slider .slick-prev::before,
+  .nav.slick-slider .slick-next::before {
+    background-color: #fccf00;
+    opacity: 1;
+    color: transparent;
+  }
+  .nav.slick-slider .slick-prev::after,
+  .nav.slick-slider .slick-next::after {
+    display: none;
+  }
+  .nav.slick-slider .slick-prev {
+    left: 0;
+  }
+  .nav.slick-slider .slick-prev::before {
+    -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolygon%20points%3D%225.8%2C11.3%200.1%2C5.6%205.6%2C0.1%207.1%2C1.5%202.9%2C5.6%207.2%2C9.9%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/37%;
+    mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolygon%20points%3D%225.8%2C11.3%200.1%2C5.6%205.6%2C0.1%207.1%2C1.5%202.9%2C5.6%207.2%2C9.9%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/37%;
+  }
+  .nav.slick-slider .slick-next {
+    right: 0;
+  }
+  .nav.slick-slider .slick-next::before {
+    -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/37%;
+    mask: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%207.1%2011.2%22%20style%3D%22enable-background%3Anew%200%200%207.1%2011.2%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%20.st0%7Bfill%3Anone%3Bstroke%3A%23000000%3Bstroke-width%3A2%3Bstroke-miterlimit%3A10%3B%7D%3C%2Fstyle%3E%3Cmetadata%3E%3C%2Fmetadata%3E%3Cpolyline%20class%3D%22st0%22%20points%3D%220.7%2C10.5%205.7%2C5.5%200.9%2C0.7%20%22%2F%3E%3C%2Fsvg%3E") no-repeat center center/37%;
+  }
+  .nav.slick-slider .slick-list .slick-track {
+    height: 100%;
+  }
+  .nav.slick-slider .slick-list .slick-slide {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 0.875rem 0 0 0.875rem;
+    -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+    box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+  }
+  .nav a,
+  .nav button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .nav a:first-child,
+  .nav button:first-child {
+    border-radius: 0.875rem 0 0 0.875rem;
+  }
+  .nav a.active:first-child,
+  .nav button.active:first-child {
+    border-radius: 0 0 0 0.875rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .nav.copy {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav.copy {
+    position: fixed;
+    right: 0;
+    bottom: 5px;
+    width: calc(100% - (60px + 0.625rem));
+    height: 60px;
+    background-color: unset;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    z-index: 101;
+  }
+  .nav.copy a:not(.active),
+  .nav.copy button:not(.active) {
+    opacity: 0;
+  }
+  .nav.copy a.active,
+  .nav.copy button.active {
+    position: relative;
+  }
+  .nav.copy a.active::after,
+  .nav.copy button.active::after,
+  .nav a.active::after,
+  .nav button.active::after {
+    position: absolute;
+    top: -1.25rem;
+    display: block;
+    width: 100%;
+    height: 1.25rem;
+    -webkit-mask: unset;
+    mask: unset;
+    background-color: #fff;
+    content: "";
+  }
+  .nav.copy a:first-child.active,
+  .nav.copy button:first-child.active {
+    border-radius: 0 0 0 0.875rem;
+  }
+}
+.nav a,
+.nav button {
+  position: relative;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  /*jsによるアクティブ時*/
+}
+@media screen and (min-width: 1101px) {
+  .nav a,
+  .nav button {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 769px) {
+  .nav a,
+  .nav button {
+    gap: 0.625rem;
+  }
+  .nav a:not(.menuButton),
+  .nav button:not(.menuButton) {
+    padding: 8px 0.875rem;
+  }
+  .nav .slick-track a:not(.menuButton):not(:first-child)::after,
+  .nav .slick-track button:not(.menuButton):not(:first-child)::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    border-left: 1px solid #3a3a3a;
+    height: 40px;
+    -webkit-mask: unset;
+    mask: unset;
+    content: "";
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav a,
+  .nav button {
+    gap: 5px;
+    background-color: #4e4e4e;
+  }
+  .nav a::after,
+  .nav button::after {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .nav a[data-icon],
+  .nav button[data-icon] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav a[data-icon],
+  .nav button[data-icon] {
+    display: grid;
+    place-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 0.625rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .nav a[data-icon]::before,
+  .nav button[data-icon]::before {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  .nav a[data-icon]:not(:first-child)::after,
+  .nav button[data-icon]:not(:first-child)::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    border-left: 1px solid #3a3a3a;
+    height: 40px;
+    -webkit-mask: unset;
+    mask: unset;
+    content: "";
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav a[data-icon]::before,
+  .nav button[data-icon]::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.nav a:not(.active)[data-icon],
+.nav button:not(.active)[data-icon] {
+  color: #fff;
+}
+.nav a:not(.active)[data-icon]::before,
+.nav button:not(.active)[data-icon]::before {
+  background-color: #fff;
+}
+@media screen and (min-width: 769px) {
+  .nav a:not(.active)[data-icon]:hover,
+  .nav button:not(.active)[data-icon]:hover {
+    background-color: #ffea04;
+    color: #005bac;
+  }
+  .nav a:not(.active)[data-icon]:hover::before,
+  .nav button:not(.active)[data-icon]:hover::before {
+    background-color: #005bac;
+  }
+}
+.nav a.active,
+.nav button.active {
+  position: relative;
+  z-index: 101;
+  background-color: #fff;
+  //pointer-events: none;
+}
+.nav a.active[data-icon],
+.nav button.active[data-icon] {
+  color: #005bac;
+}
+.nav a.active[data-icon]::before,
+.nav button.active[data-icon]::before {
+  background-color: #005bac;
+}
+
+/*▽globalNav内のモーダルの共通設定*/
+.gNavModalArea .modalContents {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 769px) {
+  .gNavModalArea .modalContents {
+    top: 140px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gNavModalArea .modalContents {
+    bottom: 70px;
+  }
+}
+.gNavModalArea .modalContents[data-icon]::before {
+  position: absolute;
+  top: -1.5625rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+@media screen and (max-width: 768px) {
+  .gNavModalArea .modalContents [onclick*=modalClose] {
+    position: absolute;
+    top: -1.25rem;
+    right: 5%;
+  }
+}
+.gNavModalArea .modalContents > .inner > .title {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #005bac;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 0;
+  border: 0;
+}
+.gNavModalArea .modalContents > .inner > .title[data-icon] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 0;
+  border: 0;
+  padding: 0;
+}
+@media screen and (min-width: 769px) {
+  .gNavModalArea .modalContents > .inner > .title[data-icon] {
+    gap: 0.625rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gNavModalArea .modalContents > .inner > .title[data-icon] {
+    gap: 5px;
+  }
+}
+.gNavModalArea .modalContents > .inner > .title[data-icon]::before {
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  .gNavModalArea .modalContents > .inner > .title[data-icon]::before {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gNavModalArea .modalContents > .inner > .title[data-icon]::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.gNavModalArea .modalContents > .inner > .title + p {
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #005bac;
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+.gNavModalArea .modalContents .arrowLinkList_before, .gNavModalArea .modalContents .arrowLinkList_after {
+  border-top: 1px solid #e9e9e9;
+}
+.gNavModalArea .modalContents .arrowLinkList_before a,
+.gNavModalArea .modalContents .arrowLinkList_before button, .gNavModalArea .modalContents .arrowLinkList_after a,
+.gNavModalArea .modalContents .arrowLinkList_after button {
+  text-decoration: unset;
+}
+.gNavModalArea .modalContents .arrowLinkList_before a::before, .gNavModalArea .modalContents .arrowLinkList_before a::after,
+.gNavModalArea .modalContents .arrowLinkList_before button::before,
+.gNavModalArea .modalContents .arrowLinkList_before button::after, .gNavModalArea .modalContents .arrowLinkList_after a::before, .gNavModalArea .modalContents .arrowLinkList_after a::after,
+.gNavModalArea .modalContents .arrowLinkList_after button::before,
+.gNavModalArea .modalContents .arrowLinkList_after button::after {
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  .gNavModalArea .modalContents .arrowLinkList_before li, .gNavModalArea .modalContents .arrowLinkList_after li {
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .gNavModalArea .modalContents .arrowLinkList_before li:hover, .gNavModalArea .modalContents .arrowLinkList_after li:hover {
+    background-color: #f6fbff;
+  }
+  .gNavModalArea .modalContents .arrowLinkList_before li a,
+  .gNavModalArea .modalContents .arrowLinkList_before li button, .gNavModalArea .modalContents .arrowLinkList_after li a,
+  .gNavModalArea .modalContents .arrowLinkList_after li button {
+    padding: 1.125rem 0.875rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-bottom: unset;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #005bac;
+  }
+  .gNavModalArea .modalContents .arrowLinkList_before li a img,
+  .gNavModalArea .modalContents .arrowLinkList_before li button img, .gNavModalArea .modalContents .arrowLinkList_after li a img,
+  .gNavModalArea .modalContents .arrowLinkList_after li button img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gNavModalArea .modalContents .arrowLinkList_before a,
+  .gNavModalArea .modalContents .arrowLinkList_before button, .gNavModalArea .modalContents .arrowLinkList_after a,
+  .gNavModalArea .modalContents .arrowLinkList_after button {
+    padding: 1.125rem;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gNavModalArea .modalContents .arrowLinkList_before + .arrowLinkList_before, .gNavModalArea .modalContents .arrowLinkList_before + .arrowLinkList_after, .gNavModalArea .modalContents .arrowLinkList_after + .arrowLinkList_before, .gNavModalArea .modalContents .arrowLinkList_after + .arrowLinkList_after {
+    border-top: unset;
+  }
+}
+.gNavModalArea .modalContents .bannerArea,
+.gNavModalArea .modalContents .bottomLinkArea {
+  padding: 1.875rem 1.25rem 0;
+}
+.gNavModalArea .modalContents .bannerArea .button,
+.gNavModalArea .modalContents .bottomLinkArea .button {
+  padding: 1em;
+  font-size: 0.875rem;
+}
+
+/*▽各メニューボタンコンテンツ*/
+/*↓これだけ特殊*/
+#navMenuArea {
+  z-index: 1002;
+}
+/*▽モーダル内コンテンツ*/
+#navMenuArea .modalContents {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  height: 100%;
+  border-radius: unset;
+  background-color: #005bac;
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea .modalContents {
+    width: 57%;
+    border-radius: 0 0.625rem 0.625rem 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  #navMenuArea .modalContents {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea .modalContents [data-icon=close] {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+  #navMenuArea .modalContents [data-icon=close]::before {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #95c3eb;
+  }
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea .modalContents .inner {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navMenuArea .modalContents .inner {
+    padding: unset;
+    padding-bottom: 70px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea .arrowLinkList_before, #navMenuArea .arrowLinkList_after {
+    margin: 2.5rem 0;
+  }
+}
+#navMenuArea .arrowLinkList_before li, #navMenuArea .arrowLinkList_after li {
+  border-bottom: 1px solid #005098;
+}
+@media screen and (max-width: 768px) {
+  #navMenuArea .arrowLinkList_before li:nth-child(odd) a,
+  #navMenuArea .arrowLinkList_before li:nth-child(odd) button, #navMenuArea .arrowLinkList_after li:nth-child(odd) a,
+  #navMenuArea .arrowLinkList_after li:nth-child(odd) button {
+    background-color: #00427c;
+  }
+}
+#navMenuArea .arrowLinkList_before li a,
+#navMenuArea .arrowLinkList_before li button, #navMenuArea .arrowLinkList_after li a,
+#navMenuArea .arrowLinkList_after li button {
+  text-decoration: none;
+  color: #fff;
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea .arrowLinkList_before li a,
+  #navMenuArea .arrowLinkList_before li button, #navMenuArea .arrowLinkList_after li a,
+  #navMenuArea .arrowLinkList_after li button {
+    padding: 1.25rem 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navMenuArea .arrowLinkList_before li a,
+  #navMenuArea .arrowLinkList_before li button, #navMenuArea .arrowLinkList_after li a,
+  #navMenuArea .arrowLinkList_after li button {
+    padding: 0.875rem 0.625rem;
+    width: 100%;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea .arrowLinkList_before li a:hover,
+  #navMenuArea .arrowLinkList_before li button:hover, #navMenuArea .arrowLinkList_after li a:hover,
+  #navMenuArea .arrowLinkList_after li button:hover {
+    background-color: unset;
+    text-decoration: underline;
+  }
+}
+#navMenuArea .arrowLinkList_before li a::after,
+#navMenuArea .arrowLinkList_before li button::after, #navMenuArea .arrowLinkList_after li a::after,
+#navMenuArea .arrowLinkList_after li button::after {
+  background-color: #fccf00;
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea .arrowLinkList_before li a::after,
+  #navMenuArea .arrowLinkList_before li button::after, #navMenuArea .arrowLinkList_after li a::after,
+  #navMenuArea .arrowLinkList_after li button::after {
+    margin-left: unset;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navMenuArea .arrowLinkList_before li a::after,
+  #navMenuArea .arrowLinkList_before li button::after, #navMenuArea .arrowLinkList_after li a::after,
+  #navMenuArea .arrowLinkList_after li button::after {
+    margin-left: auto;
+    margin-right: unset;
+  }
+}
+#navMenuArea [data-commonnav="1"] {
+  margin: 0.625rem;
+  padding: 0.875rem;
+}
+@media screen and (min-width: 769px) {
+  #navMenuArea [data-commonnav="1"] a,
+  #navMenuArea [data-commonnav="1"] button {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navMenuArea [data-commonnav="1"] a,
+  #navMenuArea [data-commonnav="1"] button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0 5px;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  #navMenuArea [data-commonnav="1"] a,
+  #navMenuArea [data-commonnav="1"] button {
+    font-size: 3.2vw;
+  }
+}
+#navMenuArea .searchForm {
+  width: 100%;
+}
+#navMenuArea .searchForm label {
+  border-radius: 1rem;
+  background-color: #00427c;
+  color: #fff;
+}
+#navMenuArea .searchForm label[data-icon=search]::before {
+  background-color: #fff;
+}
+#navMenuArea .searchForm .search_text::-webkit-input-placeholder {
+  color: #fff;
+}
+#navMenuArea .searchForm .search_text::-moz-placeholder {
+  color: #fff;
+}
+#navMenuArea .searchForm .search_text:-ms-input-placeholder {
+  color: #fff;
+}
+#navMenuArea .searchForm .search_text::-ms-input-placeholder {
+  color: #fff;
+}
+#navMenuArea .searchForm .search_text::placeholder {
+  color: #fff;
+}
+#navMenuArea .fixedContent_bottom.showTB {
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 1.5rem;
+  padding: 0.625rem 0.875rem;
+  width: 100%;
+  height: 70px;
+  background-color: #005bac;
+  -webkit-box-shadow: 0 -2px 2px 0 rgba(49, 49, 49, 0.2);
+  box-shadow: 0 -2px 2px 0 rgba(49, 49, 49, 0.2);
+}
+#navMenuArea .fixedContent_bottom.showTB [data-icon=close] {
+  display: grid;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 0.625rem;
+  color: #fff;
+}
+#navMenuArea .fixedContent_bottom.showTB [data-icon=close]::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #fff;
+}
+
+/*▽お申し込みモーダル*/
+@media screen and (min-width: 769px) {
+  #navEntryArea .modalContents > .inner {
+    overflow-y: unset !important;
+  }
+}
+#navEntryArea .entryLinks {
+  /*初めての方*/
+  /*ご利用中の方*/
+}
+#navEntryArea .entryLinks .inner {
+  padding: unset;
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .title {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .linkWrap a,
+  #navEntryArea .entryLinks .linkWrap button {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .linkWrap a:first-child,
+  #navEntryArea .entryLinks .linkWrap button:first-child {
+    padding: 1.25rem 0.875rem;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap a.entryLink,
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap button.entryLink {
+    padding-right: 0.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap a.entryLink::after,
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap button.entryLink::after {
+    position: absolute;
+    top: -3.75rem;
+    left: -1.5rem;
+    display: block;
+    width: 90px;
+    height: 90px;
+    -webkit-mask: unset;
+    mask: unset;
+    background: url("/img/top/entry.svg") no-repeat center center/contain;
+    content: "";
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap a.entryLink br,
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap button.entryLink br {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap a.entryLink img,
+  #navEntryArea .entryLinks .entryLinkArea .linkWrap button.entryLink img {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .userLinkArea .linkWrap {
+    grid-template-columns: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .userLinkArea .linkWrap a,
+  #navEntryArea .entryLinks .userLinkArea .linkWrap button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navEntryArea .entryLinks .userLinkArea .linkWrap a br,
+  #navEntryArea .entryLinks .userLinkArea .linkWrap button br {
+    display: none;
+  }
+}
+
+/*▽▽▽PCのみモーダル*/
+/*▽スターキャットのサービス*/
+#navServiceArea .inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.125rem;
+}
+#navServiceArea .buttonArea {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: min-content;
+  -ms-flex-preferred-size: min-content;
+  flex-basis: min-content;
+}
+#navServiceArea .buttonArea a,
+#navServiceArea .buttonArea button {
+  padding: 1.875rem;
+  color: #005bac;
+  font-weight: 700;
+  font-weight: 800;
+}
+#navServiceArea .buttonArea a p,
+#navServiceArea .buttonArea button p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.25rem;
+}
+#navServiceArea .buttonArea a p[data-icon]::before,
+#navServiceArea .buttonArea button p[data-icon]::before {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+#navServiceArea .arrowLinkList_before, #navServiceArea .arrowLinkList_after {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+/*||| footContentArea |||*/
+.footContentArea {
+  background-color: #1b1b1b;
+}
+@media screen and (min-width: 769px) {
+  .footContentArea {
+    padding: 3.125rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footContentArea {
+    padding: 1.875rem 0;
+  }
+}
+.footContentArea ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 769px) {
+  .footContentArea ul {
+    margin-top: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footContentArea ul {
+    margin-top: 1.875rem;
+  }
+}
+.footContentArea ul a {
+  color: #333;
+  text-decoration: none;
+  color: #fff;
+}
+.footContentArea ul a::before, .footContentArea ul a::after {
+  background-color: #fccf00;
+}
+
+/*||| footer |||*/
+footer {
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding-bottom: calc(3.75rem + 5px);
+  }
+}
+footer .copyright {
+  display: grid;
+  place-content: center;
+  height: 5rem;
+  font-size: 0.625rem;
+}
+
+
+
