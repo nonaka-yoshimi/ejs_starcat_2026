@@ -16,7 +16,8 @@
 			"/css/layout_202401.css",
 			"/css/common_202401.css",
 			"/css/mv_carousel.css",
-			"/css/top_202401.css"
+			"/css/top_202401.css",
+			"/css/dropdown_nav.css"
 		],
 		"jsFiles": [
 			"/js/jquery-3.6.1.min.js",
@@ -59,7 +60,8 @@
 			"/css/common_202401.css",
 			"/css/service.css",
 			"/css/join.css",
-			"/css/join_menu.css"
+			"/css/join_menu.css",
+			"/css/dropdown_nav.css"
 		],
 		"jsFiles": [
 			"/js/jquery.min.js",

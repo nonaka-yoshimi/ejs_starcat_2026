@@ -117,7 +117,7 @@ display: none;
 }
 @media screen and (max-width: 768px) {
   header .searchArea {
-    padding: 0 0.625rem;
+    padding: 0.625rem;
   }
 }
 
@@ -373,21 +373,6 @@ header .modalArea .modalContents {
   right: 0;
   margin: 0 auto;
 }
-@media screen and (min-width: 376px) {
-  header .modalArea .modalContents {
-    top: 80px;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .modalArea .modalContents {
-    top: 140px;
-  }
-}
-@media screen and (max-width: 375px) {
-  header .modalArea .modalContents {
-    top: 120px;
-  }
-}
 @media screen and (max-width: 768px) {
   header .modalArea [onclick*=modalClose] {
     position: absolute;
@@ -405,11 +390,6 @@ header #menuCustomerArea .modalContents {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-@media screen and (min-width: 769px) {
-  header #menuCustomerArea .modalContents {
-    max-width: 960px;
-  }
 }
 @media screen and (max-width: 768px) {
   header #menuCustomerArea .modalContents {
@@ -1024,8 +1004,7 @@ header #menuCustomerArea .bannerArea img {
 /*▽モーダル内コンテンツ*/
 #navMenuArea .modalContents {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: block;
   overflow-y: auto;
   height: 100%;
   border-radius: unset;

@@ -113,22 +113,26 @@ function modalToggle(id) {
     }
   }
   // ご利用中の方モーダルコンテンツの場合
-  if ($(id).prop('id')=="menuCustomerArea") {
+  if ($(id).prop('id')=="menuCustomerArea" || $(id).prop('id')=="menuJoinArea") {
     if ($('.showPC.commonNav').is(':visible')) {
       var headerInnerHeight = $('header .inner').height();
       var windowScrollTop = $(window).scrollTop();
       if (headerInnerHeight >= windowScrollTop) {
-        $('#menuCustomerArea .modalContents').css('top', (headerInnerHeight-windowScrollTop)+'px');
+        $('#menuCustomerArea .modalContents').css('top', (headerInnerHeight-windowScrollTop+20)+'px');
+		$('#menuJoinArea .modalContents').css('top', (headerInnerHeight-windowScrollTop+20)+'px');
       } else {
-        $('#menuCustomerArea .modalContents').css('top', '');
+        $('#menuCustomerArea .modalContents').css('top', '20px');
+		$('#menuJoinArea .modalContents').css('top', '20px');
       }
     } else {
       var headerHeight = $('header').height() + $('.showTB.commonNav').outerHeight();
       var windowScrollTop = $(window).scrollTop();
       if (headerHeight >= windowScrollTop) {
-        $('#menuCustomerArea .modalContents').css('top', (headerHeight-windowScrollTop-10)+'px');
+        $('#menuCustomerArea .modalContents').css('top', (headerHeight-windowScrollTop+10)+'px');
+		$('#menuJoinArea .modalContents').css('top', (headerHeight-windowScrollTop+10)+'px');
       } else {
-        $('#menuCustomerArea .modalContents').css('top', '');
+        $('#menuCustomerArea .modalContents').css('top', '10px');
+		$('#menuJoinArea .modalContents').css('top', '10px');
       }
     }
   }

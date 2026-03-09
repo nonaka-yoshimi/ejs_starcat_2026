@@ -1,0 +1,983 @@
+@charset "UTF-8";
+/* ドロップダウンナビゲーション 2026年改修 */
+
+/* ===== 追加アイコン定義 ===== */
+/* お問い合わせ: スマートフォンアイコン */
+[data-icon=inquiry]::before, [data-icon=inquiry]::after {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm1 17H7V4h10v14zm-5 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z'/%3E%3C/svg%3E") no-repeat center center/contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm1 17H7V4h10v14zm-5 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z'/%3E%3C/svg%3E") no-repeat center center/contain;
+  background-color: #333;
+}
+
+/* ===== ヘッダー上部ナビ [data-commonNav="2"] ===== */
+/* PC (≥1201px): .showPC01 を横並びflex */
+header [data-commonNav="2"] .showPC01 {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 1201px) {
+  header [data-commonNav="2"] .showPC01 {
+    display: flex !important;
+  }
+}
+header [data-commonNav="2"] .showPC01 > a,
+header [data-commonNav="2"] .showPC01 > button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  color: #4c4c4c;
+  text-decoration: none;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 400;
+}
+header [data-commonNav="2"] .showPC01 > a:hover,
+header [data-commonNav="2"] .showPC01 > button:hover {
+  color: #005bac;
+}
+header [data-commonNav="2"] .showPC01 > a:hover::before,
+header [data-commonNav="2"] .showPC01 > button:hover::before {
+  background-color: #005bac;
+}
+header [data-commonNav="2"] .showPC01 > a[data-icon]::before,
+header [data-commonNav="2"] .showPC01 > button[data-icon]::before {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-color: #4c4c4c;
+}
+/* サービス一覧: 多色アイコンのためmaskを解除しSVG直接表示 */
+header [data-commonNav="2"] .showPC01 > a[data-icon=service]::before {
+  -webkit-mask: none;
+  mask: none;
+  background: url("/img/icon/service_list.svg") no-repeat center center/contain !important;
+}
+/* お問い合わせ */
+header [data-commonNav="2"] .showPC01 > a[data-icon=inquiry]::before {
+  background-color: #4db284;
+}
+/* よくあるご質問 */
+header [data-commonNav="2"] .showPC01 > a[data-icon=faq]::before {
+  background-color: #d26468;
+}
+/* 企業情報 */
+header [data-commonNav="2"] .showPC01 > a[data-icon=corporate]::before {
+  background-color: #8895b9;
+}
+/* ホバー時: サービス一覧はmask解除のためbackground-color変更不要 */
+header [data-commonNav="2"] .showPC01 > a[data-icon=service]:hover::before {
+  -webkit-mask: none;
+  mask: none;
+  background: url("/img/icon/service_list.svg") no-repeat center center/contain !important;
+}
+/* 翻訳: 縦並び（アイコン上・テキスト下） */
+header [data-commonNav="2"] .showPC01 > button[data-icon=translation] {
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.625rem;
+}
+header [data-commonNav="2"] .showPC01 > button[data-icon=translation]::before {
+  width: 1.5rem;
+  height: 1.125rem;
+}
+
+/* PC検索フォーム: インライン・コンパクト */
+header [data-commonNav="2"] .showPC01 .searchForm {
+  flex-shrink: 1;
+  min-width: 0;
+}
+header [data-commonNav="2"] .showPC01 .searchForm label {
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.375rem;
+  background-color: #f3f3f3;
+  font-size: 0.8125rem;
+}
+header [data-commonNav="2"] .showPC01 .searchForm label[data-icon=search]::before {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+header [data-commonNav="2"] .showPC01 .searchForm .search_text {
+  width: 12em;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+/* SP/Tablet (.showMaxPC): 横並びアイテム */
+header [data-commonNav="2"] > a.showMaxPC,
+header [data-commonNav="2"] > button.showMaxPC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.625rem;
+  color: #4c4c4c;
+  text-decoration: none;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  font-weight: 500;
+}
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  header [data-commonNav="2"] > a.showMaxPC,
+  header [data-commonNav="2"] > button.showMaxPC {
+    font-size: 0.625rem;
+  }
+  header [data-commonNav="2"] > a.showMaxPC[data-icon]::before,
+  header [data-commonNav="2"] > button.showMaxPC[data-icon]::before {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  header [data-commonNav="2"] > a.showMaxPC,
+  header [data-commonNav="2"] > button.showMaxPC {
+    font-size: 0.5625rem;
+  }
+  header [data-commonNav="2"] > a.showMaxPC[data-icon]::before,
+  header [data-commonNav="2"] > button.showMaxPC[data-icon]::before {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* SP/Tablet アイコン色 */
+header [data-commonNav="2"] > a.showMaxPC[data-icon=inquiry]::before {
+  background-color: #4db284;
+}
+header [data-commonNav="2"] > a.showMaxPC[data-icon=faq]::before {
+  background-color: #d26468;
+}
+
+/* ヘッダー内ハンバーガーボタン (SP) */
+.headerMenuButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.125rem;
+  width: 2rem;
+  margin-top: 0 !important;
+}
+.headerMenuButton > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 1.25rem;
+}
+.headerMenuButton > div > span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #4c4c4c;
+  border-radius: 1px;
+}
+
+/* #languageList ドロップダウン位置調整 */
+@media screen and (min-width: 1201px) {
+  #languageList {
+    top: 2.5rem !important;
+  }
+}
+
+/* ===== [data-commonNav="2"] コンテナ ===== */
+header [data-commonNav="2"] {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  header [data-commonNav="2"] {
+    gap: 0.75rem;
+  }
+}
+
+/* ===== PC: ヘッダー2行レイアウト（タブバーを2行目に配置） ===== */
+@media screen and (min-width: 769px) {
+  header > .inner {
+    grid-template-columns: auto 1fr !important;
+    grid-template-rows: auto auto !important;
+    height: auto !important;
+    min-height: 50px;
+    padding: 0.5rem 1.25rem 0;
+  }
+  header > .inner > .header_logo {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+  }
+  header > .inner > [data-commonNav="2"] {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+  }
+  header > .inner > .commonNav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    padding: 0;
+    margin: 0.5rem -1.25rem 0;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  header > .inner {
+    height: auto !important;
+    min-height: 50px;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header > .inner > .header_logo img {
+    width: auto;
+    height: auto;
+    max-height: 2.5rem;
+    object-fit: contain;
+  }
+}
+
+/* ===== 共通カラータブバー ===== */
+.commonNav [data-commonNav="1"] {
+  gap: 0 !important;
+  align-items: stretch !important;
+}
+.commonNav [data-commonNav="1"] > a,
+.commonNav [data-commonNav="1"] > button {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: #fff !important;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.commonNav [data-commonNav="1"] > a:hover,
+.commonNav [data-commonNav="1"] > button:hover {
+  opacity: 0.85;
+  color: #fff !important;
+}
+.commonNav [data-commonNav="1"] > a::before,
+.commonNav [data-commonNav="1"] > button::before {
+  background-color: #fff !important;
+}
+/* アクティブ状態の白背景オーバーレイを非表示 */
+.commonNav [data-commonNav="1"] > a.active::after,
+.commonNav [data-commonNav="1"] > button.active::after {
+  display: none !important;
+}
+.commonNav [data-commonNav="1"] > a.active,
+.commonNav [data-commonNav="1"] > button.active {
+  pointer-events: auto;
+  opacity: 0.85;
+}
+
+/* 加入をご検討の方 - 緑 */
+.commonNav [data-commonNav="1"] > a[data-icon="beginner"],
+.commonNav [data-commonNav="1"] > button[data-icon="beginner"] {
+  background-color: #3d8b37;
+}
+/* 加入者様 - オレンジ */
+.commonNav [data-commonNav="1"] > a[data-icon="mypage"],
+.commonNav [data-commonNav="1"] > button[data-icon="mypage"] {
+  background-color: #ff7e0c;
+}
+/* 法人のお客様 - 青 */
+.commonNav [data-commonNav="1"] > a[data-icon="corporation"],
+.commonNav [data-commonNav="1"] > button[data-icon="corporation"] {
+  background-color: #005bac;
+}
+
+/* PC タブバー */
+@media screen and (min-width: 769px) {
+  .commonNav [data-commonNav="1"] > a,
+  .commonNav [data-commonNav="1"] > button {
+    flex-direction: row !important;
+    gap: 0 0.5rem !important;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+  }
+  .commonNav [data-commonNav="1"] > a[data-icon]::before,
+  .commonNav [data-commonNav="1"] > button[data-icon]::before {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* SP タブバー */
+@media screen and (max-width: 768px) {
+  .commonNav {
+    padding: 0 !important;
+  }
+  .commonNav [data-commonNav="1"] {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    justify-content: stretch !important;
+    align-items: stretch !important;
+  }
+  .commonNav [data-commonNav="1"] > a,
+  .commonNav [data-commonNav="1"] > button {
+    flex-direction: column !important;
+    gap: 3px 0 !important;
+    padding: 0.625rem 0.25rem;
+    font-size: 0.6875rem;
+    line-height: 1.3;
+  }
+  .commonNav [data-commonNav="1"] > a[data-icon]::before,
+  .commonNav [data-commonNav="1"] > button[data-icon]::before {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .commonNav [data-commonNav="1"] > a,
+  .commonNav [data-commonNav="1"] > button {
+    font-size: 2.8vw;
+    padding: 0.5rem 0.125rem;
+  }
+}
+
+/* ===== 共通ドロップダウンパネル ===== */
+#menuJoinArea,
+#menuCustomerArea {
+  z-index: 101;
+}
+#menuJoinArea .modalContents,
+#menuCustomerArea .modalContents {
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#menuJoinArea .modalContents {
+  background-color: #f0fbef;
+}
+#menuCustomerArea .modalContents {
+  background-color: #fff4ed;
+}
+@media screen and (max-width: 768px) {
+  #menuJoinArea .modalContents,
+  #menuCustomerArea .modalContents {
+    width: calc(100% - 1.25rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  #menuJoinArea .modalContents > .inner,
+  #menuCustomerArea .modalContents > .inner {
+    max-height: calc(100dvh - 14.375rem) !important;
+  }
+}
+
+/* ===== TOPリンク ===== */
+.dropdownTopLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+.dropdownTopLink::before,
+.dropdownTopLink::after {
+  background-color: #005bac;
+}
+.dropdownTopLink:hover {
+  color: #005bac;
+}
+.dropdownTopLink:hover::before,
+.dropdownTopLink:hover::after {
+  background-color: #005bac;
+}
+
+/* ===== ボタングリッド ===== */
+.dropdownButtonGrid {
+  display: grid;
+  gap: 0.75rem;
+}
+.dropdownButtonGrid--join {
+  grid-template-columns: repeat(2, 1fr);
+}
+.dropdownButtonGrid--customer {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ===== ドロップダウンボタン ===== */
+.dropdownBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem 0.75rem;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-align: center;
+  transition: opacity 0.3s;
+  line-height: 1.4;
+}
+.dropdownBtn:hover {
+  opacity: 0.8;
+}
+.dropdownBtn img {
+  width: 2rem;
+  height: 2rem;
+}
+.dropdownBtn p {
+  margin: 0;
+}
+
+/* 大きいボタン（2カラムの上段） */
+.dropdownBtn--large {
+  padding: 1.5rem 1rem;
+}
+.dropdownBtn--large img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (min-width: 769px) {
+  .dropdownBtn--large {
+    padding: 2rem 1rem;
+  }
+  .dropdownBtn--large img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* グリーンボタン（加入をご検討の方） */
+.dropdownBtn--green {
+  background-color: #3d8b37;
+  color: #fff;
+}
+.dropdownBtn--green img {
+  filter: brightness(0) invert(1);
+}
+
+/* 3カラムの小さいボタン（料金シミュレーション等） */
+@media screen and (min-width: 769px) {
+  /* 下段3つは3列 */
+  .dropdownButtonGrid--join {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(1) {
+    grid-column: 1 / 4;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(2) {
+    grid-column: 4 / 7;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(3) {
+    grid-column: 1 / 3;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(4) {
+    grid-column: 3 / 5;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(5) {
+    grid-column: 5 / 7;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dropdownButtonGrid--join {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(1) {
+    grid-column: 1;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(2) {
+    grid-column: 2;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(3),
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(4),
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(n+3) {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  .dropdownButtonGrid--join .dropdownBtn:nth-child(n+3) img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* オレンジボタン（加入者様） */
+.dropdownBtn--orange {
+  background-color: #ff7e0c;
+  color: #fff;
+}
+.dropdownBtn--orange img {
+  filter: brightness(0) invert(1);
+}
+
+/* 加入者様: 上段2つ大きめ、下段4つ小さめ */
+@media screen and (min-width: 769px) {
+  .dropdownButtonGrid--customer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .dropdownButtonGrid--customer .dropdownBtn:nth-child(1),
+  .dropdownButtonGrid--customer .dropdownBtn:nth-child(2) {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dropdownButtonGrid--customer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== ドロップダウン下部リンク ===== */
+.dropdownBottomLinks {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e9e9e9;
+  list-style: none;
+  padding-left: 0;
+}
+.dropdownBottomLinks li {
+  display: inline-flex;
+  align-items: center;
+  flex: 1;
+  min-height: 3rem;
+}
+.dropdownBottomLinks li:not(:last-child)::after {
+  display: block !important;
+  content: "";
+  width: 1px;
+  height: 80%;
+  mask: unset;
+  background-color: #3d8b37;
+}
+.dropdownBottomLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #333;
+  text-decoration: none;
+}
+.dropdownBottomLinks a[data-icon].icon_before::before {
+  width: 2em;
+  height: 2em;
+  background-color: #3d8b37;
+}
+.dropdownBottomLinks a:hover {
+  color: #005bac;
+}
+@media screen and (max-width: 768px) {
+  .dropdownBottomLinks {
+    gap: 0;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+  }
+  .dropdownBottomLinks li:not(:last-child)::after {
+    height: 105%;
+  }
+  .dropdownBottomLinks a {
+    flex-direction: column;
+    text-align: center;
+    font-size: 3.2vw;
+  }
+}
+
+/* ===== 下部横並びラッパー ===== */
+@media screen and (min-width: 900px) {
+  .dropdownBottomRow {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .dropdownBottomRow .dropdownSubLinks {
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+  .dropdownBottomRow .dropdownTextLinks {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+/* ===== サブリンクボタン（キャンペーン・特典・プレゼント） ===== */
+.dropdownSubLinks {
+  margin-top: 1rem;
+}
+.dropdownSubBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  border: 2px solid #ff7e0c;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  transition: background-color 0.3s;
+}
+.dropdownSubBtn:hover {
+  background-color: #fff8e6;
+}
+.dropdownSubBtn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.dropdownSubBtn p {
+  margin: 0;
+  flex: 1;
+}
+
+/* ===== テキストリンク（サポート情報、障害メンテ等） ===== */
+.dropdownTextLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+}
+.dropdownTextLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+.dropdownTextLinks a::after {
+  background-color: #005bac;
+}
+.dropdownTextLinks a:hover {
+  color: #005bac;
+}
+.dropdownTextLinks a:hover::after {
+  background-color: #005bac;
+}
+@media screen and (max-width: 768px) {
+  .dropdownTextLinks {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0.5rem;
+    padding-top: 0;
+  }
+  .dropdownTextLinks a {
+    padding: 0.75rem 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  #menuCustomerArea .dropdownButtonGrid a p {
+    font-size: 4vw;
+  }
+  #menuCustomerArea .dropdownSubLinks a {
+    font-size: 4vw;
+  }
+  #menuCustomerArea .dropdownTextLinks {
+    font-size: 4vw;
+  }
+}
+
+/* ===== SP ハンバーガーメニュー ===== */
+@media screen and (min-width: 769px) {
+  #navMenuArea {
+    display: none !important;
+  }
+}
+#navMenuArea .modalContents [data-icon=close] {
+  position: static !important;
+}
+#navMenuArea .modalContents .inner {
+  width: 100% !important;
+}
+#navMenuArea .arrowLinkList_before,
+#navMenuArea .arrowLinkList_after {
+  margin: 0 !important;
+}
+@media screen and (max-width: 768px) {
+  #navMenuArea .modalContents {
+    background-color: #fff !important;
+    place-items: start center !important;
+  }
+  #navMenuArea .modalContents .inner {
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+  /* リスト交互色の上書き */
+  #navMenuArea .arrowLinkList_after li:nth-child(odd) a,
+  #navMenuArea .arrowLinkList_after li:nth-child(odd) button {
+    background-color: transparent !important;
+  }
+  #navMenuArea .arrowLinkList_after li {
+    border-bottom: 1px solid #e9e9e9 !important;
+  }
+  #navMenuArea .arrowLinkList_after a,
+  #navMenuArea .arrowLinkList_after button {
+    color: #333 !important;
+  }
+  #navMenuArea .arrowLinkList_after a::after,
+  #navMenuArea .arrowLinkList_after button::after {
+    background-color: #ccc !important;
+  }
+  /* 検索フォーム上書き */
+  #navMenuArea .hamburgerSearchArea .searchForm label {
+    background-color: #f3f3f3 !important;
+    border-radius: 0.5rem;
+    color: #333 !important;
+  }
+  #navMenuArea .hamburgerSearchArea .searchForm label[data-icon=search]::before {
+    background-color: #999 !important;
+  }
+  #navMenuArea .hamburgerSearchArea .searchForm .search_text {
+    color: #333 !important;
+  }
+  #navMenuArea .hamburgerSearchArea .searchForm .search_text::placeholder {
+    color: #999 !important;
+  }
+  #navMenuArea .hamburgerSearchArea .searchForm .search_text::-webkit-input-placeholder {
+    color: #999 !important;
+  }
+}
+.hamburgerMenuList {
+  border-top: none !important;
+}
+.hamburgerMenuList li {
+  border-bottom: 1px solid #e9e9e9;
+}
+.hamburgerMenuList li a {
+  display: flex !important;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0.875rem !important;
+  color: #333 !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+.hamburgerMenuList li a[data-icon]::before {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+/* サービス一覧: 多色アイコンのためmaskを解除 */
+.hamburgerMenuList li a[data-icon=service]::before {
+  -webkit-mask: none;
+  mask: none;
+  background: url("/img/icon/service_list.svg") no-repeat center center/contain !important;
+}
+/* 企業情報 */
+.hamburgerMenuList li a[data-icon=corporate]::before {
+  background-color: #8895b9;
+}
+
+.hamburgerCardLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 0.875rem;
+}
+.hamburgerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 1px solid #e9e9e9;
+  border-radius: 0.625rem;
+  background-color: #fff;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.hamburgerCard[data-icon]::before {
+  width: 2rem;
+  height: 2rem;
+}
+/* お問い合わせ */
+.hamburgerCard[data-icon=inquiry]::before {
+  background-color: #4db284;
+}
+/* よくあるご質問 */
+.hamburgerCard[data-icon=faq]::before {
+  background-color: #d26468;
+}
+.hamburgerCard p {
+  margin: 0;
+}
+
+.hamburgerSearchArea {
+  padding: 0 0.875rem;
+}
+
+.hamburgerNavTabs {
+  display: flex;
+  gap: 0.5rem !important;
+  padding: 0.875rem !important;
+}
+#navMenuArea [data-commonNav="1"] {
+  margin: 0 !important;
+}
+#navMenuArea [data-commonNav="1"] a,
+#navMenuArea [data-commonNav="1"] button {
+  flex: 1;
+  aspect-ratio: 1;
+  justify-items: center;
+  align-content: center;
+  gap: 5px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.3;
+  color: #fff !important;
+}
+#navMenuArea [data-commonNav="1"] a small,
+#navMenuArea [data-commonNav="1"] button small {
+  font-size: 0.56rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 375px) {
+  #navMenuArea [data-commonNav="1"] a small,
+  #navMenuArea [data-commonNav="1"] button small {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navMenuArea [data-commonNav="1"] a,
+  #navMenuArea [data-commonNav="1"] button {
+    display: grid;
+  }
+}
+#navMenuArea [data-commonNav="1"] a[data-icon="beginner"] {
+  background-color: #3d8b37;
+}
+#navMenuArea [data-commonNav="1"] a[data-icon="beginner"]::before {
+  background-color: #fff;
+}
+#navMenuArea [data-commonNav="1"] a[data-icon="mypage"] {
+  background-color: #ff7e0c;
+}
+#navMenuArea [data-commonNav="1"] a[data-icon="mypage"]::before {
+  background-color: #fff;
+}
+#navMenuArea [data-commonNav="1"] a[data-icon="corporation"] {
+  background-color: #005bac;
+}
+#navMenuArea [data-commonNav="1"] a[data-icon="corporation"]::before {
+  background-color: #fff;
+}
+
+/* ===== Language セクション ===== */
+.hamburgerLanguage {
+  padding: 0.875rem;
+  border-top: 1px solid #e9e9e9;
+}
+.hamburgerLanguageToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 0;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.hamburgerLanguageToggle[data-icon=translation]::before {
+  width: 1.5rem;
+  height: 1.125rem;
+}
+.hamburgerLanguageToggle::after {
+  content: "＋";
+  margin-left: auto;
+  font-size: 1.25rem;
+  line-height: 1;
+  -webkit-mask: unset;
+  mask: unset;
+  background-color: unset;
+}
+.hamburgerLanguageToggle.active::after {
+  content: "ー";
+}
+.hamburgerLanguageListItems {
+  display: block;
+  padding: 0.5rem 0;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+.hamburgerLanguageListItems li {
+  list-style: none;
+}
+.hamburgerLanguageListItems li a {
+  display: block;
+  padding: 0.625rem 1.25rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.hamburgerLanguageListItems li a:hover {
+  background-color: #e9e9e9;
+}
+
+/* ===== モーダルヘッダー ===== */
+#navMenuArea .modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.375rem 2.604vw;
+  background-color: #fff;
+  border-bottom: 1px solid #e9e9e9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 375px) {
+  #navMenuArea .modalHeader {
+    min-height: 60px;
+  }
+}
+#navMenuArea .modalHeader .header_logo {
+  width: auto;
+}
+#navMenuArea .modalHeader .header_logo img {
+  height: 2.5rem;
+  width: auto;
+}
+#navMenuArea .modalHeader [data-icon=close] {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+#navMenuArea .modalHeader [data-icon=close]::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #333;
+}

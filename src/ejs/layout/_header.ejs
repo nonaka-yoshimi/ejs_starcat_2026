@@ -3,15 +3,19 @@
 	<div class="inner">
 		<a class="header_logo" href="/?ref=header"><img src="/img/logo/sc_logo_202401.svg" alt="starcatロゴ"></a>
 		<div class="showPC commonNav">
-			<div data-commonnav="1">
-				<a href="/join/?ref=header" data-icon="beginner">初めての方</a>
-				<button id="mypageButton" data-icon="mypage" onclick="modalToggle(menuCustomerArea);target(mypageButton)">ご利用中の方</button>
+			<div data-commonNav="1">
+				<button id="joinButton" data-icon="beginner" onclick="modalToggle(menuJoinArea);target(joinButton)">加入をご検討の方</button>
+				<button id="mypageButton" data-icon="mypage" onclick="modalToggle(menuCustomerArea);target(mypageButton)">加入者様(サポート・お手続き)</button>
 				<a href="/business/?ref=header" data-icon="corporation">法人のお客様</a>
 			</div>
 		</div>
-		<div data-commonnav="2">
+		<div data-commonNav="2">
 			<!--▽1201px以上-->
 			<div class="showPC01">
+				<a href="/service/?ref=header" data-icon="service">サービス一覧</a>
+				<a href="/contact/?ref=header" data-icon="inquiry">お問い合わせ</a>
+				<a href="https://faq.starcat.co.jp/?ref=header" target="_blank" rel="noopener noreferrer" data-icon="faq">よくあるご質問</a>
+				<a href="/company/?ref=header" data-icon="corporate">企業情報</a>
 				<form class="searchForm" method="get" action="https://www.google.com/search" target="_blank" rel="noopener noreferrer">
 					<label data-icon="search" class="icon_before">
 						<input class="search_text" type="text" name="q" placeholder="検索キーワードを入力">
@@ -19,12 +23,19 @@
 					<input type="hidden" name="hl" value="ja">
 					<input type="hidden" name="sitesearch" value="www.starcat.co.jp">
 				</form>
+				<button id="languageButton" data-icon="translation" onclick="toggleOpen(languageList);target(languageButton)">Language</button>
 			</div>
 			<!--▽1200以下-->
-			<a href="/service_area/?ref=header" rel="noopener noreferrer" data-icon="servicearea" id="ConOrg_servicearea">建物・エリア確認</a>
+			<a href="/contact/?ref=header" data-icon="inquiry" class="showMaxPC">お問い合わせ</a>
+			<a href="https://faq.starcat.co.jp/?ref=header" target="_blank" rel="noopener noreferrer" data-icon="faq" class="showMaxPC">よくあるご質問</a>
 			<button id="searchButton" data-icon="search" class="showMaxPC" onclick="toggleOpen(headerSearchArea);target(searchButton)">検索</button>
-			<a href="https://faq.starcat.co.jp/?ref=header" target="_blank" rel="noopener noreferrer" data-icon="faq">Q&amp;A</a>
-			<button id="languageButton" data-icon="translation" onclick="toggleOpen(languageList);target(languageButton)">Language</button>
+			<button class="headerMenuButton showTB" onclick="modalOpen(navMenuArea)">
+				<div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</button>
 		</div>
 	</div>
 	<ul id="languageList">
@@ -44,78 +55,88 @@
 			<input type="hidden" name="sitesearch" value="www.starcat.co.jp">
 		</form>
 	</div>
-	<!--▽ご利用中の方モーダル-->
+	<!--▽加入をご検討の方モーダル-->
+	<div id="menuJoinArea" class="modalArea">
+		<div class="modalContents">
+			<div class="inner">
+				<button onclick="modalClose(menuJoinArea)" data-icon="close"></button>
+				<a href="/join/?ref=header" class="dropdownTopLink icon_after" data-icon="arrow_next">加入をご検討の方TOP</a>
+				<div class="dropdownButtonGrid dropdownButtonGrid--join">
+					<a href="/join/house/?ref=header" class="dropdownBtn dropdownBtn--green dropdownBtn--large">
+						<img src="/img/icon/kodate_icon.svg" alt="戸建住宅アイコン">
+						<p>戸建住宅の<br class="showTB">お客様</p>
+					</a>
+					<a href="/join/apartment/?ref=header" class="dropdownBtn dropdownBtn--green dropdownBtn--large">
+						<img src="/img/icon/apmh_icon.svg" alt="集合住宅アイコン">
+						<p>集合住宅の<br class="showTB">お客様</p>
+					</a>
+					<a href="/simulation/?ref=header" class="dropdownBtn dropdownBtn--green">
+						<img src="/img/icon/price_simulation_icon.svg" alt="料金シミュレーションアイコン">
+						<p>料金シミュレーション</p>
+					</a>
+					<a href="/campaign/?ref=header" class="dropdownBtn dropdownBtn--green">
+						<img src="/img/icon/campaign_w_icon.svg" alt="キャンペーンアイコン">
+						<p>キャンペーン・特典</p>
+					</a>
+					<a href="/service_area/?ref=header" class="dropdownBtn dropdownBtn--green">
+						<img src="/img/icon/check_w_icon.svg" alt="エリアアイコン">
+						<p>サービス提供エリア</p>
+					</a>
+				</div>
+				<ul class="dropdownBottomLinks">
+					<li><a href="/mform/?ref=header" data-icon="entry" class="icon_before">新規加入<br class="showTB">お申し込み</a></li>
+					<li><a href="/contact/?ref=header" data-icon="inquiry" class="icon_before">お問い合わせ</a></li>
+					<li><a href="https://faq.starcat.co.jp/?ref=header" target="_blank" rel="noopener noreferrer" data-icon="faq" class="icon_before">よくある<br class="showTB">ご質問</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--▽加入者様(サポート・お手続き)モーダル-->
 	<div id="menuCustomerArea" class="modalArea">
 		<div class="modalContents">
 			<div class="inner">
 				<button onclick="modalClose(menuCustomerArea)" data-icon="close"></button>
-				<div class="buttonArea">
-					<a id="userSupportButton" href="/customer/?ref=header" class="bottomArrowLinkButton_border orange">
-						<img src="/img/icon/user_support.svg" alt="お客様サポートアイコン">
-						<p>お客様サポート<br class="showPC">TOP</p>
+				<a href="/customer/?ref=header" class="dropdownTopLink icon_after" data-icon="arrow_next">お客様サポートTOP</a>
+				<div class="dropdownButtonGrid dropdownButtonGrid--customer">
+					<a href="/contact/?ref=header" class="dropdownBtn dropdownBtn--orange dropdownBtn--large">
+						<img src="/img/icon/inquiry_icon.svg" alt="お問い合わせアイコン">
+						<p>お問い合わせ</p>
 					</a>
-					<div class="userSupportContentsLinks">
-						<a href="/customer/self/mypage/?ref=header" class="bottomArrowLinkButton_border orange">
-							<img src="/img/icon/user.svg" alt="マイページアイコン">
-							<p>マイページ</p>
-						</a>
-						<a href="/customer/self/webmail/?ref=header" class="bottomArrowLinkButton_border orange">
-							<img src="/img/icon/webmail.svg" alt="Webメールアイコン">
-							<p>Webメール</p>
-						</a>
-						<a href="/customer/self/tel/?ref=header" class="bottomArrowLinkButton_border orange">
-							<img src="/img/icon/tel_config.svg" alt="電話 各種設定アイコン">
-							<p>電話 各種設定</p>
-						</a>
-						<a href="/customer/ss/tv/tv-program/?ref=header" class="bottomArrowLinkButton_border orange">
-							<img src="/img/icon/tv_time-table.svg" alt="テレビアイコン">
-							<p>テレビ番組表</p>
+					<a href="https://faq.starcat.co.jp/?ref=header" target="_blank" rel="noopener noreferrer" class="dropdownBtn dropdownBtn--orange dropdownBtn--large">
+						<img src="/img/icon/faq_o_icon.svg" alt="よくあるご質問アイコン">
+						<p>よくあるご質問</p>
+					</a>
+					<a href="/customer/self/mypage/?ref=header" class="dropdownBtn dropdownBtn--orange">
+						<img src="/img/icon/user.svg" alt="マイページアイコン">
+						<p>マイページ</p>
+					</a>
+					<a href="/customer/self/webmail/?ref=header" class="dropdownBtn dropdownBtn--orange">
+						<img src="/img/icon/webmail.svg" alt="Webメールアイコン">
+						<p>Webメール</p>
+					</a>
+					<a href="/customer/action/?ref=header" class="dropdownBtn dropdownBtn--orange">
+						<img src="/img/icon/action_other_g_icon.svg" alt="各種お手続きアイコン">
+						<p>各種お手続き</p>
+					</a>
+					<a href="/customer/self/tel/?ref=header" class="dropdownBtn dropdownBtn--orange">
+						<img src="/img/icon/tel_config.svg" alt="電話 各種設定アイコン">
+						<p>電話 各種設定</p>
+					</a>
+				</div>
+				<div class="dropdownBottomRow">
+					<div class="dropdownSubLinks">
+						<a href="/campaign/?ref=header" class="dropdownSubBtn">
+							<img src="/img/icon/campaign_orange_icon.svg" alt="キャンペーンアイコン">
+							<p>キャンペーン・特典・プレゼント</p>
 						</a>
 					</div>
-				</div>
-				<div class="bannerArea">
-					<a href="/customer/starcat-app/?ref=header">
-						<img src="/img/banner/banner_app-now.jpg" alt="スターキャットアプリ配信中！ダウンロードはこちら">
-					</a>
+					<div class="dropdownTextLinks">
+						<a href="/customer/ss/?ref=header" data-icon="arrow_next" class="icon_after">サポート情報</a>
+						<a href="/maintenance/?ref=header" data-icon="arrow_next" class="icon_after">障害・メンテナンス情報</a>
+						<a href="/customer/ss/net/trouble/?ref=header" data-icon="arrow_next" class="icon_after">お役立ち情報</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<nav class="globalNav">
-		<!--▽ハンバーガーメニュー-->
-		<button class="menuButton" onclick="modalOpen(navMenuArea)">
-			<div>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<p>メニュー</p>
-		</button>
-		<div class="nav showPC">
-			<!--▽お申込み-->
-			<button id="navEntryButton" data-icon="entry" onclick="modalToggle(navEntryArea);target(navEntryButton)"><p>お申し込み</p></button>
-			<!--▽スターキャットのサービス-->
-			<button id="navServiceButton" data-icon="service" onclick="modalToggle(navServiceArea);target(navServiceButton)"><p>スターキャットのサービス</p></button>
-			<!--▽料金のご案内-->
-			<a data-icon="price" href="/price/?ref=bmenu"><p>料金のご案内</p></a>
-			<!--▽対応建物・エリア確認-->
-			<a data-icon="servicearea" href="/service_area/?ref=bmenu"><p>対応建物・エリア確認</p></a>
-			<!--▽キャンペーン・特典-->
-			<a data-icon="benefit" href="/campaign/?ref=bmenu"><p>キャンペーン・特典</p></a>
-			<!--▽お客様サポート-->
-			<a data-icon="support" href="/customer/?ref=bmenu"><p>お客様サポート</p></a>
-			<!--▽企業情報-->
-			<a data-icon="corporate" href="/company/?ref=bmenu"><p>企業情報</p></a>
-		</div>
-		<div class="nav showTB">
-			<!--▽お申込み-->
-			<button id="navEntryButtonTB" data-icon="entry" onclick="modalToggle(navEntryArea);target(navEntryButtonTB)"><p>お申し込み</p></button>
-			<!--▽インターネット-->
-			<button id="navInternetButtonTB" data-icon="internet" onclick="modalToggle(navInternetArea);target(navInternetButtonTB)"><p>インターネット</p></button>
-			<!--▽テレビ-->
-			<button id="navTvButtonTB" data-icon="tv" onclick="modalToggle(navTvArea);target(navTvButtonTB)"><p>テレビ</p></button>
-			<!--▽その他-->
-			<button id="navOtherButtonTB" data-icon="other" onclick="modalToggle(navOtherArea);target(navOtherButtonTB)"><p>その他</p></button>
-		</div>
-	</nav>
 </header>

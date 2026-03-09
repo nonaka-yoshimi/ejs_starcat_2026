@@ -1,64 +1,33 @@
 <div class="showTB commonNav">
-	<div data-commonnav="1">
-		<a href="/join/?ref=header" data-icon="beginner">初めての方</a>
-		<button id="mypageButtonTB" data-icon="mypage" onclick="modalToggle(menuCustomerArea);target(mypageButton)">ご利用中の方</button>
+	<div data-commonNav="1">
+		<button id="joinButtonTB" data-icon="beginner" onclick="modalToggle(menuJoinArea);target(joinButtonTB)">加入をご検討の方</button>
+		<button id="mypageButtonTB" data-icon="mypage" onclick="modalToggle(menuCustomerArea);target(mypageButtonTB)">加入者様<br>(サポート・お手続き)</button>
 		<a href="/business/?ref=header" data-icon="corporation">法人のお客様</a>
 	</div>
 </div>
 <!--▽モーダルコンテンツ-->
 <!--▽ハンバーガーメニュー-->
-<div id="navMenuArea" class="modalArea">
+<div id="navMenuArea" class="modalArea showTB">
 	<div class="modalContents">
-		<button class="showPC" onclick="modalClose(navMenuArea)" data-icon="close"></button>
+		<div class="modalHeader">
+			<a class="header_logo" href="/?ref=header"><img src="/img/logo/sc_logo_202401.svg" alt="starcatロゴ"></a>
+			<button onclick="modalClose(navMenuArea)" data-icon="close"></button>
+		</div>
 		<div class="inner">
-			<div data-commonnav="1" class="showPC">
-				<a href="/join/?ref=bmenu_h" data-icon="beginner">初めての方</a>
-				<a href="/customer/?ref=bmenu_h" data-icon="mypage">ご利用中の方</a>
-				<a href="/business/?ref=bmenu_h" data-icon="corporation">法人のお客様</a>
-			</div>
-			<div data-commonnav="1" class="showTB">
-				<a href="/join/?ref=bmenu_h_sp" data-icon="beginner">初めての方</a>
-				<a href="/customer/?ref=bmenu_h_sp" data-icon="mypage">ご利用中の方</a>
-				<a href="/business/?ref=bmenu_h_sp" data-icon="corporation">法人のお客様</a>
-			</div>
-			<!--sp版要素数によって背景色が変わってくるため出し分け-->
-			<div data-column="2" class="column_pc showPC">
-				<ul class="arrowLinkList_after">
-					<li><a href="/service/inquiry/?ref=bmenu_h">お申し込み・各種変更</a></li>
-					<li><a href="/service/?ref=bmenu_h">スターキャットのサービス</a></li>
-					<li><a href="/price/?ref=bmenu_h">料金のご案内</a></li>
-					<li><a href="/service_area/?ref=bmenu_h">サービス提供エリア</a></li>
-					<li><a href="/campaign/?ref=bmenu_h">キャンペーン・特典・プレゼント</a></li>
-					<li><a href="/members/?ref=bmenu_h">スターキャットメンバーズ</a></li>
-					<li><a href="/customer/?ref=bmenu_h">お客様サポート</a></li>
-				</ul>
-				<ul class="arrowLinkList_after">
-					<li><a href="/maintenance/?ref=bmenu_h">障害・メンテンナンス情報</a></li>
-					<li><a href="https://faq.starcat.co.jp/?ref=bmenu_h" target="_blank">よくあるご質問</a></li>
-					<li><a href="/plaza/?ref=bmenu_h">スターキャットプラザ</a></li>
-					<li><a href="/service/sales/?ref=bmenu_h" target="_blank">機器販売</a></li>
-					<li><a href="/announcement/?ref=bmenu_h">お知らせ情報</a></li>
-					<li><a href="/contact/?ref=bmenu_h">お問い合わせ</a></li>
-					<li><a href="/company/?ref=bmenu_h" target="_blank">企業情報</a></li>
-				</ul>
-			</div>
-			<ul class="arrowLinkList_after showTB">
-				<li><a href="/service/inquiry/?ref=bmenu_h_sp">お申し込み・各種変更</a></li>
-				<li><a href="/service/?ref=bmenu_h_sp">スターキャットのサービス</a></li>
-				<li><a href="/price/?ref=bmenu_h_sp">料金のご案内</a></li>
-				<li><a href="/service_area/?ref=bmenu_h_sp">サービス提供エリア</a></li>
-				<li><a href="/campaign/?ref=bmenu_h_sp">キャンペーン・特典・プレゼント</a></li>
-				<li><a href="/members/?ref=bmenu_h_sp">スターキャットメンバーズ</a></li>
-				<li><a href="/customer/?ref=bmenu_h_sp">お客様サポート</a></li>
-				<li><a href="/maintenance/?ref=bmenu_h_sp">障害・メンテンナンス情報</a></li>
-				<li><a href="https://faq.starcat.co.jp/?ref=bmenu_h_sp">よくあるご質問</a></li>
-				<li><a href="/plaza/?ref=bmenu_h_sp">スターキャットプラザ</a></li>
-				<li><a href="/service/sales/?ref=bmenu_h_sp" target="_blank">機器販売</a></li>
-				<li><a href="/announcement/?ref=bmenu_h_sp">お知らせ情報</a></li>
-				<li><a href="/contact/?ref=bmenu_h_sp">お問い合わせ</a></li>
-				<li><a href="/company/?ref=bmenu_h_sp" target="_blank">企業情報</a></li>
+			<!--▽SP版ハンバーガーメニュー-->
+			<ul class="hamburgerMenuList">
+				<li><a href="/service/?ref=bmenu_h_sp" data-icon="service" class="icon_before"><span>サービス一覧</span></a></li>
+				<li><a href="/company/?ref=bmenu_h_sp" data-icon="corporate" class="icon_before"><span>企業情報</span></a></li>
 			</ul>
-			<div class="showPC">
+			<div class="hamburgerCardLinks">
+				<a href="/contact/?ref=bmenu_h_sp" class="hamburgerCard" data-icon="inquiry">
+					<p>お問い合わせ</p>
+				</a>
+				<a href="https://faq.starcat.co.jp/?ref=bmenu_h_sp" target="_blank" rel="noopener noreferrer" class="hamburgerCard" data-icon="faq">
+					<p>よくあるご質問</p>
+				</a>
+			</div>
+			<div class="hamburgerSearchArea">
 				<form class="searchForm" method="get" action="https://www.google.com/search" target="_blank" rel="noopener noreferrer">
 					<label data-icon="search" class="icon_before">
 						<input class="search_text" type="text" name="q" placeholder="検索キーワードを入力">
@@ -67,15 +36,24 @@
 					<input type="hidden" name="sitesearch" value="www.starcat.co.jp">
 				</form>
 			</div>
-			<div class="fixedContent_bottom showTB">
-				<button onclick="modalClose(navMenuArea)" data-icon="close">閉じる</button>
-				<form class="searchForm" method="get" action="https://www.google.com/search" target="_blank" rel="noopener noreferrer">
-					<label data-icon="search" class="icon_before">
-						<input class="search_text" type="text" name="q" placeholder="検索キーワードを入力">
-					</label>
-					<input type="hidden" name="hl" value="ja">
-					<input type="hidden" name="sitesearch" value="www.starcat.co.jp">
-				</form>
+			<div data-commonNav="1" class="hamburgerNavTabs">
+				<a href="/join/?ref=bmenu_h_sp" data-icon="beginner">加入を<br>ご検討の方</a>
+				<a href="/customer/?ref=bmenu_h_sp" data-icon="mypage">加入者様<br><small>(サポート・お手続き)</small></a>
+				<a href="/business/?ref=bmenu_h_sp" data-icon="corporation">法人の<br>お客様</a>
+			</div>
+			<!--▽Language-->
+			<div class="hamburgerLanguage">
+				<button id="hamburgerLanguageButton" class="hamburgerLanguageToggle active" data-icon="translation" onclick="toggleOpen(hamburgerLanguageList);this.classList.toggle('active')">
+					<span>Language</span>
+				</button>
+				<ul id="hamburgerLanguageList" class="hamburgerLanguageListItems active">
+					<li><a href="/?ref=lang" class="cl-norewrite">日本語</a></li>
+					<li><a href="https://www.starcat.co.jp.e.lh.hp.transer.com/">English</a></li>
+					<li><a href="https://www.starcat.co.jp.c.lh.hp.transer.com/">中文（簡体字）</a></li>
+					<li><a href="https://www.starcat.co.jp.t.lh.hp.transer.com/">中文（繁体字）</a></li>
+					<li><a href="https://www.starcat.co.jp.k.lh.hp.transer.com/">한국어</a></li>
+					<li><a href="https://www.starcat.co.jp.p.lh.hp.transer.com/">Português</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>

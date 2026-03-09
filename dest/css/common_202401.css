@@ -1755,8 +1755,7 @@ button.iconTitle.active[data-icon]::before, button.iconTitle.active[data-icon]::
 }
 
 .modalArea:not(#navMenuArea) .modalContents {
-  width: 100%;
-  background-color: #fff;
+  width: 98%;
 }
 @media screen and (min-width: 769px) {
   .modalArea:not(#navMenuArea) .modalContents {
@@ -1814,7 +1813,7 @@ button.iconTitle.active[data-icon]::before, button.iconTitle.active[data-icon]::
     place-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #000;
+    bottom: -2.25rem;
   }
 }
 .modalArea:not(#navMenuArea) [onclick*=modalClose]::before {

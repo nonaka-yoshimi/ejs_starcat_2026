@@ -67,5 +67,414 @@
     }
 }
 
+/* ===== 2026年改修 joinページ新デザイン ===== */
 
+/* イントロセクション */
+.joinIntroSection {
+    background-color: #f8f8f8;
+    padding: 2.5rem 0;
+}
+.joinIntroContent {
+    text-align: center;
+}
+.joinIntroLead {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.joinIntroHighlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    border: 2px solid #3d8b37;
+    border-radius: 0.625rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.joinIntroHighlight__text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    text-align: left;
+    line-height: 1.6;
+}
+.joinIntroHighlight__text strong {
+    color: #3d8b37;
+}
+.joinIntroHighlight__more {
+    margin: 0;
+}
+.joinIntroHighlight__more a {
+    color: #005bac;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+.joinIntroPricing {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.joinIntroPricing__label {
+    font-size: 0.875rem;
+    color: #333;
+    margin: 0;
+    background-color: #3d8b37;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+}
+.joinIntroPricing__price {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #ff4d00;
+    margin: 0;
+}
+.joinIntroPricing__num {
+    font-size: 3rem;
+    line-height: 1;
+    font-family: 'Ubuntu', sans-serif;
+}
+.joinIntroSub {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.joinIntroReasonBtn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: #005bac;
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.joinIntroReasonBtn:hover {
+    background-color: #004a8a;
+    color: #fff;
+}
+.joinIntroReasonBtn__num {
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fccf00;
+}
 
+@media screen and (max-width: 767px) {
+    .joinIntroSection {
+        padding: 1.5rem 0;
+    }
+    .joinIntroHighlight {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    .joinIntroPricing {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .joinIntroPricing__num {
+        font-size: 2.5rem;
+    }
+}
+
+/* セクションタイトル共通 */
+.joinSectionTitle {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #fccf00;
+    display: inline-block;
+}
+.joinSectionTitle::before {
+    display: none;
+}
+.joinServiceSection .section_inner,
+.joinOtherSection .section_inner,
+.joinCorporateSection .section_inner {
+    text-align: center;
+}
+.joinSectionLead {
+    font-size: 0.9375rem;
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* 住宅タイプタブ */
+.joinHouseTab {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+.joinHouseTab__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 280px;
+    padding: 1.5rem 1rem;
+    border-radius: 0.625rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    transition: opacity 0.3s;
+}
+.joinHouseTab__btn:hover {
+    opacity: 0.85;
+    color: #fff;
+}
+.joinHouseTab__btn img {
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: brightness(0) invert(1);
+}
+.joinHouseTab__btn p {
+    margin: 0;
+}
+.joinHouseTab__btn--kodate {
+    background-color: #3d8b37;
+}
+.joinHouseTab__btn--apmh {
+    background-color: #3d8b37;
+}
+
+@media screen and (max-width: 767px) {
+    .joinHouseTab__btn {
+        width: auto;
+        flex: 1;
+        padding: 1rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* サービスカード */
+.joinServiceCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.joinServiceCard {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    background-color: #fff;
+}
+.joinServiceCard > a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+.joinServiceCard > a:hover {
+    opacity: 0.85;
+}
+.joinServiceCard__header {
+    height: 140px;
+    overflow: hidden;
+}
+.joinServiceCard__header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.joinServiceCard__body {
+    padding: 1rem;
+}
+.joinServiceCard__title {
+    font-size: 1.125rem;
+    font-weight: 900;
+    color: #005bac;
+    margin-bottom: 0.5rem;
+}
+.joinServiceCard__desc {
+    font-size: 0.8125rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+.joinServiceCard__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #e0e0e0;
+}
+.joinServiceCard__links li {
+    border-bottom: 1px solid #f0f0f0;
+}
+.joinServiceCard__links li:last-child {
+    border-bottom: none;
+}
+.joinServiceCard__links li a {
+    display: block;
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+    color: #005bac;
+    text-decoration: none;
+    position: relative;
+    padding-right: 1.5rem;
+}
+.joinServiceCard__links li a::after {
+    content: ">";
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #005bac;
+    font-size: 0.75rem;
+}
+.joinServiceCard__links li a:hover {
+    background-color: #f6fbff;
+}
+
+@media screen and (max-width: 767px) {
+    .joinServiceCards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .joinServiceCard__header {
+        height: 120px;
+    }
+}
+
+/* サービス下部リンク */
+.joinServiceBottomLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.joinServiceBottomLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: border-color 0.3s;
+}
+.joinServiceBottomLink:hover {
+    border-color: #005bac;
+    color: #005bac;
+}
+.joinServiceBottomLink img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+@media screen and (max-width: 767px) {
+    .joinServiceBottomLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .joinServiceBottomLink {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* 住宅リンク */
+.joinHouseLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.joinHouseLink {
+    color: #005bac;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+}
+.joinHouseLink:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+    .joinHouseLinks {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+    }
+}
+
+/* その他のサービス */
+.joinOtherSection {
+    background-color: #f8f8f8;
+    padding: 2.5rem 0;
+    margin-top: 2rem;
+}
+.joinOtherGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+.joinOtherItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.25rem 0.5rem;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: box-shadow 0.3s;
+    line-height: 1.4;
+}
+.joinOtherItem:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.joinOtherItem img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.joinOtherItem p {
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .joinOtherGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .joinOtherSection {
+        padding: 1.5rem 0;
+    }
+}
+
+/* 法人セクション */
+.joinCorporateSection {
+    padding: 2.5rem 0;
+}
+.joinCorporateLead {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.joinCorporateSub {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
