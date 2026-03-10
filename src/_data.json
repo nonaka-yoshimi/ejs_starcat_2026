@@ -12,17 +12,16 @@
 		"cssFiles": [
 			"/css/slick-theme.css",
 			"/css/slick.css",
-			"/css/base_202401.css",
-			"/css/layout_202401.css",
-			"/css/common_202401.css",
+			"/css/base_202603.css",
+			"/css/layout_202603.css",
+			"/css/common_202603.css",
 			"/css/mv_carousel.css",
-			"/css/top_202401.css",
-			"/css/dropdown_nav.css"
+			"/css/top_202603.css"
 		],
 		"jsFiles": [
 			"/js/jquery-3.6.1.min.js",
 			"/js/slick.min.js",
-			"/js/common_202401.js",
+			"/js/common_202603.js",
 			"/js/mv_carousel.js"
 		]
 	},
@@ -55,19 +54,18 @@
 			"/css/procedure.css",
 			"/css/recomend_drama.css",
 			"/css/print.css",
-			"/css/base_202401.css",
-			"/css/layout_202401.css",
-			"/css/common_202401.css",
+			"/css/base_202603.css",
+			"/css/layout_202603.css",
+			"/css/common_202603.css",
 			"/css/service.css",
 			"/css/join.css",
-			"/css/join_menu.css",
-			"/css/dropdown_nav.css"
+			"/css/join_menu.css"
 		],
 		"jsFiles": [
 			"/js/jquery.min.js",
 			"/js/freecall_modal.js",
 			"/js/slick.min.js",
-			"/js/common_202401.js"
+			"/js/common_202603.js"
 		]
 	}
 }
