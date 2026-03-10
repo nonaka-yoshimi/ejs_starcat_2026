@@ -444,6 +444,100 @@ function overScrollList() {
 	});
 }
 
+//▽PC版ヘッダーボタン hover でモーダル表示
+$(function() {
+  var hoverTimer = null;
+
+  function showModalHover(buttonId, modalId) {
+    var $button = $('#' + buttonId);
+    var $modal = $('#' + modalId);
+    var $modalContents = $modal.find('.modalContents');
+    var isOpen = false;
+
+    // モーダルを開く
+    function openModal() {
+      clearTimeout(hoverTimer);
+      // モーダル位置を計算
+      var headerInnerHeight = $('header .inner').height();
+      var windowScrollTop = $(window).scrollTop();
+      if (headerInnerHeight >= windowScrollTop) {
+        $modalContents.css('top', (headerInnerHeight - windowScrollTop + 20) + 'px');
+      } else {
+        $modalContents.css('top', '20px');
+      }
+      // 他のモーダルを閉じる
+      $('.modalArea').not($modal).removeClass('active').hide();
+      $('[onclick*="target"]').removeClass('active');
+      // モーダルを表示
+      $modal.stop().fadeIn().addClass('active');
+      $button.addClass('active');
+      isOpen = true;
+    }
+
+    // モーダルを閉じる
+    function closeModal() {
+      $modal.stop().fadeOut().removeClass('active');
+      $button.removeClass('active');
+      isOpen = false;
+    }
+
+    // カーソルがボタン・modalContents・その間のギャップ内にあるか判定
+    function isInArea(e) {
+      var btnRect = $button[0].getBoundingClientRect();
+
+      // ボタン内
+      if (e.clientX >= btnRect.left && e.clientX <= btnRect.right &&
+          e.clientY >= btnRect.top && e.clientY <= btnRect.bottom) {
+        return true;
+      }
+
+      if ($modalContents.is(':visible') && $modalContents[0]) {
+        var mcRect = $modalContents[0].getBoundingClientRect();
+
+        // modalContents内
+        if (e.clientX >= mcRect.left && e.clientX <= mcRect.right &&
+            e.clientY >= mcRect.top && e.clientY <= mcRect.bottom) {
+          return true;
+        }
+
+        // ボタンとmodalContentsの間のギャップ内（縦方向）
+        var gapLeft = Math.min(btnRect.left, mcRect.left);
+        var gapRight = Math.max(btnRect.right, mcRect.right);
+        if (e.clientX >= gapLeft && e.clientX <= gapRight &&
+            e.clientY >= btnRect.bottom && e.clientY <= mcRect.top) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    // ボタンにマウスが入った時 → モーダルを開く
+    $button.on('mouseenter', function() {
+      openModal();
+    });
+
+    // ドキュメント上のマウス移動で範囲外判定
+    $(document).on('mousemove', function(e) {
+      if (!isOpen) return;
+      if (isInArea(e)) {
+        clearTimeout(hoverTimer);
+      } else {
+        // 範囲外に出たら遅延後に閉じる
+        if (!hoverTimer) {
+          hoverTimer = setTimeout(function() {
+            closeModal();
+            hoverTimer = null;
+          }, 200);
+        }
+      }
+    });
+  }
+
+  showModalHover('joinButton', 'menuJoinArea');
+  showModalHover('mypageButton', 'menuCustomerArea');
+});
+
 //jsで生成した要素用※一番下に書かないとプラグインに影響がある
 // $(document).on('click', '[onclick*="modalToggle('+ id +')"].active', function () {
 // 	$(id).fadeOut().removeClass('active');
