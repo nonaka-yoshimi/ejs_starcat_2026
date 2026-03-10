@@ -29,77 +29,79 @@ header > .inner {
   }
 }
 @media screen and (min-width: 376px) {
-  header > .inner {
+  header > .inner ,
+  .modalHeader{
     grid-template-columns: 1fr auto auto;
-    height: 80px;
-  }
-}
-@media screen and (max-width: 375px) {
-  header > .inner {
-    grid-template-columns: 1fr auto;
     height: 60px;
   }
 }
+@media screen and (max-width: 375px) {
+  header > .inner ,
+  .modalHeader{
+    grid-template-columns: 1fr auto;
+    height: 50px;
+  }
+}
 @media screen and (min-width: 769px) {
-  header .header_logo:hover {
+  .header_logo:hover {
     opacity: 0.8;
   }
 }
 /*追加したコード*/
 @media screen and (min-width: 360px) {
-  header .header_logo {
+  .header_logo {
     width: 120px;
   }
 }
 @media screen and (max-width: 359px) {
-  header .header_logo {
+  .header_logo {
     width: 110px;
   }
 }
 
 @media screen and (max-width: 349px) {
-  header .header_logo {
+  .header_logo {
     width: 100px;
   }
 }
 
 @media screen and (max-width: 339px) {
-  header .header_logo {
+  .header_logo {
     width: 90px;
   }
 }
 
 @media screen and (max-width: 327px) {
-  header .header_logo {
+  .header_logo {
     width: 80px;
   }
 }
 
 @media screen and (max-width: 317px) {
-  header .header_logo {
+  .header_logo {
     width: 70px;
   }
 }
 @media screen and (max-width: 307px) {
-  header .header_logo {
+  .header_logo {
     width: 60px;
   }
 }
 /*追加したコード*/
 
-/*元々のコード*
+/*元々のコード*/
 @media screen and (min-width: 376px) {
-  header .header_logo {
+  .header_logo {
     width: 143px;
   }
 }
 
 @media screen and (max-width: 375px) {
-  header .header_logo {
+  .header_logo {
     width: 100px;
   }
 }
-/**/
+
 header .searchArea {
   display: none; /*初期表示用*/
 }
@@ -502,8 +504,8 @@ header #menuCustomerArea .bannerArea img {
   .globalNav {
     width: 100%;
     min-width: 1260px;
-    // -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
-    // box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);
+    /* -webkit-box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);*/
+    /* box-shadow: 0 0 5px 0 rgba(49, 49, 49, 0.2);*/
   }
 }
 @media screen and (max-width: 768px) {
@@ -513,7 +515,7 @@ header #menuCustomerArea .bannerArea img {
     left: 0;
     gap: 0 0.625rem;
     width: 100%;
-    //z-index: 80;
+    /*z-index: 80;
   }
 }
 @media screen and (min-width: 769px) {
@@ -552,7 +554,7 @@ header #menuCustomerArea .bannerArea img {
 .nav {
   width: calc(100vw - 60px);
   height: 100%;
-  // z-index: 1001;
+  /* z-index: 1001; */
 }
 @media screen and (min-width: 769px) {
   .nav {
@@ -825,7 +827,7 @@ header #menuCustomerArea .bannerArea img {
   position: relative;
   z-index: 101;
   background-color: #fff;
-  //pointer-events: none;
+  /*pointer-events: none;*/
 }
 .nav a.active[data-icon],
 .nav button.active[data-icon] {
@@ -1211,13 +1213,7 @@ header #menuCustomerArea .bannerArea img {
     overflow-y: unset !important;
   }
 }
-#navEntryArea .entryLinks {
-  /*初めての方*/
-  /*ご利用中の方*/
-}
-#navEntryArea .entryLinks .inner {
-  padding: unset;
-}
+
 @media screen and (max-width: 768px) {
   #navEntryArea .entryLinks .title {
     -webkit-box-pack: center;
