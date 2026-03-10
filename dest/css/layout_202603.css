@@ -515,7 +515,7 @@ header #menuCustomerArea .bannerArea img {
     left: 0;
     gap: 0 0.625rem;
     width: 100%;
-    /*z-index: 80;
+    /*z-index: 80;*/
   }
 }
 @media screen and (min-width: 769px) {
@@ -1083,7 +1083,6 @@ header #menuCustomerArea .bannerArea img {
   }
 }
 .footContentArea ul a {
-  color: #333;
   text-decoration: none;
   color: #fff;
 }
