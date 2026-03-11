@@ -1,17 +1,51 @@
 .main_inner .join_menu { padding:30px; border-radius:10px; background:#424242; color:#FFFFFF; }
 .main_inner .join_menu .contact_block { margin-bottom:10px; }
+.main_inner .join_menu .menu_block p { font-size:16px; }
+
+/* apply_area: カンタン3分 / Webからお申し込み ラベル */
+.main_inner .join_menu .apply_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    flex-shrink: 0;
+}
+.main_inner .join_menu .apply_area__badge {
+    display: inline-block;
+    background: #fccf00;
+    color: #333;
+    font-size: 13px;
+    font-weight: 900;
+    padding: 2px 14px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+}
+.main_inner .join_menu .apply_area__badge span {
+    font-size: 20px;
+    line-height: 1;
+}
+.main_inner .join_menu .apply_area__label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* apply_btn 位置調整 */
 .main_inner .join_menu .apply_btn { font-size:26px; }
 .main_inner .join_menu .apply_btn::before { left:-60px; }
-.main_inner .join_menu .menu_block p { font-size:16px; }
-@media screen and (max-width:1100px) {
-  .main_inner .join_menu .apply_btn::before { left:20px; }
 
+@media screen and (max-width:1100px) {
+    .main_inner .join_menu .apply_btn::before { left:20px; }
 }
 @media screen and (max-width:767px) {
-  .main_inner .join_menu .apply_btn::before { left:-10px; }
-  .main_inner .join_menu .contact_link_list { display:block; }
-  .main_inner .join_menu .contact_link_list .contact_link_btn { display: block; width: 100%; margin-bottom: 15px; }
-  .main_inner .join_menu .contact_link_list .contact_link_btn span br { display:none; }
+    .main_inner .join_menu .apply_area {
+        width: 100%;
+        padding: 0 0 20px;
+    }
+    .main_inner .join_menu .apply_btn::before { left:-10px; }
+    .main_inner .join_menu .contact_link_list { display:block; }
+    .main_inner .join_menu .contact_link_list .contact_link_btn { display: block; width: 100%; margin-bottom: 15px; }
+    .main_inner .join_menu .contact_link_list .contact_link_btn span br { display:none; }
 }
-
-

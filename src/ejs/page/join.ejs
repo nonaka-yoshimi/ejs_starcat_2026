@@ -16,21 +16,22 @@
 			<!--▽イントロセクション-->
 			<section id="join_intro" class="joinIntroSection">
 				<div class="section_inner">
-					<div class="joinIntroContent">
-						<p class="joinIntroLead">独自の光回線インターネット！</p>
-						<div class="joinIntroHighlight">
-							<p class="joinIntroHighlight__text"><strong>1工事1週間で</strong><br>Wi-Fi環境が整います！</p>
-							<p class="joinIntroHighlight__more"><a href="/service/net/">さらに ></a></p>
+					<div class="joinIntroBoxes">
+						<div class="joinIntroBox joinIntroBox--left">
+							<p class="joinIntroBox__label">独自の光回線インターネット！</p>
+							<p class="joinIntroBox__main"><strong>工事1週間で</strong><br>Wi-Fi環境が整います！</p>
 						</div>
-						<div class="joinIntroPricing">
-							<p class="joinIntroPricing__label">ネット2Gコースなら6年間</p>
-							<p class="joinIntroPricing__price">月額<span class="joinIntroPricing__num">880</span>円</p>
+						<p class="joinIntroSakurai">さらに</p>
+						<div class="joinIntroBox joinIntroBox--right">
+							<p class="joinIntroBox__course">ネット2Gコースなら6年間</p>
+							<p class="joinIntroBox__price">月額<span class="joinIntroBox__nanto">なんと</span><span class="joinIntroBox__num">880</span><span class="joinIntroBox__en">円<small>税込</small></span></p>
 						</div>
-						<p class="joinIntroSub">その他にも家計にやさしいおトクなプラン<br>をご用意しています</p>
-						<a class="joinIntroReasonBtn" href="#select_reason">
-							スターキャットが選ばれる<span class="joinIntroReasonBtn__num">5</span>つの理由
-						</a>
 					</div>
+					<p class="joinIntroSub">その他にも家計にやさしいおトクなプランを取り揃えています。</p>
+					<a class="joinIntroReasonBtn" href="#select_reason">
+						<span class="joinIntroReasonBtn__stars">★★★★★</span>
+						スターキャットが選ばれる<span class="joinIntroReasonBtn__num">5</span>つの理由
+					</a>
 				</div>
 			</section>
 
@@ -39,84 +40,90 @@
 				<div class="section_inner">
 					<h2 class="joinSectionTitle">スターキャットのサービス</h2>
 					<p class="joinSectionLead">スターキャットがお客様にあったプランをご提案いたします！</p>
+					<p class="joinSectionLead2">スターキャットでは、「インターネット」「テレビ」「固定電話」をはじめ、携帯サービスや割引サービスをご用意しております。</p>
 
 					<!--▽住宅タイプタブ-->
 					<div class="joinHouseTab">
-						<a class="joinHouseTab__btn joinHouseTab__btn--kodate" href="/join/house/">
-							<img src="/img/icon/kodate_icon.svg" alt="戸建住宅アイコン">
-							<p>戸建住宅のお客様</p>
-						</a>
-						<a class="joinHouseTab__btn joinHouseTab__btn--apmh" href="/join/apartment/">
-							<img src="/img/icon/apmh_icon.svg" alt="集合住宅アイコン">
-							<p>集合住宅のお客様</p>
-						</a>
+						<button class="joinHouseTab__btn joinHouseTab__btn--kodate joinHouseTab__btn--active" data-tab="kodate">
+							<img src="/img/icon/kodate_icon.svg" alt="">
+							<span>戸建住宅のお客様へ</span>
+						</button>
+						<button class="joinHouseTab__btn joinHouseTab__btn--apmh" data-tab="apmh">
+							<img src="/img/icon/apmh_icon.svg" alt="">
+							<span>集合住宅のお客様へ</span>
+						</button>
 					</div>
 
-					<!--▽サービスカード-->
-					<div class="joinServiceCards">
-						<div class="joinServiceCard">
-							<a href="/service/net/">
-								<div class="joinServiceCard__header">
-									<img src="/img/service/service_list_pic_01.jpg" alt="インターネット">
-								</div>
-								<div class="joinServiceCard__body">
-									<p class="joinServiceCard__title">インターネット</p>
-									<p class="joinServiceCard__desc">下り最大10Gbpsの超高速回線で動画視聴やオンライン会議も快適！</p>
-								</div>
+					<!--▽サービスボックス(戸建住宅)-->
+					<div class="joinServiceBox joinServiceBox--active" data-tabpanel="kodate">
+						<div class="joinServiceIcons">
+							<a href="/service/net/" class="joinServiceIcon">
+								<img src="/img/icon/starcat_net_icon.svg" alt="インターネット">
+								<p>インターネット</p>
 							</a>
-							<ul class="joinServiceCard__links">
-								<li><a href="/simulation/">料金シミュレーション</a></li>
-								<li><a href="/campaign/">キャンペーン・ご優待のご紹介</a></li>
-								<li><a href="/service/net/#_link_2">サービス詳細・ご利用料金</a></li>
-							</ul>
-						</div>
-						<div class="joinServiceCard">
-							<a href="/service/tv/">
-								<div class="joinServiceCard__header">
-									<img src="/img/service/service_list_pic_04.jpg" alt="テレビ">
-								</div>
-								<div class="joinServiceCard__body">
-									<p class="joinServiceCard__title">テレビ</p>
-									<p class="joinServiceCard__desc">アンテナ不要！地上波・BS・4K対応。最大58chの専門チャンネル！</p>
-								</div>
+							<a href="/service/tv/" class="joinServiceIcon">
+								<img src="/img/icon/starcat_tv_icon.svg" alt="テレビ">
+								<p>テレビ</p>
 							</a>
-							<ul class="joinServiceCard__links">
-								<li><a href="/simulation/">料金シミュレーション</a></li>
-								<li><a href="/campaign/">キャンペーン・ご優待のご紹介</a></li>
-								<li><a href="/service/tv/#_link_2">サービス詳細・ご利用料金</a></li>
-							</ul>
-						</div>
-						<div class="joinServiceCard">
-							<a href="/service/tel/">
-								<div class="joinServiceCard__header">
-									<img src="/img/service/service_list_pic_05.jpg" alt="電話">
-								</div>
-								<div class="joinServiceCard__body">
-									<p class="joinServiceCard__title">電話</p>
-									<p class="joinServiceCard__desc">基本料・通話料がおトク！電話番号もそのまま使える！</p>
-								</div>
+							<a href="/service/tel/" class="joinServiceIcon">
+								<img src="/img/icon/starcat_tel_icon.svg" alt="電話">
+								<p>電話</p>
 							</a>
-							<ul class="joinServiceCard__links">
-								<li><a href="/simulation/">料金シミュレーション</a></li>
-								<li><a href="/service/tel/#_link_2">サービス詳細・ご利用料金</a></li>
-							</ul>
 						</div>
+						<div class="joinServiceQuickLinks">
+							<a href="/simulation/" class="joinServiceQuickLink">
+								<img src="/img/icon/price_simulation_icon.svg" alt="">料金シミュレーション
+							</a>
+							<a href="/campaign/" class="joinServiceQuickLink">
+								<img src="/img/icon/campaign_orange_icon.svg" alt="">キャンペーン・特典
+							</a>
+							<a href="/service_area/" class="joinServiceQuickLink">
+								<img src="/img/icon/apmh_search_icon.svg" alt="">サービス提供エリア
+							</a>
+						</div>
+						<p class="joinServiceBoxLead">お客様にあったプランをご提案いたしますので、お気軽にお問い合わせください。</p>
+						<div class="joinServiceBtns">
+							<a href="/mform/?ref=main_content_footer" class="joinServiceBtn joinServiceBtn--apply">新規加入お申し込み</a>
+							<a href="/mform_inquiry/?ref=main_content_footer" class="joinServiceBtn joinServiceBtn--inquiry">お問い合わせ</a>
+							<a href="/faq/" class="joinServiceBtn joinServiceBtn--faq">よくあるご質問</a>
+						</div>
+						<a href="/join/house/" class="joinServiceTopLink">戸建住宅のお客様TOP &gt;</a>
 					</div>
 
-					<div class="joinServiceBottomLinks">
-						<a class="joinServiceBottomLink" href="/simulation/">
-							<img src="/img/icon/price_simulation_icon.svg" alt="料金シミュレーション">
-							<span>料金シミュレーション</span>
-						</a>
-						<a class="joinServiceBottomLink" href="/campaign/">
-							<img src="/img/icon/campaign_w_icon.svg" alt="キャンペーン">
-							<span>キャンペーン</span>
-						</a>
-					</div>
-
-					<div class="joinHouseLinks">
-						<a href="/join/house/" class="joinHouseLink">戸建住宅のお客様はこちら ></a>
-						<a href="/join/apartment/" class="joinHouseLink">集合住宅のお客様はこちら ></a>
+					<!--▽サービスボックス(集合住宅)-->
+					<div class="joinServiceBox" data-tabpanel="apmh">
+						<div class="joinServiceIcons">
+							<a href="/service/net/" class="joinServiceIcon">
+								<img src="/img/icon/starcat_net_icon.svg" alt="インターネット">
+								<p>インターネット</p>
+							</a>
+							<a href="/service/tv/" class="joinServiceIcon">
+								<img src="/img/icon/starcat_tv_icon.svg" alt="テレビ">
+								<p>テレビ</p>
+							</a>
+							<a href="/service/tel/" class="joinServiceIcon">
+								<img src="/img/icon/starcat_tel_icon.svg" alt="電話">
+								<p>電話</p>
+							</a>
+						</div>
+						<div class="joinServiceQuickLinks">
+							<a href="/simulation/" class="joinServiceQuickLink">
+								<img src="/img/icon/price_simulation_icon.svg" alt="">料金シミュレーション
+							</a>
+							<a href="/campaign/" class="joinServiceQuickLink">
+								<img src="/img/icon/campaign_orange_icon.svg" alt="">キャンペーン・特典
+							</a>
+							<a href="/service_area/" class="joinServiceQuickLink">
+								<img src="/img/icon/apmh_search_icon.svg" alt="">サービス提供エリア
+							</a>
+						</div>
+						<p class="joinServiceBoxLead">お客様にあったプランをご提案いたしますので、お気軽にお問い合わせください。</p>
+						<div class="joinServiceBtns">
+							<a href="/mform/?ref=main_content_footer" class="joinServiceBtn joinServiceBtn--apply">新規加入お申し込み</a>
+							<a href="/mform_inquiry/?ref=main_content_footer" class="joinServiceBtn joinServiceBtn--inquiry">お問い合わせ</a>
+							<a href="/faq/" class="joinServiceBtn joinServiceBtn--faq">よくあるご質問</a>
+						</div>
+						<a href="/join/apartment/" class="joinServiceTopLink">集合住宅のお客様TOP &gt;</a>
 					</div>
 				</div>
 			</section>
@@ -125,28 +132,58 @@
 			<section id="other_service" class="joinOtherSection">
 				<div class="section_inner">
 					<h2 class="joinSectionTitle">その他のサービス</h2>
-					<div class="joinOtherGrid">
-						<a href="/service/mvno/" class="joinOtherItem">
-							<img src="/img/icon/service_smartPhone.svg" alt="ケーブルスマホ">
-							<p>携帯・割引サービス</p>
-						</a>
-						<a href="/service/vod/" class="joinOtherItem">
-							<img src="/img/icon/service_video-delivery.svg" alt="動画配信サービス">
-							<p>動画配信サービス</p>
-						</a>
-						<a href="/service/net/option/security-camera/" class="joinOtherItem">
-							<img src="/img/icon/service_security-camera.svg" alt="防犯カメラ">
-							<p>防犯カメラサービス 24時間セキュリティ</p>
-						</a>
-						<a href="/service/net/option/omakase-wifi/" class="joinOtherItem">
-							<img src="/img/logo/omakase_wifi.png" alt="おまかせWi-Fi">
-							<p>おまかせWi-Fiサービス</p>
-						</a>
-						<a href="/service/other/" class="joinOtherItem">
-							<img src="/img/icon/service_emergency-report.svg" alt="生活向上サービス">
-							<p>生活向上サービス</p>
-						</a>
-					</div>
+					<ul class="joinOtherList">
+						<li>
+							<a href="/service/other/#discount" class="joinOtherItem">
+								<img src="/img/icon/service_discount_icon.svg" alt="携帯・割引サービス">
+								<div class="joinOtherItem__body">
+									<p class="joinOtherItem__title">携帯・割引サービス</p>
+									<p class="joinOtherItem__desc">スターキャットのサービスとセットでご利用いただくことでおトクになる各種サービスもご案内中です。</p>
+								</div>
+								<span class="joinOtherItem__arrow">&gt;</span>
+							</a>
+						</li>
+						<li>
+							<a href="/service/mvno/" class="joinOtherItem">
+								<img src="/img/icon/service_smartPhone.svg" alt="格安スマホサービス">
+								<div class="joinOtherItem__body">
+									<p class="joinOtherItem__title">格安スマホサービス</p>
+									<p class="joinOtherItem__desc">ご自宅でも訪問でもお申し込みができるスターキャットの格安スマホ「ケーブルスマホ」のご案内です。</p>
+								</div>
+								<span class="joinOtherItem__arrow">&gt;</span>
+							</a>
+						</li>
+						<li>
+							<a href="/service/vod/" class="joinOtherItem">
+								<img src="/img/icon/service_video-delivery.svg" alt="動画配信サービス">
+								<div class="joinOtherItem__body">
+									<p class="joinOtherItem__title">動画配信サービス</p>
+									<p class="joinOtherItem__desc">テレビ、スマホ、タブレット、パソコンなどで観たいときに、見たい場所で映画、ドラマ、アニメ、スポーツなどを楽しめるサービスです。</p>
+								</div>
+								<span class="joinOtherItem__arrow">&gt;</span>
+							</a>
+						</li>
+						<li>
+							<a href="/service/net/option/security-camera/" class="joinOtherItem">
+								<img src="/img/icon/service_security-camera.svg" alt="防犯カメラサービス">
+								<div class="joinOtherItem__body">
+									<p class="joinOtherItem__title">防犯カメラサービス</p>
+									<p class="joinOtherItem__desc">家族見守りカメラなら、24時間あなたの代わりに家を見守り、外出先からスマホで確認できます。見えない不安を安心に。自分の暮らしをもっと安全・安心に。</p>
+								</div>
+								<span class="joinOtherItem__arrow">&gt;</span>
+							</a>
+						</li>
+						<li>
+							<a href="/service/other/" class="joinOtherItem">
+								<img src="/img/icon/service_emergency-report.svg" alt="生活向上サービス">
+								<div class="joinOtherItem__body">
+									<p class="joinOtherItem__title">生活向上サービス</p>
+									<p class="joinOtherItem__desc">もしものときに備えておきたい！お住まいの地域の防災に関する情報をお提供する安心サービスをご用意しています。</p>
+								</div>
+								<span class="joinOtherItem__arrow">&gt;</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 
@@ -176,7 +213,11 @@
 				<div class="section_inner">
 					<div class="join_menu">
 						<div class="contact_block flex">
-							<a class="apply_btn flex flex_align_center flex_justify_center" href="/mform/?ref=main_content_footer"><span>新規お申し込み</span></a>
+							<div class="apply_area">
+								<p class="apply_area__badge">カンタン<span>3</span>分</p>
+								<p class="apply_area__label">Webからお申し込み</p>
+								<a class="apply_btn flex flex_align_center flex_justify_center" href="/mform/?ref=main_content_footer"><span>新規お申し込み</span></a>
+							</div>
 							<div class="contact_block_inner">
 								<p class="title_border">新規加入に関するお問い合わせ</p>
 								<div class="contact_link_list flex flex_justify_center">
@@ -215,6 +256,21 @@
 			<li><a href="/campaign/">キャンペーン<img src="/img/icon/link_icon.svg" class="sp"></a></li>
 		</ul>
 
+	<script>
+	(function () {
+		var tabs = document.querySelectorAll('.joinHouseTab__btn[data-tab]');
+		var panels = document.querySelectorAll('.joinServiceBox[data-tabpanel]');
+		tabs.forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				var target = this.dataset.tab;
+				tabs.forEach(function (b) { b.classList.remove('joinHouseTab__btn--active'); });
+				panels.forEach(function (p) { p.classList.remove('joinServiceBox--active'); });
+				this.classList.add('joinHouseTab__btn--active');
+				document.querySelector('.joinServiceBox[data-tabpanel="' + target + '"]').classList.add('joinServiceBox--active');
+			});
+		});
+	}());
+	</script>
     </main>
 
 	<%- include("../layout/_footContentArea") %>
