@@ -1484,6 +1484,12 @@ header [data-commonNav="2"] {
     top: 140px !important;
   }
 }
+@media screen and (max-width: 375px) {
+  #menuJoinArea .modalContents,
+  #menuCustomerArea .modalContents {
+    top: 120px !important;
+  }
+}
 
 /* ===== TOPリンク ===== */
 .dropdownTopLink {
