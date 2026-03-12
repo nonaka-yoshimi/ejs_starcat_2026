@@ -70,7 +70,7 @@
 /* ===== 2026年改修 joinページ新デザイン ===== */
 
 section {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 /* イントロセクション */
@@ -250,6 +250,16 @@ section {
     margin-bottom: 3rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #c4c4c4;
+}
+@media screen and (max-width: 768px) {
+    .joinSectionTitle {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .joinSectionTitle {
+        margin-bottom: 9vw;
+    }
 }
 .joinSectionTitle::before {
     display: none;
@@ -495,12 +505,15 @@ section {
     margin-bottom: 1.2rem;
 }
 .joinOtherItem {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5em;
     border: 1px solid #005bac;
     border-radius: 0.6em;
-    padding: 1.8em 2em 1.8em 3em;
+    padding: 1em 2em 1em 3em;
+    min-height: 6.6em;
+    font-size: min(16px, 4.267vw);
     text-decoration: none;
     color: #333;
     transition: background-color 0.2s;
@@ -512,33 +525,57 @@ section {
     background-color: #005bac;
 }
 .joinOtherItem > img {
-    width: 3rem;
-    height: 3rem;
-    flex-shrink: 0;
+    width: 2.3em;
+    height: 2.3em;
+    object-fit: contain;
 }
 .joinOtherItem__body {
-    flex: 1;
     text-align: left;
 }
 .joinOtherItem__title {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.3em;
+    font-weight: 900;
     color: #005bac;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.25em;
 }
 .joinOtherItem__desc {
-    font-size: 0.8125rem;
     color: #666;
+    font-weight: 500;
+    font-size: inherit;
     line-height: 1.6;
     margin: 0;
 }
 @media screen and (max-width: 768px) {
+    .joinOtherItem {
+        gap: 0.8em 1em;
+        padding: 1.2em 1.2em 1.2em 1.5em;
+    }
     .joinOtherItem > img {
-        width: 2.5rem;
-        height: 2.5rem;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .joinOtherItem__body {
+        display: contents;
     }
     .joinOtherItem__title {
-        font-size: 0.9375rem;
+        grid-row: 1;
+        grid-column: 2 / -1;
+        font-size: 1.2em;
+        margin-bottom: 0;
+        align-self: center;
+    }
+    .joinOtherList [data-icon].icon_after::after {
+        grid-row: 1 / 3;
+        grid-column: 4;
+    }
+    .joinOtherItem__desc {
+        grid-row: 2;
+        grid-column: 1 / -1;
+    }
+}
+@media screen and (max-width: 375px) {
+    .joinOtherItem {
+        padding: 1.2em;
     }
 }
 
