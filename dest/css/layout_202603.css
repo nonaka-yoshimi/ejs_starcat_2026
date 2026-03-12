@@ -1413,8 +1413,8 @@ header [data-commonnav="2"] {
   transition: opacity 0.3s;
   line-height: 1.4;
 }
-.dropdownBtn:hover {
-  opacity: 0.8;
+.dropdownBtn:hover img{
+  opacity: unset !important;
 }
 .dropdownBtn img {
   width: 2rem;
@@ -1449,6 +1449,9 @@ header [data-commonnav="2"] {
 .dropdownBtn--green {
   background-color: #3d8b37;
   color: #fff;
+}
+.dropdownBtn--green:hover{
+  background-color: #69b704;
 }
 .dropdownBtn--green img {
   filter: brightness(0) invert(1);
@@ -1508,6 +1511,9 @@ header [data-commonnav="2"] {
 .dropdownBtn--orange {
   background-color: #ff7e0c;
   color: #fff;
+}
+.dropdownBtn--orange:hover {
+  background-color: #fdb300;
 }
 .dropdownBtn--orange img {
   filter: brightness(0) invert(1);
