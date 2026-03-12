@@ -341,18 +341,18 @@
 
 					<!--▽住宅タイプタブ-->
 					<div class="joinHouseTab">
-						<button class="joinHouseTab__btn joinHouseTab__btn--kodate joinHouseTab__btn--active" data-tab="kodate">
+						<button id="tab_kodate" class="joinHouseTab__btn joinHouseTab__btn--kodate active" onclick="switchTab(tabpanel_kodate)">
 							<img src="/img/icon/kodate_icon.svg" alt="">
 							<span>戸建住宅の<br class="showTB">お客様へ</span>
 						</button>
-						<button class="joinHouseTab__btn joinHouseTab__btn--apmh" data-tab="apmh">
+						<button id="tab_apmh" class="joinHouseTab__btn joinHouseTab__btn--apmh" onclick="switchTab(tabpanel_apmh)">
 							<img src="/img/icon/apmh_icon.svg" alt="">
 							<span>集合住宅の<br class="showTB">お客様へ</span>
 						</button>
 					</div>
 
 					<!--▽サービスボックス(戸建住宅)-->
-					<div class="joinServiceBox joinServiceBox--active" data-tabpanel="kodate">
+					<div id="tabpanel_kodate" class="joinServiceBox active">
 						<div class="joinServiceBox__inner">
 							<div class="joinServiceIcons">
 								<a href="/service/net/" class="joinServiceIcon">
@@ -394,7 +394,7 @@
 					</div>
 
 					<!--▽サービスボックス(集合住宅)-->
-					<div class="joinServiceBox" data-tabpanel="apmh">
+					<div id="tabpanel_apmh" class="joinServiceBox">
 						<div class="joinServiceBox__inner">
 							<div class="joinServiceIcons">
 								<a href="/service/net/" class="joinServiceIcon">
@@ -554,19 +554,23 @@
 		</ul>
 
 	<script>
-	(function () {
-		var tabs = document.querySelectorAll('.joinHouseTab__btn[data-tab]');
-		var panels = document.querySelectorAll('.joinServiceBox[data-tabpanel]');
-		tabs.forEach(function (btn) {
-			btn.addEventListener('click', function () {
-				var target = this.dataset.tab;
-				tabs.forEach(function (b) { b.classList.remove('joinHouseTab__btn--active'); });
-				panels.forEach(function (p) { p.classList.remove('joinServiceBox--active'); });
-				this.classList.add('joinHouseTab__btn--active');
-				document.querySelector('.joinServiceBox[data-tabpanel="' + target + '"]').classList.add('joinServiceBox--active');
-			});
+	function switchTab(panel) {
+		// パネル切り替え
+		document.querySelectorAll('.joinServiceBox').forEach(function (p) {
+			p.style.display = 'none';
+			p.classList.remove('active');
 		});
-	}());
+		panel.style.display = '';
+		panel.classList.add('active');
+
+		// タブのactive切り替え
+		document.querySelectorAll('.joinHouseTab__btn').forEach(function (b) {
+			b.classList.remove('active');
+		});
+		// クリックされたボタンにactiveを付与
+		var btnId = 'tab_' + panel.id.replace('tabpanel_', '');
+		document.getElementById(btnId).classList.add('active');
+	}
 	</script>
     </main>
 
