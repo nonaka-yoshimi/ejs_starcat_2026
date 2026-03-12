@@ -452,11 +452,11 @@ $(function() {
     var $button = $('#' + buttonId);
     var $modal = $('#' + modalId);
     var $modalContents = $modal.find('.modalContents');
-    var isOpen = false;
 
     // モーダルを開く
     function openModal() {
       clearTimeout(hoverTimer);
+      hoverTimer = null;
       // モーダル位置を計算
       var headerInnerHeight = $('header .inner').height();
       var windowScrollTop = $(window).scrollTop();
@@ -466,19 +466,19 @@ $(function() {
         $modalContents.css('top', '20px');
       }
       // 他のモーダルを閉じる
-      $('.modalArea').not($modal).removeClass('active').hide();
+      $('.modalArea').not($modal).stop(true, true).removeClass('active').hide();
       $('[onclick*="target"]').removeClass('active');
+      // 他のヘッダーボタンのactiveを外す
+      $('#joinButton, #mypageButton').not($button).removeClass('active');
       // モーダルを表示
-      $modal.stop().fadeIn().addClass('active');
+      $modal.stop(true, true).fadeIn().addClass('active');
       $button.addClass('active');
-      isOpen = true;
     }
 
     // モーダルを閉じる
     function closeModal() {
-      $modal.stop().fadeOut().removeClass('active');
+      $modal.stop(true, true).fadeOut(150).removeClass('active');
       $button.removeClass('active');
-      isOpen = false;
     }
 
     // カーソルがボタン・modalContents・その間のギャップ内にあるか判定
@@ -519,9 +519,10 @@ $(function() {
 
     // ドキュメント上のマウス移動で範囲外判定
     $(document).on('mousemove', function(e) {
-      if (!isOpen) return;
+      if (!$modal.hasClass('active')) return;
       if (isInArea(e)) {
         clearTimeout(hoverTimer);
+        hoverTimer = null;
       } else {
         // 範囲外に出たら遅延後に閉じる
         if (!hoverTimer) {
