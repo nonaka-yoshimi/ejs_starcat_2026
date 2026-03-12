@@ -70,7 +70,7 @@
 /* ===== 2026年改修 joinページ新デザイン ===== */
 
 section {
-    margin-bottom: 3em;
+    margin-bottom: 4em;
 }
 .joinIntroSection,
 .joinServiceSection,
@@ -254,7 +254,7 @@ section {
     color: #005bac;
     text-align: left;
     margin-top: unset;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     padding-bottom: 1em;
     border-bottom: 1px solid #c4c4c4;
 }
