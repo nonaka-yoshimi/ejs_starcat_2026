@@ -1349,6 +1349,7 @@ header [data-commonnav="2"] {
 @media screen and (min-width: 769px) {
   .dropdownButtonGrid {
     gap: 1.2rem;
+    grid-template-rows: 10.5em 7.5em;
   }
 }
 .dropdownButtonGrid--join {
@@ -1487,7 +1488,6 @@ header [data-commonnav="2"] {
 @media screen and (min-width: 769px) {
   .dropdownButtonGrid--customer {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 10.5em 7.5em;
   }
   .dropdownButtonGrid--customer .dropdownBtn:nth-child(1),
   .dropdownButtonGrid--customer .dropdownBtn:nth-child(2) {
