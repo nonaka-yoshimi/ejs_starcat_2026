@@ -963,8 +963,8 @@ header [data-commonnav="2"] .showPC01 {
     display: flex !important;
   }
 }
-header [data-commonnav="2"] .showPC01 > a,
-header [data-commonnav="2"] .showPC01 > button {
+header [data-commonnav="2"] a,
+header [data-commonnav="2"] button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -977,51 +977,51 @@ header [data-commonnav="2"] .showPC01 > button {
   cursor: pointer;
   padding: 0;
 }
-header [data-commonnav="2"] .showPC01 > a:hover,
-header [data-commonnav="2"] .showPC01 > button:hover {
+header [data-commonnav="2"] a:hover,
+header [data-commonnav="2"] button:hover {
   color: #005bac;
 }
-header [data-commonnav="2"] .showPC01 > a:hover::before,
-header [data-commonnav="2"] .showPC01 > button:hover::before {
+header [data-commonnav="2"] a:hover::before,
+header [data-commonnav="2"] button:hover::before {
   background-color: #005bac;
 }
-header [data-commonnav="2"] .showPC01 > a[data-icon]::before,
-header [data-commonnav="2"] .showPC01 > button[data-icon]::before {
+header [data-commonnav="2"] a[data-icon]::before,
+header [data-commonnav="2"] button[data-icon]::before {
   width: 1.5em;
   height: 1.5em;
   background-color: #4c4c4c;
 }
 /* サービス一覧: 多色アイコンのためmaskを解除しSVG直接表示 */
-header [data-commonnav="2"] .showPC01 > a[data-icon=service]::before {
+header [data-commonnav="2"] a[data-icon=service]::before {
   -webkit-mask: none;
   mask: none;
   background: url("/img/icon/service_list.svg") no-repeat center center/contain !important;
 }
 /* お問い合わせ */
-header [data-commonnav="2"] .showPC01 > a[data-icon=inquiry]::before {
+header [data-commonnav="2"] a[data-icon=inquiry]::before {
   background-color: #4db284;
 }
 /* よくあるご質問 */
-header [data-commonnav="2"] .showPC01 > a[data-icon=faq]::before {
+header [data-commonnav="2"] a[data-icon=faq]::before {
   background-color: #d26468;
 }
 /* 企業情報 */
-header [data-commonnav="2"] .showPC01 > a[data-icon=corporate]::before {
+header [data-commonnav="2"] a[data-icon=corporate]::before {
   background-color: #8895b9;
 }
 /* ホバー時: サービス一覧はmask解除のためbackground-color変更不要 */
-header [data-commonnav="2"] .showPC01 > a[data-icon=service]:hover::before {
+header [data-commonnav="2"] a[data-icon=service]:hover::before {
   -webkit-mask: none;
   mask: none;
   background: url("/img/icon/service_list.svg") no-repeat center center/contain !important;
 }
 /* 翻訳: 縦並び（アイコン上・テキスト下） */
-header [data-commonnav="2"] .showPC01 > button[data-icon=translation] {
+header [data-commonnav="2"] button[data-icon=translation] {
   flex-direction: column;
   gap: 2px;
   font-size: 0.875em;
 }
-header [data-commonnav="2"] .showPC01 > button[data-icon=translation]::before {
+header [data-commonnav="2"] button[data-icon=translation]::before {
   width: 2.8em;
   height: 1.8em;
 }
