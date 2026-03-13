@@ -816,57 +816,6 @@ header #menuCustomerArea .bannerArea img {
   border-radius: unset;
   background-color: #005bac;
 }
-/* @media screen and (min-width: 769px) {
-  #navMenuArea .modalContents {
-    width: 57%;
-    border-radius: 0 0.625rem 0.625rem 0;
-  }
-} */
-/* @media screen and (min-width: 769px) and (max-width: 1100px) {
-  #navMenuArea .modalContents {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 769px) {
-  #navMenuArea .modalContents [data-icon=close] {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
-  }
-  #navMenuArea .modalContents [data-icon=close]::before {
-    width: 1.25rem;
-    height: 1.25rem;
-    background-color: #95c3eb;
-  }
-} */
-/* @media screen and (max-width: 768px) {
-  #navMenuArea .modalContents .inner {
-    padding: unset;
-    padding-bottom: 70px;
-    width: 100%;
-  }
-} */
-
-/* #navMenuArea [data-commonnav="1"] {
-  margin: 0.625rem;
-  padding: 0.875rem;
-} */
-/* @media screen and (max-width: 768px) {
-  #navMenuArea [data-commonnav="1"] a,
-  #navMenuArea [data-commonnav="1"] button {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    gap: 0 5px;
-    font-size: 0.875rem;
-  }
-} */
 @media screen and (max-width: 375px) {
   #navMenuArea [data-commonnav="1"] a,
   #navMenuArea [data-commonnav="1"] button {
@@ -1313,6 +1262,18 @@ header [data-commonnav="2"] {
 #menuCustomerArea {
   z-index: 101;
 }
+@media screen and (max-width: 500px) {
+  #menuJoinArea,
+  #menuCustomerArea {
+    font-size: min(16px, 3.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #menuJoinArea,
+  #menuCustomerArea {
+    font-size: min(14px, 3.733vw);
+  }
+}
 #menuJoinArea .modalContents,
 #menuCustomerArea .modalContents {
   margin: 0 auto;
@@ -1330,6 +1291,7 @@ header [data-commonnav="2"] {
   #menuJoinArea .modalContents,
   #menuCustomerArea .modalContents {
     width: calc(100% - 1.25rem);
+    padding: 1.5em 1.2em 1.2em !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1363,9 +1325,8 @@ header [data-commonnav="2"] {
   align-items: center;
   gap: 5px;
   margin-bottom: 1.25rem;
-  font-size: 0.9375rem;
   font-weight: 700;
-  color: #333;
+  color: #4c4c4c;
   text-decoration: none;
 }
 .dropdownTopLink::before,
@@ -1407,8 +1368,7 @@ header [data-commonnav="2"] {
   padding: 1.25rem 0.75rem;
   border-radius: 0.625rem;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9375rem;
+  font-weight: 500;
   text-align: center;
   transition: opacity 0.3s;
   line-height: 1.4;
@@ -1417,14 +1377,18 @@ header [data-commonnav="2"] {
   opacity: unset !important;
 }
 .dropdownBtn img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.2em;
+  height: 2em;
   object-fit: contain;
 }
 .dropdownBtn p {
   margin: 0;
 }
-
+@media screen and (max-width: 768px) {
+  .dropdownBtn {
+    border-radius: 0.3em;
+  }
+}
 /* 大きいボタン（2カラムの上段） */
 .dropdownBtn--large {
   padding: 1.5rem 1rem;
@@ -1523,6 +1487,7 @@ header [data-commonnav="2"] {
 @media screen and (min-width: 769px) {
   .dropdownButtonGrid--customer {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10.5em 7.5em;
   }
   .dropdownButtonGrid--customer .dropdownBtn:nth-child(1),
   .dropdownButtonGrid--customer .dropdownBtn:nth-child(2) {
@@ -1536,12 +1501,8 @@ header [data-commonnav="2"] {
   .dropdownButtonGrid--customer .dropdownBtn:nth-child(n+3) {
     flex-direction: row;
     justify-content: center;
-    padding: 1rem;
-    gap: 0.75rem;
-  }
-  .dropdownButtonGrid--customer .dropdownBtn:nth-child(n+3) img {
-    width: 1.5rem;
-    height: 1.5rem;
+    padding: 1em;
+    gap: 0.75em;
   }
 }
 
@@ -1585,7 +1546,7 @@ header [data-commonnav="2"] {
   flex: 1;
   gap: 5px;
   font-weight: 400;
-  color: #333;
+  color: #4c4c4c;
   text-decoration: none;
 }
 .dropdownBottomLinks a[data-icon].icon_before::before {
@@ -1620,8 +1581,6 @@ header [data-commonnav="2"] {
   .dropdownBottomRow {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
   }
   .dropdownBottomRow .dropdownSubLinks {
     margin-top: 0;
@@ -1634,22 +1593,26 @@ header [data-commonnav="2"] {
     justify-content: space-evenly;
   }
 }
+@media screen and (min-width: 769px) {
+  .dropdownBottomRow {
+    margin-top: 2.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dropdownBottomRow {
+    margin-top: 1.6em;
+  }
+}
 
 /* ===== サブリンクボタン（キャンペーン・特典・プレゼント） ===== */
-.dropdownSubLinks {
-  margin-top: 1rem;
-}
 .dropdownSubBtn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 1rem;
-  border: 2px solid #ff7e0c;
-  border-radius: 0.625rem;
+  gap: 0.5em;
+  border: 1px solid #ff7e0c;
+  border-radius: 0.625em;
   text-decoration: none;
-  color: #333;
-  font-weight: 700;
-  font-size: 0.9375rem;
+  color: #4c4c4c;
   transition: background-color 0.3s;
 }
 .dropdownSubBtn:hover {
@@ -1663,22 +1626,30 @@ header [data-commonnav="2"] {
   margin: 0;
   flex: 1;
 }
+@media screen and (min-width: 769px) {
+  .dropdownSubBtn {
+    padding: 1.2em 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dropdownSubBtn {
+    padding: 0.6em 0.8em;
+    border-radius: 0.3em;
+  }
+}
 
 /* ===== テキストリンク（サポート情報、障害メンテ等） ===== */
 .dropdownTextLinks {
   display: flex;
-  gap: 1.5rem;
   margin-top: 1rem;
   padding-top: 0.75rem;
 }
 .dropdownTextLinks a {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.875rem;
-  color: #333;
+  gap: 0.5em;
+  color: #4c4c4c;
   text-decoration: none;
-  font-weight: 500;
 }
 .dropdownTextLinks a::after {
   background-color: #005bac;
@@ -1692,26 +1663,9 @@ header [data-commonnav="2"] {
 @media screen and (max-width: 768px) {
   .dropdownTextLinks {
     flex-direction: column;
-    gap: 0;
-    margin-top: 0.5rem;
+    gap: 0.6em;
+    margin-top: 1.2em;
     padding-top: 0;
-  }
-  .dropdownTextLinks a {
-    padding: 0.75rem 0;
-  }
-}
-@media screen and (max-width: 375px) {
-  .dropdownBottomLinks a {
-    font-size: 4vw;
-  }
-  #menuCustomerArea .dropdownButtonGrid a p {
-    font-size: 4vw;
-  }
-  #menuCustomerArea .dropdownSubLinks a {
-    font-size: 4vw;
-  }
-  #menuCustomerArea .dropdownTextLinks {
-    font-size: 4vw;
   }
 }
 
@@ -1850,6 +1804,10 @@ header [data-commonnav="2"] {
   display: flex;
   gap: 0.5rem !important;
   padding: 0.875rem !important;
+}
+.hamburgerNavTabs a small,
+.hamburgerNavTabs button small{
+  font-size: 0.7em;
 }
 #navMenuArea [data-commonnav="1"] a,
 #navMenuArea [data-commonnav="1"] button {
