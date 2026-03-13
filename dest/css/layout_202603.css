@@ -347,42 +347,22 @@ header .modalArea .modalContents {
     margin: 0 auto;
   }
 }
-header #menuCustomerArea {
-  z-index: 101;
-}
-header #menuCustomerArea .modalContents {
-  margin: 0 auto;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-@media screen and (max-width: 768px) {
-  header #menuCustomerArea .modalContents {
-    width: calc(100% - 1.25rem);
-  }
-}
-@media screen and (max-width: 768px) {
-  header #menuCustomerArea .modalContents > .inner {
-    /*デバイス高さからmodalCloseボタンとgナビ分と上下のpadding分、headerを引いています。*/
-    max-height: calc(100dvh - 14.375rem) !important;
-  }
-}
-header #menuCustomerArea .buttonArea {
+#menuCustomerArea .buttonArea {
   display: grid;
 }
 @media screen and (min-width: 769px) {
-  header #menuCustomerArea .buttonArea {
+  #menuCustomerArea .buttonArea {
     grid-template-columns: 1fr 2fr;
     gap: 0 1.25rem;
   }
 }
 @media screen and (max-width: 768px) {
-  header #menuCustomerArea .buttonArea {
+  #menuCustomerArea .buttonArea {
     grid-template-columns: unset;
     gap: 1.25rem 0;
   }
 }
-header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+#menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -390,7 +370,7 @@ header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCu
   gap: 0.625rem;
 }
 @media screen and (min-width: 769px) {
-  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+  #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -398,7 +378,7 @@ header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCu
   }
 }
 @media screen and (max-width: 768px) {
-  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+  #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
     display: grid;
     place-items: center;
     place-content: center;
@@ -407,12 +387,12 @@ header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCu
   }
 }
 @media screen and (max-width: 375px) {
-  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
+  #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, #menuCustomerArea .buttonArea .bottomArrowLinkButton_border {
     font-size: 3.733vw;
   }
 }
 @media screen and (min-width: 769px) {
-  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill#userSupportButton, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border#userSupportButton {
+  #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill#userSupportButton, #menuCustomerArea .buttonArea .bottomArrowLinkButton_border#userSupportButton {
     display: grid;
     place-items: center;
     place-content: center;
@@ -421,26 +401,26 @@ header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill, header #menuCu
   }
 }
 @media screen and (min-width: 769px) {
-  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill img, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border img {
+  #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill img, #menuCustomerArea .buttonArea .bottomArrowLinkButton_border img {
     width: 2.5rem;
     height: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
-  header #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill img, header #menuCustomerArea .buttonArea .bottomArrowLinkButton_border img {
+  #menuCustomerArea .buttonArea .bottomArrowLinkButton_fill img, #menuCustomerArea .buttonArea .bottomArrowLinkButton_border img {
     width: 1.875rem;
     height: 1.875rem;
   }
 }
-header #menuCustomerArea .buttonArea .userSupportContentsLinks {
+#menuCustomerArea .buttonArea .userSupportContentsLinks {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(2, 1fr);
 }
-header #menuCustomerArea .bannerArea {
+#menuCustomerArea .bannerArea {
   margin-top: 1.25rem;
 }
-header #menuCustomerArea .bannerArea img {
+#menuCustomerArea .bannerArea img {
   display: block;
   margin: 0 auto;
   width: 315px;
@@ -1304,6 +1284,11 @@ header [data-commonnav="2"] {
   #menuJoinArea .modalContents,
   #menuCustomerArea .modalContents {
     top: 160px !important;
+  }
+  #menuJoinArea .modalContents > .inner,
+  #menuCustomerArea .modalContents > .inner {
+    max-height: calc(100dvh - 160px - 7.5rem);
+    overflow-y: auto;
   }
 }
 @media screen and (max-width: 768px) {
