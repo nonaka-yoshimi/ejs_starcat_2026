@@ -643,7 +643,7 @@ section {
 }
 
 /* 5つの理由ボタン */
-a[href="/join/"].bottomArrowLinkButton_fill {
+a[aria-label="スターキャットが選ばれる5つの理由"].bottomArrowLinkButton_fill {
     display: block;
     margin: 0 auto;
     padding-bottom: 0.625rem;
@@ -657,17 +657,17 @@ a[href="/join/"].bottomArrowLinkButton_fill {
         justify-content: start;
         font-size: 2.2em;
     }
-    a[href="/join/"].bottomArrowLinkButton_fill {
+    a[aria-label="スターキャットが選ばれる5つの理由"].bottomArrowLinkButton_fill {
         font-size: 1.25em;
     }
 }
-a[href="/join/"].bottomArrowLinkButton_fill img {
+a[aria-label="スターキャットが選ばれる5つの理由"].bottomArrowLinkButton_fill img {
     display: block;
     width: 120px;
     margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
-    a[href="/join/"].bottomArrowLinkButton_fill img {
+    a[aria-label="スターキャットが選ばれる5つの理由"].bottomArrowLinkButton_fill img {
         margin-bottom: 0.625rem;
     }
 }

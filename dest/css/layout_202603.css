@@ -418,9 +418,9 @@ header .modalArea .modalContents {
   grid-template-columns: repeat(2, 1fr);
 }
 #menuCustomerArea .bannerArea {
-  margin-top: 1.25rem;
+  margin-top: 1.25em;
 }
-#menuCustomerArea .bannerArea img {
+#menuCustomerArea .bannerArea a {
   display: block;
   margin: 0 auto;
   width: 315px;
