@@ -1655,11 +1655,6 @@ header [data-commonnav="2"] {
 }
 
 /* ===== SP ハンバーガーメニュー ===== */
-@media screen and (min-width: 769px) {
-  #navMenuArea {
-    display: none !important;
-  }
-}
 #navMenuArea .modalContents [data-icon=close] {
   position: static !important;
 }

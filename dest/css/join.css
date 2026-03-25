@@ -682,11 +682,6 @@ a[aria-label="スターキャットが選ばれる5つの理由"].bottomArrowLin
 .colorYellow {
     color: #fccf00 !important;
 }
-@media screen and (min-width: 769px) {
-    .showTB {
-        display: none !important;
-    }
-}
 
 /* ===== 「法人のお客様・マンションオーナー様・管理会社へ」（starcat.co.jp/join/ より） ===== */
 /* バナー */
