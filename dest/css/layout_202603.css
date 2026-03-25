@@ -1101,9 +1101,9 @@ header [data-commonnav="2"] > a.showMaxPC[data-icon=faq]::before {
 }
 
 /* #languageList ドロップダウン位置調整 */
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 769px) {
   #languageList {
-    top: 2.5rem !important;
+    top: 4.375em !important;
   }
 }
 
