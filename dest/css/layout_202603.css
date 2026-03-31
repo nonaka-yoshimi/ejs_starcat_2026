@@ -259,6 +259,17 @@ header [data-commonnav="2"] > button[data-icon=translation]::before {
     width: 1.875rem;
   }
 }
+@media screen and (min-width: 769px) {
+  .commonNav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    padding: 0;
+    margin: 0.5rem -1.25rem 0;
+  }
+  .commonNav [data-commonnav] {
+    min-height: 4.4em;
+  }
+}
 @media screen and (max-width: 768px) {
   .commonNav {
     padding: 0.625rem;
@@ -1132,15 +1143,6 @@ header [data-commonnav="2"] {
     grid-column: 2;
     justify-self: end;
     gap: 1.5rem;
-  }
-  header > .inner > .commonNav {
-    grid-row: 2;
-    grid-column: 1 / -1;
-    padding: 0;
-    margin: 0.5rem -1.25rem 0;
-  }
-  header > .inner > .commonNav [data-commonnav] {
-    min-height: 4.4em;
   }
 }
 
